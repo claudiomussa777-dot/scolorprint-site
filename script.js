@@ -20,16 +20,33 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 document.getElementById('year').textContent = new Date().getFullYear();
 
-document.getElementById('quote-form').addEventListener('submit', event => {
+const quoteForm = document.getElementById('quote-form');
+const formStatus = document.getElementById('form-status');
+quoteForm.addEventListener('submit', async event => {
   event.preventDefault();
-  const data = new FormData(event.currentTarget);
-  const message = [
-    'Olá S Color Print, gostaria de pedir um orçamento.',
-    '',
-    `Nome: ${data.get('nome')}`,
-    `Contacto: ${data.get('contacto')}`,
-    `Serviço: ${data.get('servico')}`,
-    `Projecto: ${data.get('mensagem') || 'A combinar'}`
-  ].join('\n');
-  window.open(`https://wa.me/258849900402?text=${encodeURIComponent(message)}`, '_blank', 'noopener');
+  const submitButton = quoteForm.querySelector('button[type="submit"]');
+  const originalLabel = submitButton.innerHTML;
+  submitButton.disabled = true;
+  submitButton.textContent = 'A enviar...';
+  formStatus.className = 'form-status';
+  formStatus.textContent = '';
+
+  try {
+    const formData = Object.fromEntries(new FormData(quoteForm).entries());
+    const response = await fetch('https://formsubmit.co/ajax/info@scolorprint.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+    if (!response.ok) throw new Error('Falha no envio');
+    quoteForm.reset();
+    formStatus.className = 'form-status success';
+    formStatus.textContent = 'Pedido enviado com sucesso! Responderemos para o seu email.';
+  } catch (error) {
+    formStatus.className = 'form-status error';
+    formStatus.innerHTML = 'Não foi possível enviar agora. Escreva para <a href="mailto:info@scolorprint.com">info@scolorprint.com</a>.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.innerHTML = originalLabel;
+  }
 });

@@ -90,19 +90,27 @@
     </section>
 
     <section class="contact section" id="contacto">
-      <div class="contact-copy reveal"><p class="eyebrow"><span></span> Vamos criar juntos</p><h2>Tem uma ideia?<br>Vamos pô-la no <em>papel.</em></h2><p>Conte-nos o que precisa. Respondemos com uma solução feita à medida do seu projecto.</p><div class="contact-detail"><small>EMAIL</small><a href="mailto:info@scolorprint.com">info@scolorprint.com</a></div><div class="contact-detail"><small>WHATSAPP E CHAMADAS</small><a href="tel:+258849900402">+258 84 990 0402</a><a class="whatsapp-link" href="https://wa.me/258849900402" target="_blank" rel="noopener">Conversar no WhatsApp ↗</a></div><div class="contact-detail"><small>LOCALIZAÇÃO</small><span>Maputo, Moçambique</span></div></div>
-      <form class="quote-form reveal" id="quote-form">
+      <div class="contact-copy reveal"><p class="eyebrow"><span></span> Vamos criar juntos</p><h2>Tem uma ideia?<br>Vamos pô-la no <em>papel.</em></h2><p>Conte-nos o que precisa. Respondemos com uma solução feita à medida do seu projecto.</p><div class="contact-detail"><small>EMAIL</small><a href="mailto:info@scolorprint.com">info@scolorprint.com</a></div><div class="contact-detail"><small>WHATSAPP E CHAMADAS</small><a href="tel:+258849900402">+258 84 990 0402</a><a class="whatsapp-link" href="https://wa.me/258849900402">Conversar no WhatsApp ↗</a></div><div class="contact-detail"><small>LOCALIZAÇÃO</small><span>Maputo, Moçambique</span></div></div>
+      <form class="quote-form reveal" id="quote-form" action="https://formsubmit.co/info@scolorprint.com" method="POST">
+        <input type="hidden" name="_subject" value="Novo pedido de orçamento — S Color Print">
+        <input type="hidden" name="_next" value="https://scolorprint.com/obrigado.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
         <label>O seu nome<input type="text" name="nome" placeholder="Como devemos chamar-lhe?" required></label>
-        <label>Email ou telefone<input type="text" name="contacto" placeholder="Para respondermos ao pedido" required></label>
+        <label>O seu email<input type="email" name="email" placeholder="nome@exemplo.com" required></label>
+        <label>Telefone ou WhatsApp <small>(opcional)</small><input type="tel" name="telefone" placeholder="Ex.: +258 84 000 0000"></label>
         <label>Serviço pretendido<select name="servico" required><option value="">Seleccione uma opção</option><option>Impressão comercial</option><option>Grande formato</option><option>Personalizados</option><option>Design gráfico</option><option>Outro</option></select></label>
         <label>Conte-nos sobre o projecto<textarea name="mensagem" rows="4" placeholder="Produto, quantidade, medidas e prazo..."></textarea></label>
-        <button class="button button-dark" type="submit">Enviar pelo WhatsApp <span>↗</span></button>
-        <p class="form-note">Ao enviar, será aberta uma conversa com a S Color Print no WhatsApp.</p>
+        <button class="button button-dark" type="submit">Enviar pedido por email <span>↗</span></button>
+        <p class="form-note">O pedido será enviado para info@scolorprint.com.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <div class="form-choice"><span>ou</span></div>
+        <a class="button button-whatsapp-inline" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento.">Aceder ao WhatsApp <span>↗</span></a>
       </form>
     </section>
   </main>
 
-  <a class="whatsapp-float" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a S Color Print no WhatsApp"><span>WA</span><b>Fale connosco</b></a>
+  <a class="whatsapp-float" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20gostaria%20de%20pedir%20um%20or%C3%A7amento." aria-label="Falar com a S Color Print no WhatsApp"><span>WA</span><b>Fale connosco</b></a>
   <footer><a class="brand brand-footer" href="#topo"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b></span></a><p>Impressão com criatividade.</p><a href="#topo">Voltar ao topo ↑</a><small>© <span id="year"></span> S Color Print. Todos os direitos reservados.</small></footer>
   <script src="script.js"></script>
 </body>
