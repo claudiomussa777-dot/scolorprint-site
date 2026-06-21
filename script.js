@@ -43,9 +43,13 @@ $$('.swatch').forEach(button => button.addEventListener('click', () => {
 $$('.side-toggle button').forEach(button => button.addEventListener('click', () => {
   $$('.side-toggle button').forEach(item => item.classList.remove('active'));
   button.classList.add('active');
-  state.side = button.dataset.side === 'front' ? 'Frente' : 'Costas';
+  const isBack = button.dataset.side === 'back';
+  state.side = isBack ? 'Costas' : 'Frente';
+  shirtImage.src = isBack ? 'assets/tshirt-designer-back-white-v1.png' : 'assets/tshirt-designer-white-v1.png';
+  shirtImage.alt = isBack ? 'Pré-visualização das costas da camiseta' : 'Pré-visualização da frente da camiseta';
+  shirtWrap.classList.toggle('back-view', isBack);
   $('.summary-meta').textContent = `${state.color} · ${state.side} personalizada`;
-  designContent.style.opacity = button.dataset.side === 'front' ? '1' : '.82';
+  designContent.style.opacity = '1';
 }));
 
 $('#add-text').addEventListener('click', () => {
