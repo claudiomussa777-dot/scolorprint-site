@@ -1,6 +1,12 @@
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
 
+const API_BASE = (() => {
+  const host = location.hostname;
+  if (host === 'localhost' || host === '127.0.0.1' || host === '') return 'http://localhost:8765';
+  return 'https://scolor-api.onrender.com';
+})();
+
 $('#year').textContent = new Date().getFullYear();
 $('.menu-button').addEventListener('click', () => $('.site-header').classList.toggle('open'));
 
@@ -79,22 +85,83 @@ $$('.style-chips button').forEach(button => button.addEventListener('click', () 
   button.classList.add('selected');
 }));
 
-$('#generate-ai').addEventListener('click', () => {
+const aiResults = $('#ai-results');
+const aiCredits = $('#ai-credits');
+
+async function refreshCredits() {
+  try {
+    const response = await fetch(`${API_BASE}/api/credits`);
+    if (!response.ok) return;
+    const data = await response.json();
+    renderCredits(data.remaining, data.daily_limit);
+  } catch {}
+}
+function renderCredits(remaining, limit) {
+  aiCredits.textContent = remaining > 0
+    ? `Restam ${remaining} de ${limit} gerações grátis hoje`
+    : `Limite diário grátis atingido — adquira créditos para continuar`;
+  aiCredits.classList.toggle('exhausted', remaining === 0);
+}
+function applyConceptToShirt(url, label) {
+  uploadedArt.src = url;
+  uploadedArt.alt = `Conceito IA — ${label}`;
+  uploadedArt.style.display = 'block';
+  designContent.style.opacity = '0';
+}
+function renderConcepts(concepts) {
+  aiResults.innerHTML = '';
+  concepts.forEach(concept => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'ai-concept';
+    card.innerHTML = `<img src="${concept.preview_url}" alt="Conceito ${escapeHtml(concept.style_label)}"><span>${escapeHtml(concept.style_label)}</span>`;
+    card.addEventListener('click', () => {
+      $$('.ai-concept').forEach(item => item.classList.remove('selected'));
+      card.classList.add('selected');
+      applyConceptToShirt(concept.preview_url, concept.style_label);
+    });
+    aiResults.appendChild(card);
+  });
+}
+
+$('#generate-ai').addEventListener('click', async () => {
   const button = $('#generate-ai');
   const idea = $('#ai-prompt').value.trim();
-  const words = idea ? idea.split(/\s+/).filter(word => word.length > 3).slice(0, 2) : ['MAPUTO', 'CRIA'];
-  button.innerHTML = '<span>✦</span> A criar...';
+  if (idea.length < 3) {
+    aiResults.innerHTML = '<p class="ai-error">Descreva a sua ideia (mínimo 3 caracteres).</p>';
+    return;
+  }
+  const style = ($('.style-chips button.selected')?.dataset.style) || 'vibrante';
+  button.innerHTML = '<span>✦</span> A gerar 4 conceitos...';
   button.disabled = true;
-  setTimeout(() => {
-    designContent.className = 'design-content style-event';
-    designContent.innerHTML = `<small>EDIÇÃO LOCAL</small><strong>${escapeHtml((words[0] || 'MAPUTO').toUpperCase())}<br>${escapeHtml((words[1] || 'CRIA').toUpperCase())}</strong><i>✦</i>`;
-    uploadedArt.style.display = 'none';
-    designContent.style.opacity = '1';
-    if (['Preto', 'Azul-marinho', 'Vermelho', 'Verde'].includes(state.color)) designContent.style.color = '#ffffff';
-    button.innerHTML = '<span>✦</span> Gerar outro conceito';
+  aiResults.innerHTML = '<div class="ai-loading"><span></span><span></span><span></span><span></span></div>';
+  try {
+    const response = await fetch(`${API_BASE}/api/generate`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: idea, style })
+    });
+    if (response.status === 429) {
+      const err = await response.json().catch(() => ({ detail: 'Limite atingido.' }));
+      aiResults.innerHTML = `<p class="ai-error">${escapeHtml(err.detail)}</p>`;
+      renderCredits(0, 3);
+      return;
+    }
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    renderConcepts(data.concepts);
+    renderCredits(data.credits_remaining, 3);
+    if (data.concepts[0]) applyConceptToShirt(data.concepts[0].preview_url, data.concepts[0].style_label);
+    $$('.ai-concept')[0]?.classList.add('selected');
+  } catch (error) {
+    aiResults.innerHTML = `<p class="ai-error">Não foi possível gerar agora. Tente novamente em instantes.</p>`;
+  } finally {
+    button.innerHTML = '<span>✦</span> Gerar 4 conceitos';
     button.disabled = false;
-  }, 900);
+  }
 });
+
+refreshCredits();
 
 const templates = {
   maputo: ['style-maputo', 'FEITO EM', 'MAPUTO', '✦'],
