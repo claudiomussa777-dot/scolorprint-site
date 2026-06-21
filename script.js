@@ -111,6 +111,27 @@ $$('[data-template]').forEach(button => button.addEventListener('click', () => {
   designContent.style.opacity = '1';
 }));
 
+const cartoonModels = [
+  { name: 'Leão skater', src: 'assets/cartoon-leao-v1.png' },
+  { name: 'Robô criativo', src: 'assets/cartoon-robo-v1.png' },
+  { name: 'Dança urbana', src: 'assets/cartoon-danca-v1.png' },
+  { name: 'Camaleão DJ', src: 'assets/cartoon-camaleao-v1.png' }
+];
+const templateGrid = $('.template-grid');
+cartoonModels.forEach(model => {
+  const button = document.createElement('button');
+  button.className = 'cartoon-option';
+  button.type = 'button';
+  button.innerHTML = `<img class="cartoon-thumb" src="${model.src}" alt="${model.name}"><span>${model.name}</span>`;
+  button.addEventListener('click', () => {
+    uploadedArt.src = model.src;
+    uploadedArt.alt = model.name;
+    uploadedArt.style.display = 'block';
+    designContent.style.opacity = '0';
+  });
+  templateGrid.appendChild(button);
+});
+
 $('#zoom-in').addEventListener('click', () => setZoom(Math.min(1.25, state.zoom + .05)));
 $('#zoom-out').addEventListener('click', () => setZoom(Math.max(.75, state.zoom - .05)));
 function setZoom(value) { state.zoom = value; shirtWrap.style.transform = `scale(${value})`; $('#zoom-value').textContent = `${Math.round(value * 100)}%`; }

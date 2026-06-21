@@ -12,3 +12,7 @@
   .primary-button, .panel-action, .checkout-button { min-height: 48px; }
   .order-modal input, .order-modal textarea { font-size: 16px; }
 }
+
+.cartoon-option { text-align: center !important; font-weight: 700; }
+.cartoon-option .cartoon-thumb { width: 100%; height: 108px; display: block; object-fit: contain; margin-bottom: 7px; border-radius: 5px; background: linear-gradient(135deg, #f5f2e9, #e7e2d7); }
+.cartoon-option span { display: block; padding: 2px 3px 5px; }
