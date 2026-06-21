@@ -2,192 +2,104 @@
 <html lang="pt">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="S Color Print AI — crie materiais gráficos com inteligência artificial, visualize mockups, receba orçamento instantâneo e encomende com entrega em Moçambique.">
-  <meta name="theme-color" content="#111111">
-  <title>S Color Print AI — Da ideia à impressão</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>S Color Print — Crie a sua camiseta</title>
+  <meta name="description" content="Crie camisetas personalizadas online. Escolha o modelo, cor, arte e tamanhos, veja o preço e receba em Moçambique.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="topbar"><span>Produção local em Maputo</span><span>Orçamentos em meticais</span><a href="tel:+258849900402">Apoio: +258 84 990 0402</a></div>
+  <div class="announcement"><span>Produção local em Maputo</span><span>Orçamento imediato</span><span>WhatsApp +258 84 990 0402</span></div>
   <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="S Color Print — início">
-      <span class="brand-symbol"><i></i><i></i><i></i></span>
-      <span>S COLOR <b>PRINT</b><small>AI STUDIO</small></span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav" aria-label="Navegação principal">
-      <a href="#catalogo">Produtos</a>
-      <a href="#studio">Criar com IA</a>
-      <a href="#processo">Como funciona</a>
-      <a href="#orcamento">Preços</a>
-    </nav>
-    <a class="header-cta" href="#studio">Começar a criar <span>↗</span></a>
+    <a class="brand" href="#top" aria-label="S Color Print"><span class="brand-bars"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>CAMISETAS PERSONALIZADAS</small></span></a>
+    <nav><a href="#editor">Criar camiseta</a><a href="#como-funciona">Como funciona</a><a href="#qualidade">Qualidade</a><a href="#ajuda">Ajuda</a></nav>
+    <a class="header-help" href="https://wa.me/258849900402" target="_blank" rel="noopener">Falar connosco</a>
+    <button class="menu-button" aria-label="Abrir menu">☰</button>
   </header>
 
-  <main>
-    <section class="hero" id="inicio">
+  <main id="top">
+    <section class="hero">
       <div class="hero-copy">
-        <p class="eyebrow"><span>✦</span> A nova gráfica digital de Moçambique</p>
-        <h1>Descreva.<br>A IA cria.<br><em>Nós imprimimos.</em></h1>
-        <p class="hero-lead">Transforme uma ideia em três propostas profissionais, veja o resultado num mockup realista e encomende — tudo numa só plataforma.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="#studio">Criar design grátis <span>↗</span></a>
-          <a class="button ghost" href="#catalogo">Explorar produtos</a>
-        </div>
-        <div class="trust-row">
-          <span><b>✓</b> Sem experiência em design</span>
-          <span><b>✓</b> Revisão antes de imprimir</span>
-          <span><b>✓</b> Entrega local</span>
-        </div>
+        <p class="eyebrow"><span>✦</span> DESIGN STUDIO S COLOR</p>
+        <h1>A sua ideia.<br><em>Na sua camiseta.</em></h1>
+        <p>Crie uniformes, merchandising, camisetas para eventos ou para a sua marca. Personalize online, veja o resultado e receba em Moçambique.</p>
+        <div class="hero-actions"><a class="primary-button" href="#editor">Começar a criar <span>→</span></a><a class="text-link" href="#como-funciona">Ver como funciona</a></div>
+        <div class="trust"><span>✓ Sem quantidade mínima</span><span>✓ Revisão da arte</span><span>✓ Entrega local</span></div>
       </div>
-      <div class="hero-visual">
-        <img src="assets/hero-print-mozambique.png" alt="Conjunto de materiais personalizados com padrões contemporâneos inspirados em Moçambique">
-        <div class="hero-chip chip-ai"><span>✦</span><div><small>CRIADO COM IA</small><b>3 propostas em segundos</b></div></div>
-        <div class="hero-chip chip-delivery"><span>⌁</span><div><small>ENTREGA LOCAL</small><b>Maputo e arredores</b></div></div>
+      <div class="hero-product">
+        <span class="hero-badge">A partir de<br><b>650 MT</b></span>
+        <img src="assets/tshirt-designer-white-v1.png" alt="Camiseta branca personalizável">
+        <div class="hero-print"><small>FEITO EM</small><strong>MAPUTO</strong><i>✦</i></div>
       </div>
     </section>
 
-    <section class="social-proof">
-      <p>Da ideia ao material impresso, sem complicações.</p>
-      <div><span>RESTAURANTES</span><i>✦</i><span>EMPREENDEDORES</span><i>✦</i><span>EVENTOS</span><i>✦</i><span>MODA</span><i>✦</i><span>TECNOLOGIA</span></div>
-    </section>
+    <section class="editor-wrap" id="editor">
+      <div class="editor-heading"><div><p class="eyebrow"><span>01</span> CRIE ONLINE</p><h2>Estúdio de camisetas</h2></div><p>Escolha o produto, personalize a frente ou as costas e veja o orçamento em tempo real.</p></div>
+      <div class="editor-app">
+        <div class="editor-topbar"><div><span class="status"></span><b>Design sem título</b><small>Guardado neste dispositivo</small></div><div><button id="reset-design">Recomeçar</button><button id="share-design">Partilhar</button></div></div>
 
-    <section class="catalog section" id="catalogo">
-      <div class="section-head">
-        <div><p class="kicker">Catálogo</p><h2>Escolha o que quer <em>criar.</em></h2></div>
-        <p>Formatos profissionais, produção sob medida e quantidades para todos os negócios.</p>
-      </div>
-      <div class="product-grid">
-        <button class="product-card" data-product="Cartão de visita"><span class="product-art card-art"><i></i><i></i></span><b>Cartões de visita</b><small>A partir de 750 MT</small></button>
-        <button class="product-card" data-product="Flyer"><span class="product-art flyer-art"><i>✦</i></span><b>Flyers</b><small>A partir de 1.200 MT</small></button>
-        <button class="product-card" data-product="Banner"><span class="product-art banner-art"><i>IMPACTO</i></span><b>Banners e lonas</b><small>A partir de 1.450 MT</small></button>
-        <button class="product-card" data-product="Menu"><span class="product-art menu-art"><i>MENU</i><u></u><u></u><u></u></span><b>Menus</b><small>A partir de 980 MT</small></button>
-        <button class="product-card" data-product="Autocolante"><span class="product-art sticker-art"><i>S</i></span><b>Autocolantes</b><small>A partir de 600 MT</small></button>
-        <button class="product-card" data-product="T-shirt"><span class="product-art shirt-art"><i>★</i></span><b>T-shirts</b><small>A partir de 650 MT/un.</small></button>
-      </div>
-    </section>
-
-    <section class="ai-intro">
-      <div><span class="ai-orb">✦</span><p class="kicker">S Color AI Studio</p><h2>O seu designer criativo,<br><em>disponível agora.</em></h2></div>
-      <p>Descreva o seu negócio e o que deseja comunicar. A plataforma cria três direções visuais pensadas para o seu setor e prontas para visualizar.</p>
-    </section>
-
-    <section class="studio section" id="studio">
-      <div class="studio-shell">
-        <aside class="studio-controls">
-          <div class="studio-title"><span class="ai-dot">✦</span><div><small>DESIGN MAKER</small><b>Criar com inteligência artificial</b></div></div>
-          <div class="step-label"><span>1</span><div><b>Conte-nos o que precisa</b><small>Quanto mais detalhes, melhor o resultado.</small></div></div>
-          <label>Material
-            <select id="material-select">
-              <option>Cartão de visita</option><option>Flyer</option><option>Banner</option><option>Menu</option><option>Autocolante</option><option>T-shirt</option>
-            </select>
-          </label>
-          <label>Setor do negócio
-            <select id="sector-select">
-              <option>Restaurante</option><option>Tecnologia</option><option>Moda</option><option>Beleza</option><option>Construção</option><option>Eventos</option><option>Educação</option><option>Outro</option>
-            </select>
-          </label>
-          <label>Descreva a sua ideia
-            <textarea id="idea-input" rows="5" placeholder="Ex.: Restaurante de mariscos em Maputo, ambiente familiar, quero destacar entregas e pratos frescos..."></textarea>
-          </label>
-          <div class="tone-picker"><span>Estilo pretendido</span><div><button class="tone active" data-tone="Vibrante">Vibrante</button><button class="tone" data-tone="Elegante">Elegante</button><button class="tone" data-tone="Minimalista">Minimalista</button></div></div>
-          <button class="button ai-button" id="generate-button"><span>✦</span> Gerar 3 propostas</button>
-          <p class="control-note">A IA cria conceitos iniciais. A nossa equipa verifica a arte antes da produção.</p>
+        <aside class="tool-rail" aria-label="Ferramentas de design">
+          <button class="tool active" data-panel="product-panel"><span>◫</span>Produto</button>
+          <button class="tool" data-panel="upload-panel"><span>↑</span>Carregar</button>
+          <button class="tool" data-panel="text-panel"><span>T</span>Texto</button>
+          <button class="tool" data-panel="ai-panel"><span>✦</span>IA</button>
+          <button class="tool" data-panel="templates-panel"><span>▦</span>Modelos</button>
         </aside>
 
-        <div class="studio-workspace">
-          <div class="workspace-toolbar">
-            <div><span class="status-dot"></span><b>Pré-visualização</b></div>
-            <div class="view-switch"><button class="active" data-view="mockup">Mockup</button><button data-view="flat">Arte</button></div>
-          </div>
-          <div class="workspace-stage" id="workspace-stage">
-            <div class="mockup-scene">
-              <div class="mockup-object business-card" id="mockup-object">
-                <div class="design-face style-one" id="design-face"><small id="mockup-sector">RESTAURANTE</small><strong id="mockup-title">SABORES<br>DE MAPUTO</strong><span>✦</span><p>Qualidade local. Sabor memorável.</p></div>
-              </div>
-              <span class="scene-shadow"></span>
+        <aside class="tool-panel">
+          <section class="panel active" id="product-panel">
+            <p class="panel-kicker">PRODUTO</p><h3>Escolha a sua camiseta</h3>
+            <button class="product-option selected" data-product="classic" data-name="Camiseta Clássica" data-price="650"><span class="product-thumb">T</span><span><b>Clássica</b><small>100% algodão · 160g</small></span><strong>650 MT</strong></button>
+            <button class="product-option" data-product="premium" data-name="Camiseta Premium" data-price="850"><span class="product-thumb premium">T</span><span><b>Premium</b><small>Algodão macio · 190g</small></span><strong>850 MT</strong></button>
+            <button class="product-option" data-product="oversized" data-name="Camiseta Oversized" data-price="1050"><span class="product-thumb oversized">T</span><span><b>Oversized</b><small>Corte amplo · 240g</small></span><strong>1.050 MT</strong></button>
+            <div class="color-section"><div><b>Cor da camiseta</b><span id="color-name">Branco</span></div><div class="swatches"><button class="swatch selected" style="--swatch:#f7f4ec" data-color="Branco" data-filter="none"></button><button class="swatch" style="--swatch:#18191d" data-color="Preto" data-filter="brightness(.22)"></button><button class="swatch" style="--swatch:#17304f" data-color="Azul-marinho" data-filter="brightness(.42) sepia(1) hue-rotate(168deg) saturate(3.2)"></button><button class="swatch" style="--swatch:#a62d38" data-color="Vermelho" data-filter="brightness(.72) sepia(1) hue-rotate(305deg) saturate(4)"></button><button class="swatch" style="--swatch:#1e6f50" data-color="Verde" data-filter="brightness(.65) sepia(1) hue-rotate(95deg) saturate(2.5)"></button><button class="swatch" style="--swatch:#e2a92f" data-color="Mostarda" data-filter="brightness(.9) sepia(1) hue-rotate(355deg) saturate(2.3)"></button></div></div>
+          </section>
+
+          <section class="panel" id="upload-panel"><p class="panel-kicker">A SUA ARTE</p><h3>Carregue um ficheiro</h3><label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label><input id="art-upload" type="file" accept="image/png,image/jpeg" hidden><p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p></section>
+
+          <section class="panel" id="text-panel"><p class="panel-kicker">TEXTO</p><h3>Adicione uma mensagem</h3><label>O seu texto<input id="custom-text" value="MAPUTO CRIA"></label><label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label><label>Cor<input id="text-color" type="color" value="#111111"></label><button class="panel-action" id="add-text">Aplicar texto</button></section>
+
+          <section class="panel" id="ai-panel"><p class="panel-kicker">DESIGN COM IA</p><h3>Descreva a sua ideia</h3><label>O que devemos criar?<textarea id="ai-prompt" rows="5" placeholder="Ex.: Camiseta para um restaurante de mariscos em Maputo, moderna e vibrante..."></textarea></label><div class="style-chips"><button class="selected">Vibrante</button><button>Minimalista</button><button>Elegante</button></div><button class="panel-action gradient" id="generate-ai"><span>✦</span> Gerar conceito</button><small class="ai-note">A nossa equipa revê a arte antes da impressão.</small></section>
+
+          <section class="panel" id="templates-panel"><p class="panel-kicker">MODELOS</p><h3>Comece com uma ideia</h3><div class="template-grid"><button data-template="maputo"><span class="template maputo">MAPUTO<br><b>CRIA</b></span>Maputo</button><button data-template="team"><span class="template team">NOSSA<br>EQUIPA</span>Equipa</button><button data-template="event"><span class="template event">VIVA<br>2026</span>Evento</button><button data-template="brand"><span class="template brand-template">SUA<br>MARCA</span>Marca</button></div></section>
+        </aside>
+
+        <section class="design-workspace">
+          <div class="canvas-toolbar"><div class="side-toggle"><button class="active" data-side="front">Frente</button><button data-side="back">Costas</button></div><div class="zoom-controls"><button id="zoom-out">−</button><span id="zoom-value">100%</span><button id="zoom-in">+</button></div></div>
+          <div class="shirt-canvas">
+            <div class="shirt-wrap" id="shirt-wrap">
+              <img class="shirt-image" id="shirt-image" src="assets/tshirt-designer-white-v1.png" alt="Pré-visualização da camiseta">
+              <div class="print-zone" id="print-zone"><div class="design-content style-maputo" id="design-content"><small>FEITO EM</small><strong>MAPUTO</strong><i>✦</i></div><img id="uploaded-art" alt="Arte carregada"></div>
             </div>
-            <div class="zoom-hint">Arraste para visualizar • 100%</div>
+            <span class="print-guide">ÁREA DE IMPRESSÃO</span>
           </div>
-          <div class="proposal-area">
-            <div class="proposal-head"><div><span class="step-number">2</span><b>Escolha uma proposta</b></div><small>Clique para aplicar ao mockup</small></div>
-            <div class="proposal-grid" id="proposal-grid">
-              <button class="proposal selected" data-style="one"><span class="mini-layout mini-one"><b>VIVA</b><i></i></span><small>Energia local</small></button>
-              <button class="proposal" data-style="two"><span class="mini-layout mini-two"><b>FORMA</b><i></i></span><small>Moderno editorial</small></button>
-              <button class="proposal" data-style="three"><span class="mini-layout mini-three"><b>RAIZ</b><i></i></span><small>Cultura contemporânea</small></button>
-            </div>
-          </div>
-        </div>
+          <div class="canvas-help"><span>↔ Arraste a arte para posicionar</span><span>Impressão frontal incluída</span></div>
+        </section>
+
+        <aside class="order-panel">
+          <p class="panel-kicker">O SEU PEDIDO</p><h3 id="summary-product">Camiseta Clássica</h3><p class="summary-meta"><span id="summary-color">Branco</span> · Frente personalizada</p>
+          <div class="quality-row"><span>Qualidade de impressão</span><b>HD</b></div>
+          <div class="size-head"><b>Tamanhos e quantidades</b><small>Total: <span id="total-units">1</span></small></div>
+          <div class="size-grid"><label>S<input class="size-qty" type="number" min="0" value="0"></label><label>M<input class="size-qty" type="number" min="0" value="1"></label><label>L<input class="size-qty" type="number" min="0" value="0"></label><label>XL<input class="size-qty" type="number" min="0" value="0"></label><label>2XL<input class="size-qty" type="number" min="0" value="0"></label></div>
+          <div class="price-box"><div><span>Camisetas</span><b id="shirts-price">650 MT</b></div><div><span>Preparação da arte</span><b>Incluída</b></div><div><span>Entrega em Maputo</span><b>A calcular</b></div><div class="total"><span>Total estimado</span><strong id="order-total">650 MT</strong></div><small id="unit-price">650 MT por unidade</small></div>
+          <button class="checkout-button" id="continue-order">Continuar pedido <span>→</span></button>
+          <p class="secure-note">✓ Revisão humana antes de imprimir</p>
+        </aside>
       </div>
     </section>
 
-    <section class="quote section" id="orcamento">
-      <div class="quote-copy">
-        <p class="kicker">Orçamento automático</p>
-        <h2>Preço claro.<br><em>Sem surpresas.</em></h2>
-        <p>Configure a quantidade, o material e o acabamento. O valor estimado é atualizado na hora e inclui preparação da arte.</p>
-        <ul><li><span>✓</span> Revisão técnica da arte</li><li><span>✓</span> Impressão e acabamento</li><li><span>✓</span> Acompanhamento do pedido</li></ul>
-      </div>
-      <div class="quote-calculator">
-        <div class="calculator-head"><div><small>O SEU ORÇAMENTO</small><b id="quote-product">Cartão de visita</b></div><span class="quote-live">● AO VIVO</span></div>
-        <div class="calculator-grid">
-          <label>Quantidade<input type="number" id="quantity-input" min="1" value="100"></label>
-          <label>Material<select id="paper-select"><option value="standard">Couché standard</option><option value="premium">Premium fosco</option><option value="eco">Reciclado</option></select></label>
-          <label>Acabamento<select id="finish-select"><option value="none">Sem acabamento extra</option><option value="matte">Laminação fosca</option><option value="gloss">Laminação brilhante</option></select></label>
-          <label>Entrega<select id="delivery-select"><option value="pickup">Levantar em Maputo</option><option value="maputo">Entrega em Maputo</option><option value="matola">Entrega na Matola</option><option value="province">Outra província</option></select></label>
-        </div>
-        <div class="price-lines"><p><span>Produção estimada</span><b id="production-price">750 MT</b></p><p><span>Entrega</span><b id="delivery-price">Grátis</b></p></div>
-        <div class="quote-total"><div><small>TOTAL ESTIMADO</small><strong id="total-price">750 MT</strong></div><span>IVA incluído</span></div>
-        <button class="button checkout-button" id="checkout-button">Finalizar pedido <span>→</span></button>
-        <p class="calculator-note">O preço final será confirmado após a revisão do ficheiro e das especificações.</p>
-      </div>
-    </section>
+    <section class="benefits" id="qualidade"><article><span>01</span><h3>Impressão que dura</h3><p>Técnica escolhida conforme a arte, o tecido e a quantidade.</p></article><article><span>02</span><h3>Uma ou mil peças</h3><p>Produzimos pedidos individuais, equipas, eventos e marcas.</p></article><article><span>03</span><h3>Entrega em Moçambique</h3><p>Prazo e transporte confirmados antes do pagamento.</p></article><article><span>04</span><h3>Ajuda de verdade</h3><p>Revemos resolução, cores, posição e tamanho da impressão.</p></article></section>
 
-    <section class="process section" id="processo">
-      <div class="section-head"><div><p class="kicker">Simples do início ao fim</p><h2>Você cria.<br><em>Nós cuidamos do resto.</em></h2></div></div>
-      <div class="process-grid">
-        <article><span>01</span><div class="process-icon">✎</div><h3>Descreva a ideia</h3><p>Escolha o produto, setor e diga à IA o que deseja comunicar.</p></article>
-        <article><span>02</span><div class="process-icon">✦</div><h3>Escolha o design</h3><p>Compare três propostas e visualize a sua favorita no produto.</p></article>
-        <article><span>03</span><div class="process-icon">▤</div><h3>Confirme o preço</h3><p>Ajuste quantidade e acabamento com orçamento instantâneo.</p></article>
-        <article><span>04</span><div class="process-icon">⌁</div><h3>Receba localmente</h3><p>Produzimos em Maputo e coordenamos a entrega consigo.</p></article>
-      </div>
-    </section>
-
-    <section class="local-banner">
-      <div><p class="kicker">Feito aqui. Entregue perto.</p><h2>Design global.<br><em>Produção moçambicana.</em></h2><p>A tecnologia acelera a criação; a nossa equipa garante qualidade, acabamento e apoio humano em cada encomenda.</p><a class="button light" href="#studio">Criar o meu material <span>↗</span></a></div>
-      <div class="maputo-mark"><span>25°58′S</span><b>MAPUTO</b><span>32°35′E</span><i>✦</i></div>
-    </section>
+    <section class="how" id="como-funciona"><div><p class="eyebrow"><span>02</span> SIMPLES E RÁPIDO</p><h2>Da ideia à camiseta<br><em>em quatro passos.</em></h2></div><ol><li><b>Escolha</b><span>Modelo, cor e tamanhos.</span></li><li><b>Crie</b><span>Carregue a arte, escreva ou use IA.</span></li><li><b>Confirme</b><span>Receba o preço e aprove o mockup.</span></li><li><b>Receba</b><span>Produção e entrega local.</span></li></ol></section>
   </main>
 
-  <footer>
-    <div><a class="brand footer-brand" href="#inicio"><span class="brand-symbol"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>AI STUDIO</small></span></a><p>A plataforma inteligente para criar e imprimir em Moçambique.</p></div>
-    <div><b>Plataforma</b><a href="#catalogo">Produtos</a><a href="#studio">Criar com IA</a><a href="#orcamento">Orçamentos</a></div>
-    <div><b>Contacto</b><a href="mailto:info@scolorprint.com">info@scolorprint.com</a><a href="tel:+258849900402">+258 84 990 0402</a><span>Maputo, Moçambique</span></div>
-    <div class="footer-bottom"><span>© <span id="year"></span> S Color Print. Todos os direitos reservados.</span><span>Produzido com criatividade em Moçambique.</span></div>
-  </footer>
+  <footer id="ajuda"><div class="brand footer-brand"><span class="brand-bars"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>CAMISETAS PERSONALIZADAS</small></span></div><div><b>Precisa de ajuda?</b><a href="mailto:info@scolorprint.com">info@scolorprint.com</a><a href="tel:+258849900402">+258 84 990 0402</a></div><div><b>Localização</b><span>Maputo, Moçambique</span><span>Produção e entrega local</span></div><small>© <span id="year"></span> S Color Print</small></footer>
 
-  <a class="whatsapp-float" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20preciso%20de%20ajuda%20com%20uma%20encomenda." aria-label="Apoio pelo WhatsApp"><span>WA</span><b>Precisa de ajuda?</b></a>
+  <a class="whatsapp" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20quero%20criar%20uma%20camiseta." target="_blank" rel="noopener"><span>WA</span><b>Ajuda</b></a>
 
-  <dialog class="checkout-modal" id="checkout-modal">
-    <button class="modal-close" id="modal-close" aria-label="Fechar">×</button>
-    <div class="modal-head"><span>03</span><div><p class="kicker">Finalizar pedido</p><h2>Quase lá.</h2><p>Envie os seus dados. Confirmaremos a arte, o preço e a entrega antes de produzir.</p></div></div>
-    <form id="order-form">
-      <input type="hidden" name="_subject" value="Novo pedido da plataforma — S Color Print">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="resumo" id="order-summary">
-      <div class="form-row"><label>Nome completo<input type="text" name="nome" required></label><label>Email<input type="email" name="email" required></label></div>
-      <div class="form-row"><label>Telefone / WhatsApp<input type="tel" name="telefone" required></label><label>Local de entrega<input type="text" name="local_entrega" placeholder="Bairro, cidade ou província" required></label></div>
-      <label>Observações<textarea name="observacoes" rows="3" placeholder="Prazo, referências ou instruções especiais..."></textarea></label>
-      <div class="order-recap"><span id="modal-product">Cartão de visita • 100 unidades</span><b id="modal-total">750 MT</b></div>
-      <button class="button checkout-button" type="submit">Enviar pedido para confirmação <span>→</span></button>
-      <p class="modal-status" id="modal-status" role="status" aria-live="polite"></p>
-    </form>
-  </dialog>
-
+  <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
   <script src="script.js"></script>
 </body>
 </html>
