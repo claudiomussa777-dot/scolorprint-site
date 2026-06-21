@@ -1,0 +1,32 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="kcRing" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d2cdb8"/>
+      <stop offset="1" stop-color="#8a8472"/>
+    </linearGradient>
+    <linearGradient id="kcTag" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dad4be"/>
+    </linearGradient>
+    <filter id="kcShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dx="0" dy="14"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="305" cy="555" rx="160" ry="12" fill="#000" opacity=".22"/>
+  <g filter="url(#kcShadow)" transform="rotate(-6 300 300)">
+    <!-- ring -->
+    <circle cx="300" cy="120" r="44" fill="none" stroke="url(#kcRing)" stroke-width="14"/>
+    <!-- chain links (3) -->
+    <ellipse cx="300" cy="185" rx="10" ry="14" fill="none" stroke="#a59f8b" stroke-width="4"/>
+    <ellipse cx="300" cy="215" rx="10" ry="14" fill="none" stroke="#a59f8b" stroke-width="4"/>
+    <ellipse cx="300" cy="245" rx="10" ry="14" fill="none" stroke="#a59f8b" stroke-width="4"/>
+    <!-- attachment -->
+    <rect x="290" y="265" width="20" height="14" fill="#7a7361" rx="2"/>
+    <!-- tag -->
+    <rect x="195" y="278" width="210" height="240" rx="14" fill="url(#kcTag)" stroke="#a59f8b" stroke-width="2"/>
+    <circle cx="300" cy="295" r="6" fill="#7a7361"/>
+  </g>
+</svg>

@@ -56,3 +56,14 @@
 .apply-chip:hover{transform:translateY(-2px);border-color:var(--purple);box-shadow:0 4px 10px #0001}
 .apply-chip img{width:100%;aspect-ratio:1;object-fit:contain;background:radial-gradient(circle,#fff,#f4f2ec)}
 .apply-chip span{font-size:7.5px;font-weight:700;letter-spacing:.6px;color:#555;text-transform:uppercase}
+
+/* New product thumbs */
+.product-thumb.hoodie{background:#d0c6b3;clip-path:polygon(15% 22%,32% 8%,45% 4%,55% 4%,68% 8%,85% 22%,100% 50%,90% 60%,90% 100%,10% 100%,10% 60%,0 50%)}
+.product-thumb.bottle{background:#f3eed8;clip-path:polygon(40% 5%,60% 5%,60% 16%,68% 26%,68% 100%,32% 100%,32% 26%,40% 16%);border:2px solid #b6ad95}
+.product-thumb.pillow{background:#e8dfc4;border-radius:18px}
+.product-thumb.tote{background:#e7dfc5;clip-path:polygon(18% 30%,82% 30%,90% 100%,10% 100%);border:2px solid #b6ad95}
+.product-thumb.keychain{background:radial-gradient(circle at 50% 30%,#cfc8b3 0 14%,transparent 16%),linear-gradient(#fff,#ddd5be);border-radius:7px}
+.product-thumb.frame{background:#fff;border:5px solid #3a2d1e;box-sizing:border-box}
+.product-thumb.giftkit{background:linear-gradient(135deg,#fff,#f4f2ec);position:relative;overflow:hidden}
+.product-thumb.giftkit:after{content:"";position:absolute;left:50%;top:0;bottom:0;width:8px;background:var(--pink);transform:translateX(-50%)}
+.giftkit-option strong{color:var(--pink)}

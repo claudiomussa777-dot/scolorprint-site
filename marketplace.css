@@ -155,3 +155,8 @@
 .tile-price b{font:800 14px "Manrope";color:var(--ink);letter-spacing:-.4px}
 .tile-cta{display:block;padding:12px;text-align:center;background:#fafaf6;border-top:1px solid #f0eeea;font-size:11px;font-weight:700;color:var(--purple);transition:.15s}
 .tile-cta:hover{background:var(--purple);color:#fff}
+
+/* Featured gift kit tile + popular badge */
+.product-tile.featured{border:2px solid var(--pink);box-shadow:0 14px 36px #f228781a}
+.product-tile.featured:hover{box-shadow:0 20px 50px #f2287833}
+.badge-hot{display:inline-block;margin-left:6px;background:var(--pink);color:#fff;font:800 8px "DM Sans";letter-spacing:1.2px;padding:3px 7px;border-radius:10px;vertical-align:middle}

@@ -11,17 +11,19 @@ $('#year').textContent = new Date().getFullYear();
 $('.menu-button').addEventListener('click', () => $('.site-header').classList.toggle('open'));
 
 const PRODUCTS = {
-  classic:   { name:'Camiseta Clássica',     price:650,  front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
-  premium:   { name:'Camiseta Premium',      price:850,  front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
-  oversized: { name:'Camiseta Oversized',    price:1050, front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 35×45cm' },
-  cap:       { name:'Boné brim',             price:450,  front:'assets/mockup-cap-v1.svg',                 back:null,                                        zone:{l:'36%',t:'40%',w:'28%',h:'16%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
-  mug:       { name:'Caneca cerâmica',       price:380,  front:'assets/mockup-mug-v1.svg',                 back:null,                                        zone:{l:'32%',t:'36%',w:'38%',h:'40%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO TOTAL · SUBLIMAÇÃO 360°' },
-  banner:    { name:'Banner roll-up 80×200', price:3500, front:'assets/mockup-banner-v1.svg',              back:null,                                        zone:{l:'30%',t:'19%',w:'40%',h:'66%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO · 80×200cm · LONA PREMIUM' },
-  sticker:   { name:'Autocolantes (50 un.)', price:850,  front:'assets/mockup-sticker-v1.svg',             back:null,                                        zone:{l:'30%',t:'30%',w:'40%',h:'40%'}, colorable:false, hasBack:false, printLabel:'VINIL · ø 8cm · 50 unidades' },
-  card:      { name:'Cartões visita (100)',  price:1250, front:'assets/mockup-card-v1.svg',                back:null,                                        zone:{l:'40%',t:'34%',w:'34%',h:'22%'}, colorable:false, hasBack:false, printLabel:'COUCHÉ 300g · 85×55mm · 100 un' }
+  tshirt:   { name:'Camiseta',                 price:650,  front:'assets/tshirt-designer-white-v1.png', back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
+  hoodie:   { name:'Hoodie',                   price:1500, front:'assets/mockup-hoodie-v1.svg',         back:null,                                        zone:{l:'37%',t:'34%',w:'26%',h:'18%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO · PEITO 25×25cm · DTG' },
+  mug:      { name:'Mug',                      price:380,  front:'assets/mockup-mug-v1.svg',            back:null,                                        zone:{l:'32%',t:'36%',w:'38%',h:'40%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO 360° · 330ml' },
+  cap:      { name:'Boné',                     price:450,  front:'assets/mockup-cap-v1.svg',            back:null,                                        zone:{l:'36%',t:'40%',w:'28%',h:'16%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
+  tote:     { name:'Tote bag',                 price:550,  front:'assets/mockup-tote-v1.svg',           back:null,                                        zone:{l:'32%',t:'37%',w:'36%',h:'30%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO CENTRAL · DTG 25×25cm' },
+  bottle:   { name:'Garrafa térmica',          price:950,  front:'assets/mockup-bottle-v1.svg',         back:null,                                        zone:{l:'42%',t:'30%',w:'18%',h:'40%'}, colorable:false, hasBack:false, printLabel:'GRAVAÇÃO LASER · ÁREA 7×12cm' },
+  pillow:   { name:'Almofada',                 price:720,  front:'assets/mockup-pillow-v1.svg',         back:null,                                        zone:{l:'25%',t:'27%',w:'50%',h:'50%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO TOTAL · 40×40cm' },
+  frame:    { name:'Quadro personalizado',     price:1200, front:'assets/mockup-frame-v1.svg',          back:null,                                        zone:{l:'27%',t:'22%',w:'46%',h:'58%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO ALTA RES · 30×40cm' },
+  keychain: { name:'Chaveiro',                 price:180,  front:'assets/mockup-keychain-v1.svg',       back:null,                                        zone:{l:'33%',t:'48%',w:'34%',h:'34%'}, colorable:false, hasBack:false, printLabel:'ACRÍLICO · 6×6cm · UV' },
+  giftkit:  { name:'Kit corporativo',          price:2500, front:'assets/mockup-giftkit-v1.svg',        back:null,                                        zone:{l:'22%',t:'40%',w:'56%',h:'18%'}, colorable:false, hasBack:false, printLabel:'BUNDLE: t-shirt + mug + boné + caderno' }
 };
 
-const state = { productId: 'classic', product: 'Camiseta Clássica', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0 };
+const state = { productId: 'tshirt', product: 'Camiseta', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0 };
 const shirtImage = $('#shirt-image');
 const shirtWrap = $('#shirt-wrap');
 const designContent = $('#design-content');

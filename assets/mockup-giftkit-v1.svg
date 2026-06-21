@@ -1,0 +1,45 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="boxBody" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f8f4e6"/>
+      <stop offset="1" stop-color="#cfc9b6"/>
+    </linearGradient>
+    <linearGradient id="boxLid" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7e2cf"/>
+    </linearGradient>
+    <linearGradient id="boxRibbon" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#f22878"/>
+      <stop offset="1" stop-color="#b81c5b"/>
+    </linearGradient>
+    <filter id="kitShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="11"/>
+      <feOffset dx="0" dy="16"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.32"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="300" cy="555" rx="210" ry="13" fill="#000" opacity=".22"/>
+  <g filter="url(#kitShadow)">
+    <!-- box body -->
+    <rect x="105" y="200" width="390" height="320" rx="6" fill="url(#boxBody)" stroke="#a59f8b" stroke-width="2"/>
+    <!-- lid -->
+    <rect x="95" y="170" width="410" height="60" rx="6" fill="url(#boxLid)" stroke="#a59f8b" stroke-width="2"/>
+    <!-- contents hint: t-shirt fold + mug + cap -->
+    <rect x="135" y="245" width="150" height="120" rx="3" fill="#f7f4ec" stroke="#cfc9b8" stroke-width="1.5"/>
+    <text x="210" y="312" text-anchor="middle" font-family="Manrope" font-size="14" font-weight="800" fill="#b8b3a3">T-SHIRT</text>
+    <rect x="305" y="245" width="80" height="100" rx="4" fill="#fff" stroke="#cfc9b8" stroke-width="1.5"/>
+    <path d="M385 270 q15 5 15 25 q0 20 -15 25" fill="none" stroke="#cfc9b8" stroke-width="3"/>
+    <text x="345" y="305" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="800" fill="#b8b3a3">MUG</text>
+    <rect x="135" y="385" width="240" height="65" rx="3" fill="#f7f4ec" stroke="#cfc9b8" stroke-width="1.5"/>
+    <text x="255" y="425" text-anchor="middle" font-family="Manrope" font-size="13" font-weight="800" fill="#b8b3a3">CADERNO + CANETA</text>
+    <rect x="395" y="365" width="80" height="85" rx="4" fill="#f7f4ec" stroke="#cfc9b8" stroke-width="1.5"/>
+    <text x="435" y="412" text-anchor="middle" font-family="Manrope" font-size="9" font-weight="800" fill="#b8b3a3">BONÉ</text>
+    <!-- ribbon vertical -->
+    <rect x="280" y="170" width="40" height="350" fill="url(#boxRibbon)"/>
+    <!-- bow loops -->
+    <path d="M300 170 q-55 -40 -50 5 q-5 30 50 5" fill="url(#boxRibbon)" stroke="#9b1850" stroke-width="1.5"/>
+    <path d="M300 170 q55 -40 50 5 q5 30 -50 5" fill="url(#boxRibbon)" stroke="#9b1850" stroke-width="1.5"/>
+    <circle cx="300" cy="172" r="11" fill="url(#boxRibbon)" stroke="#9b1850" stroke-width="1.5"/>
+  </g>
+</svg>
