@@ -14,7 +14,7 @@ const PRODUCTS = {
   tshirt:   { name:'Camiseta',                 price:650,  front:'assets/mockup-tshirt-real-v2.jpg',    back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'35%',t:'33%',w:'30%',h:'30%'}, colorable:false, hasBack:false, printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
   hoodie:   { name:'Hoodie',                   price:1500, front:'assets/mockup-hoodie-real-v2.jpg',    back:null,                                        zone:{l:'39%',t:'46%',w:'22%',h:'22%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO · PEITO 25×25cm · DTG' },
   mug:      { name:'Mug',                      price:380,  front:'assets/mockup-mug-real-v2.jpg',       back:null,                                        zone:{l:'44%',t:'38%',w:'22%',h:'22%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO 360° · 330ml' },
-  cap:      { name:'Boné',                     price:450,  front:'assets/mockup-cap-real-v2.jpg',       back:null,                                        zone:{l:'42%',t:'13%',w:'16%',h:'16%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
+  cap:      { name:'Boné',                     price:450,  front:'assets/mockup-cap-real-v2.jpg',       back:null,                                        zone:{l:'40%',t:'12%',w:'18%',h:'18%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
   tote:     { name:'Tote bag',                 price:550,  front:'assets/mockup-tote-real-v2.jpg',      back:null,                                        zone:{l:'38%',t:'60%',w:'24%',h:'24%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO CENTRAL · DTG 25×25cm' },
   bottle:   { name:'Garrafa térmica',          price:950,  front:'assets/mockup-bottle-real-v2.jpg',    back:null,                                        zone:{l:'43%',t:'42%',w:'14%',h:'14%'}, colorable:false, hasBack:false, printLabel:'GRAVAÇÃO LASER · ÁREA 7×12cm' },
   pillow:   { name:'Almofada',                 price:720,  front:'assets/mockup-pillow-real-v2.jpg',    back:null,                                        zone:{l:'34%',t:'34%',w:'32%',h:'32%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO TOTAL · 40×40cm' },
@@ -23,7 +23,7 @@ const PRODUCTS = {
   giftkit:  { name:'Kit corporativo',          price:2500, front:'assets/mockup-giftkit-real-v2.jpg',   back:null,                                        zone:{l:'18%',t:'18%',w:'26%',h:'26%'}, colorable:false, hasBack:false, printLabel:'BUNDLE: t-shirt + mug + boné + caderno' }
 };
 
-const state = { productId: 'tshirt', product: 'Camiseta', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0 };
+const state = { productId: 'tshirt', product: 'Camiseta', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0, scale: 1 };
 const shirtImage = $('#shirt-image');
 const shirtWrap = $('#shirt-wrap');
 const designContent = $('#design-content');
@@ -40,8 +40,8 @@ function setProduct(id) {
   state.product = product.name;
   state.basePrice = product.price;
   state.side = 'Frente';
-  state.dx = 0; state.dy = 0;
-  printZone.style.transform = '';
+  state.dx = 0; state.dy = 0; state.scale = 1;
+  applyPrintTransform();
   shirtImage.src = product.front;
   shirtImage.alt = `Pré-visualização de ${product.name}`;
   printZone.style.left = product.zone.l;
@@ -51,7 +51,6 @@ function setProduct(id) {
   colorSection.style.display = product.colorable ? '' : 'none';
   sideToggle.style.display = product.hasBack ? '' : 'none';
   printGuide.textContent = product.printLabel;
-  printZone.style.mixBlendMode = 'multiply';
   $('#summary-product').textContent = product.name;
   const meta = product.colorable ? `${state.color} · Frente personalizada` : 'Personalização total';
   $('.summary-meta').textContent = meta;
@@ -278,15 +277,40 @@ $('#zoom-in').addEventListener('click', () => setZoom(Math.min(1.25, state.zoom 
 $('#zoom-out').addEventListener('click', () => setZoom(Math.max(.75, state.zoom - .05)));
 function setZoom(value) { state.zoom = value; shirtWrap.style.transform = `scale(${value})`; $('#zoom-value').textContent = `${Math.round(value * 100)}%`; }
 
+const resizeHandle = $('#resize-handle');
+function applyPrintTransform() {
+  printZone.style.transform = `translate(${state.dx}px,${state.dy}px) scale(${state.scale})`;
+}
+
 let dragStart = null;
-printZone.addEventListener('pointerdown', event => { dragStart = { x: event.clientX, y: event.clientY, dx: state.dx, dy: state.dy }; printZone.setPointerCapture(event.pointerId); });
+printZone.addEventListener('pointerdown', event => {
+  if (event.target === resizeHandle) return;
+  dragStart = { x: event.clientX, y: event.clientY, dx: state.dx, dy: state.dy };
+  printZone.setPointerCapture(event.pointerId);
+});
 printZone.addEventListener('pointermove', event => {
   if (!dragStart) return;
-  state.dx = Math.max(-35, Math.min(35, dragStart.dx + event.clientX - dragStart.x));
-  state.dy = Math.max(-45, Math.min(45, dragStart.dy + event.clientY - dragStart.y));
-  printZone.style.transform = `translate(${state.dx}px,${state.dy}px)`;
+  state.dx = Math.max(-90, Math.min(90, dragStart.dx + event.clientX - dragStart.x));
+  state.dy = Math.max(-110, Math.min(110, dragStart.dy + event.clientY - dragStart.y));
+  applyPrintTransform();
 });
 printZone.addEventListener('pointerup', () => dragStart = null);
+printZone.addEventListener('pointercancel', () => dragStart = null);
+
+let resizeStart = null;
+resizeHandle.addEventListener('pointerdown', event => {
+  event.stopPropagation();
+  resizeStart = { y: event.clientY, scale: state.scale };
+  resizeHandle.setPointerCapture(event.pointerId);
+});
+resizeHandle.addEventListener('pointermove', event => {
+  if (!resizeStart) return;
+  const delta = (event.clientY - resizeStart.y) / 160;
+  state.scale = Math.max(0.4, Math.min(2.4, resizeStart.scale + delta));
+  applyPrintTransform();
+});
+resizeHandle.addEventListener('pointerup', () => resizeStart = null);
+resizeHandle.addEventListener('pointercancel', () => resizeStart = null);
 
 $$('.size-qty').forEach(input => input.addEventListener('input', updatePrice));
 function getQuantity() { return $$('.size-qty').reduce((sum, input) => sum + Math.max(0, Number(input.value) || 0), 0); }
