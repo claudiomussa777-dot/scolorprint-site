@@ -20,3 +20,20 @@
 .ai-loading span:nth-child(4){animation-delay:.45s}
 @keyframes ai-shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 .ai-error{margin:10px 0 0;padding:10px;background:#fdeef1;color:#a52044;border-radius:6px;font-size:10px;line-height:1.5;text-align:center}
+
+/* Three doors — marketplace entry */
+.three-doors{max-width:var(--max);margin:0 auto 70px;padding:0 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.door{position:relative;padding:30px 26px 26px;border-radius:14px;border:1px solid var(--line);background:#fff;display:flex;flex-direction:column;gap:10px;transition:.18s;overflow:hidden;min-height:180px}
+.door:hover{transform:translateY(-3px);border-color:var(--ink);box-shadow:0 18px 40px #00000018}
+.door-kicker{font:800 9px "DM Sans";letter-spacing:2.2px;color:#fff;background:var(--ink);padding:5px 9px;border-radius:20px;width:max-content}
+.door strong{font:800 24px/1.1 "Manrope";letter-spacing:-.6px;margin-top:4px}
+.door small{font-size:11px;color:var(--muted);line-height:1.55;max-width:90%}
+.door-arrow{position:absolute;right:22px;bottom:22px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:18px;font-weight:700;background:var(--paper);transition:.2s}
+.door:hover .door-arrow{background:var(--pink);color:#fff;transform:translateX(4px)}
+.door-customer .door-kicker{background:var(--pink)}
+.door-customer:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff 60%,#ffe7ef 100%);z-index:-1}
+.door-designer .door-kicker{background:var(--purple)}
+.door-designer:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff 60%,#ece8ff 100%);z-index:-1}
+.door-partner .door-kicker{background:var(--green)}
+.door-partner:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff 60%,#dff3ea 100%);z-index:-1}
+@media(max-width:850px){.three-doors{grid-template-columns:1fr;padding:0 18px;margin-bottom:40px}}
