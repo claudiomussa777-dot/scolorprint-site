@@ -10,12 +10,53 @@ const API_BASE = (() => {
 $('#year').textContent = new Date().getFullYear();
 $('.menu-button').addEventListener('click', () => $('.site-header').classList.toggle('open'));
 
-const state = { product: 'Camiseta Clássica', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0 };
+const PRODUCTS = {
+  classic:   { name:'Camiseta Clássica',     price:650,  front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
+  premium:   { name:'Camiseta Premium',      price:850,  front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
+  oversized: { name:'Camiseta Oversized',    price:1050, front:'assets/tshirt-designer-white-v1.png',      back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'38%',t:'29%',w:'24%',h:'34%'}, colorable:true,  hasBack:true,  printLabel:'ÁREA DE IMPRESSÃO · FRENTE 35×45cm' },
+  cap:       { name:'Boné brim',             price:450,  front:'assets/mockup-cap-v1.svg',                 back:null,                                        zone:{l:'36%',t:'40%',w:'28%',h:'16%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
+  mug:       { name:'Caneca cerâmica',       price:380,  front:'assets/mockup-mug-v1.svg',                 back:null,                                        zone:{l:'32%',t:'36%',w:'38%',h:'40%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO TOTAL · SUBLIMAÇÃO 360°' },
+  banner:    { name:'Banner roll-up 80×200', price:3500, front:'assets/mockup-banner-v1.svg',              back:null,                                        zone:{l:'30%',t:'19%',w:'40%',h:'66%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO · 80×200cm · LONA PREMIUM' },
+  sticker:   { name:'Autocolantes (50 un.)', price:850,  front:'assets/mockup-sticker-v1.svg',             back:null,                                        zone:{l:'30%',t:'30%',w:'40%',h:'40%'}, colorable:false, hasBack:false, printLabel:'VINIL · ø 8cm · 50 unidades' },
+  card:      { name:'Cartões visita (100)',  price:1250, front:'assets/mockup-card-v1.svg',                back:null,                                        zone:{l:'40%',t:'34%',w:'34%',h:'22%'}, colorable:false, hasBack:false, printLabel:'COUCHÉ 300g · 85×55mm · 100 un' }
+};
+
+const state = { productId: 'classic', product: 'Camiseta Clássica', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0 };
 const shirtImage = $('#shirt-image');
 const shirtWrap = $('#shirt-wrap');
 const designContent = $('#design-content');
 const uploadedArt = $('#uploaded-art');
 const printZone = $('#print-zone');
+const colorSection = $('#color-section');
+const sideToggle = $('.side-toggle');
+const printGuide = $('.print-guide');
+
+function setProduct(id) {
+  const product = PRODUCTS[id];
+  if (!product) return;
+  state.productId = id;
+  state.product = product.name;
+  state.basePrice = product.price;
+  state.side = 'Frente';
+  state.dx = 0; state.dy = 0;
+  printZone.style.transform = '';
+  shirtImage.src = product.front;
+  shirtImage.alt = `Pré-visualização de ${product.name}`;
+  printZone.style.left = product.zone.l;
+  printZone.style.top = product.zone.t;
+  printZone.style.width = product.zone.w;
+  printZone.style.height = product.zone.h;
+  colorSection.style.display = product.colorable ? '' : 'none';
+  sideToggle.style.display = product.hasBack ? '' : 'none';
+  printGuide.textContent = product.printLabel;
+  printZone.style.mixBlendMode = product.colorable ? printZone.style.mixBlendMode : 'normal';
+  $('#summary-product').textContent = product.name;
+  const meta = product.colorable ? `${state.color} · Frente personalizada` : 'Personalização total';
+  $('.summary-meta').textContent = meta;
+  $$('.side-toggle button').forEach(b => b.classList.toggle('active', b.dataset.side === 'front'));
+  shirtWrap.classList.remove('back-view');
+  updatePrice();
+}
 
 $$('.tool').forEach(button => button.addEventListener('click', () => {
   $$('.tool').forEach(item => item.classList.remove('active'));
@@ -27,10 +68,7 @@ $$('.tool').forEach(button => button.addEventListener('click', () => {
 $$('.product-option').forEach(button => button.addEventListener('click', () => {
   $$('.product-option').forEach(item => item.classList.remove('selected'));
   button.classList.add('selected');
-  state.product = button.dataset.name;
-  state.basePrice = Number(button.dataset.price);
-  $('#summary-product').textContent = state.product;
-  updatePrice();
+  setProduct(button.dataset.product);
 }));
 
 $$('.swatch').forEach(button => button.addEventListener('click', () => {
@@ -47,12 +85,14 @@ $$('.swatch').forEach(button => button.addEventListener('click', () => {
 }));
 
 $$('.side-toggle button').forEach(button => button.addEventListener('click', () => {
+  const product = PRODUCTS[state.productId];
+  if (!product.hasBack) return;
   $$('.side-toggle button').forEach(item => item.classList.remove('active'));
   button.classList.add('active');
   const isBack = button.dataset.side === 'back';
   state.side = isBack ? 'Costas' : 'Frente';
-  shirtImage.src = isBack ? 'assets/tshirt-designer-back-white-v1.png' : 'assets/tshirt-designer-white-v1.png';
-  shirtImage.alt = isBack ? 'Pré-visualização das costas da camiseta' : 'Pré-visualização da frente da camiseta';
+  shirtImage.src = isBack ? product.back : product.front;
+  shirtImage.alt = isBack ? 'Pré-visualização das costas' : 'Pré-visualização da frente';
   shirtWrap.classList.toggle('back-view', isBack);
   $('.summary-meta').textContent = `${state.color} · ${state.side} personalizada`;
   designContent.style.opacity = '1';
@@ -107,6 +147,34 @@ function applyConceptToShirt(url, label) {
   uploadedArt.alt = `Conceito IA — ${label}`;
   uploadedArt.style.display = 'block';
   designContent.style.opacity = '0';
+  renderApplyToStrip();
+}
+
+function renderApplyToStrip() {
+  let strip = $('#ai-apply-strip');
+  if (!strip) {
+    strip = document.createElement('div');
+    strip.id = 'ai-apply-strip';
+    strip.className = 'ai-apply-strip';
+    aiResults.insertAdjacentElement('afterend', strip);
+  }
+  const others = Object.entries(PRODUCTS).filter(([id]) => id !== state.productId);
+  strip.innerHTML = '<small>Aplicar esta arte a:</small><div class="apply-grid"></div>';
+  const grid = strip.querySelector('.apply-grid');
+  others.forEach(([id, product]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'apply-chip';
+    button.title = `${product.name} · ${product.price} MT`;
+    button.innerHTML = `<img src="${product.front}" alt=""><span>${product.name.split(' ')[0]}</span>`;
+    button.addEventListener('click', () => {
+      $$('.product-option').forEach(b => b.classList.toggle('selected', b.dataset.product === id));
+      setProduct(id);
+      const editor = document.querySelector('.shirt-canvas');
+      if (editor) editor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    grid.appendChild(button);
+  });
 }
 function renderConcepts(concepts) {
   aiResults.innerHTML = '';
@@ -162,6 +230,12 @@ $('#generate-ai').addEventListener('click', async () => {
 });
 
 refreshCredits();
+
+const queryProduct = new URLSearchParams(location.search).get('product');
+if (queryProduct && PRODUCTS[queryProduct]) {
+  $$('.product-option').forEach(b => b.classList.toggle('selected', b.dataset.product === queryProduct));
+  setProduct(queryProduct);
+}
 
 const templates = {
   maputo: ['style-maputo', 'FEITO EM', 'MAPUTO', '✦'],

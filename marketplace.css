@@ -140,3 +140,18 @@
   .kpi-grid{grid-template-columns:repeat(2,1fr)}
   .dash-side{position:static}
 }
+
+/* /produtos.html — catalog tiles */
+.catalog-products{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.product-tile{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.product-tile:hover{transform:translateY(-3px);box-shadow:0 14px 36px #0001;border-color:#ccc}
+.product-tile.soon{opacity:.7}
+.product-tile-image{aspect-ratio:1;background:radial-gradient(circle at 50% 50%,#fff,#e8e4db);display:grid;place-items:center;padding:18px}
+.product-tile-image img{max-width:80%;max-height:80%;object-fit:contain;filter:drop-shadow(0 12px 18px #0001)}
+.product-tile-body{padding:16px 16px 10px;flex:1;display:flex;flex-direction:column;gap:6px}
+.product-tile-body h3{font:800 16px "Manrope";letter-spacing:-.4px;margin:0}
+.product-tile-body small{font-size:11px;color:var(--muted);line-height:1.55}
+.tile-meta{display:flex;justify-content:space-between;align-items:center;margin-top:8px;padding-top:10px;border-top:1px solid #f0eeea;font-size:10px;color:#666}
+.tile-price b{font:800 14px "Manrope";color:var(--ink);letter-spacing:-.4px}
+.tile-cta{display:block;padding:12px;text-align:center;background:#fafaf6;border-top:1px solid #f0eeea;font-size:11px;font-weight:700;color:var(--purple);transition:.15s}
+.tile-cta:hover{background:var(--purple);color:#fff}

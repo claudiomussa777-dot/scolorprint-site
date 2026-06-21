@@ -1,0 +1,20 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="stickerBg" cx=".5" cy=".5" r=".55">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6e1d0"/>
+    </radialGradient>
+    <filter id="stickerShadow" x="-15%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="10"/>
+      <feOffset dx="4" dy="18"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.38"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <ellipse cx="320" cy="540" rx="190" ry="12" fill="#000" opacity=".22"/>
+  <g filter="url(#stickerShadow)" transform="rotate(-7 300 300)">
+    <circle cx="300" cy="300" r="200" fill="#ffffff" stroke="#cfc8b5" stroke-width="3"/>
+    <circle cx="300" cy="300" r="186" fill="url(#stickerBg)" stroke="#dcd5bf" stroke-width="2" stroke-dasharray="3 4"/>
+    <path d="M120 220 q40 -30 80 -10" fill="none" stroke="#fff" stroke-width="14" opacity=".7"/>
+  </g>
+</svg>

@@ -37,3 +37,22 @@
 .door-partner .door-kicker{background:var(--green)}
 .door-partner:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff 60%,#dff3ea 100%);z-index:-1}
 @media(max-width:850px){.three-doors{grid-template-columns:1fr;padding:0 18px;margin-bottom:40px}}
+
+/* Multi-product editor — category dividers + new thumbs */
+.cat-divider{margin:16px 0 6px;font:800 8px "DM Sans";letter-spacing:1.8px;color:#999;border-top:1px solid #f0eeea;padding-top:10px}
+.cat-divider:first-of-type{margin-top:0;border-top:0;padding-top:0}
+.product-thumb.cap{background:#e7ddff;clip-path:polygon(0 60%,15% 30%,40% 10%,60% 10%,85% 30%,100% 60%,100% 75%,80% 70%,75% 60%,25% 60%,20% 70%,0 75%)}
+.product-thumb.mug{background:#fff;clip-path:polygon(15% 18%,80% 18%,80% 86%,15% 86%);border:2px solid #cfccc3}
+.product-thumb.banner{background:#fff;clip-path:polygon(28% 10%,72% 10%,72% 88%,28% 88%);border:2px solid #cfccc3}
+.product-thumb.sticker{background:radial-gradient(circle,#fff 60%,#cfccc3 100%);clip-path:circle(45% at 50% 50%)}
+.product-thumb.card{background:#fff;clip-path:polygon(8% 28%,92% 28%,92% 72%,8% 72%);border:2px solid #cfccc3}
+.print-zone{transition:left .25s,top .25s,width .25s,height .25s}
+
+/* Apply-to-other-products strip in AI panel */
+.ai-apply-strip{margin-top:14px;padding:12px;background:#fafaf6;border:1px solid #ede9dc;border-radius:8px}
+.ai-apply-strip small{font-size:9px;letter-spacing:1.2px;color:#777;font-weight:700;text-transform:uppercase;display:block;margin-bottom:8px}
+.apply-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.apply-chip{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 4px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;font:inherit;transition:.15s}
+.apply-chip:hover{transform:translateY(-2px);border-color:var(--purple);box-shadow:0 4px 10px #0001}
+.apply-chip img{width:100%;aspect-ratio:1;object-fit:contain;background:radial-gradient(circle,#fff,#f4f2ec)}
+.apply-chip span{font-size:7.5px;font-weight:700;letter-spacing:.6px;color:#555;text-transform:uppercase}
