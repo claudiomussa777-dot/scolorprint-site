@@ -11,16 +11,30 @@ $('#year').textContent = new Date().getFullYear();
 $('.menu-button').addEventListener('click', () => $('.site-header').classList.toggle('open'));
 
 const PRODUCTS = {
-  tshirt:   { name:'Camiseta',                 price:650,  front:'assets/mockup-tshirt-real-v2.jpg',    back:'assets/tshirt-designer-back-white-v1.png', zone:{l:'35%',t:'33%',w:'30%',h:'30%'}, colorable:false, hasBack:false, printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm' },
-  hoodie:   { name:'Hoodie',                   price:1500, front:'assets/mockup-hoodie-real-v2.jpg',    back:null,                                        zone:{l:'39%',t:'46%',w:'22%',h:'22%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO · PEITO 25×25cm · DTG' },
-  mug:      { name:'Mug',                      price:380,  front:'assets/mockup-mug-real-v2.jpg',       back:null,                                        zone:{l:'44%',t:'38%',w:'22%',h:'22%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO 360° · 330ml' },
-  cap:      { name:'Boné',                     price:450,  front:'assets/mockup-cap-real-v2.jpg',       back:null,                                        zone:{l:'40%',t:'12%',w:'18%',h:'18%'}, colorable:false, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm' },
-  tote:     { name:'Tote bag',                 price:550,  front:'assets/mockup-tote-real-v2.jpg',      back:null,                                        zone:{l:'38%',t:'60%',w:'24%',h:'24%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO CENTRAL · DTG 25×25cm' },
-  bottle:   { name:'Garrafa térmica',          price:950,  front:'assets/mockup-bottle-real-v2.jpg',    back:null,                                        zone:{l:'43%',t:'42%',w:'14%',h:'14%'}, colorable:false, hasBack:false, printLabel:'GRAVAÇÃO LASER · ÁREA 7×12cm' },
-  pillow:   { name:'Almofada',                 price:720,  front:'assets/mockup-pillow-real-v2.jpg',    back:null,                                        zone:{l:'34%',t:'34%',w:'32%',h:'32%'}, colorable:false, hasBack:false, printLabel:'SUBLIMAÇÃO TOTAL · 40×40cm' },
-  frame:    { name:'Quadro personalizado',     price:1200, front:'assets/mockup-frame-real-v2.jpg',     back:null,                                        zone:{l:'37%',t:'34%',w:'26%',h:'26%'}, colorable:false, hasBack:false, printLabel:'IMPRESSÃO ALTA RES · 30×40cm' },
-  keychain: { name:'Chaveiro',                 price:180,  front:'assets/mockup-keychain-real-v2.jpg',  back:null,                                        zone:{l:'39%',t:'44%',w:'22%',h:'22%'}, colorable:false, hasBack:false, printLabel:'ACRÍLICO · 6×6cm · UV' },
-  giftkit:  { name:'Kit corporativo',          price:2500, front:'assets/mockup-giftkit-real-v2.jpg',   back:null,                                        zone:{l:'18%',t:'18%',w:'26%',h:'26%'}, colorable:false, hasBack:false, printLabel:'BUNDLE: t-shirt + mug + boné + caderno' }
+  tshirt:   { name:'Camiseta', price:650,  zone:{l:'35%',t:'33%',w:'30%',h:'30%'}, hasBack:false, printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm',
+              sizes:['S','M','L','XL','2XL'],
+              colors:[{name:'Branco',hex:'#f4f2ec',img:'assets/mockup-tshirt-real-v2.jpg'},{name:'Preto',hex:'#18191d',img:'assets/mockup-tshirt-black-v2.jpg'},{name:'Azul-marinho',hex:'#17304f',img:'assets/mockup-tshirt-navy-v2.jpg'},{name:'Vermelho',hex:'#a62d38',img:'assets/mockup-tshirt-red-v2.jpg'}] },
+  hoodie:   { name:'Hoodie', price:1500, zone:{l:'39%',t:'46%',w:'22%',h:'22%'}, hasBack:false, printLabel:'IMPRESSÃO · PEITO 25×25cm · DTG',
+              sizes:['S','M','L','XL','2XL'],
+              colors:[{name:'Cinza',hex:'#9a9690',img:'assets/mockup-hoodie-real-v2.jpg'},{name:'Preto',hex:'#18191d',img:'assets/mockup-hoodie-black-v2.jpg'}] },
+  mug:      { name:'Mug', price:380,  zone:{l:'44%',t:'38%',w:'22%',h:'22%'}, hasBack:false, printLabel:'SUBLIMAÇÃO 360° · 330ml',
+              sizes:['330ml','450ml'],
+              colors:[{name:'Branco',hex:'#ffffff',img:'assets/mockup-mug-real-v2.jpg'}] },
+  cap:      { name:'Boné', price:450,  zone:{l:'40%',t:'12%',w:'18%',h:'18%'}, hasBack:false, printLabel:'ÁREA FRONTAL · BORDADO/DTG · 8×4cm',
+              sizes:['S/M','L/XL'],
+              colors:[{name:'Cinza',hex:'#8f8f86',img:'assets/mockup-cap-real-v2.jpg'}] },
+  tote:     { name:'Tote bag', price:550,  zone:{l:'38%',t:'60%',w:'24%',h:'24%'}, hasBack:false, printLabel:'IMPRESSÃO CENTRAL · DTG 25×25cm',
+              sizes:['Único'], colors:[{name:'Cru',hex:'#e7dfc5',img:'assets/mockup-tote-real-v2.jpg'}] },
+  bottle:   { name:'Garrafa térmica', price:950,  zone:{l:'43%',t:'42%',w:'14%',h:'14%'}, hasBack:false, printLabel:'GRAVAÇÃO LASER · ÁREA 7×12cm',
+              sizes:['500ml','750ml'], colors:[{name:'Inox',hex:'#c0c0c0',img:'assets/mockup-bottle-real-v2.jpg'}] },
+  pillow:   { name:'Almofada', price:720,  zone:{l:'34%',t:'34%',w:'32%',h:'32%'}, hasBack:false, printLabel:'SUBLIMAÇÃO TOTAL · 40×40cm',
+              sizes:['40×40','50×50'], colors:[{name:'Branco',hex:'#ffffff',img:'assets/mockup-pillow-real-v2.jpg'}] },
+  frame:    { name:'Quadro personalizado', price:1200, zone:{l:'37%',t:'34%',w:'26%',h:'26%'}, hasBack:false, printLabel:'IMPRESSÃO ALTA RES · 30×40cm',
+              sizes:['30×40','40×50'], colors:[{name:'Madeira',hex:'#3a2d1e',img:'assets/mockup-frame-real-v2.jpg'}] },
+  keychain: { name:'Chaveiro', price:180,  zone:{l:'39%',t:'44%',w:'22%',h:'22%'}, hasBack:false, printLabel:'ACRÍLICO · 6×6cm · UV',
+              sizes:['Único'], colors:[{name:'Transparente',hex:'#dfe6ea',img:'assets/mockup-keychain-real-v2.jpg'}] },
+  giftkit:  { name:'Kit corporativo', price:2500, zone:{l:'18%',t:'18%',w:'26%',h:'26%'}, hasBack:false, printLabel:'BUNDLE: t-shirt + mug + boné + caderno',
+              sizes:['Standard','Premium'], colors:[{name:'Kraft',hex:'#cbb89a',img:'assets/mockup-giftkit-real-v2.jpg'}] }
 };
 
 const state = { productId: 'tshirt', product: 'Camiseta', basePrice: 650, color: 'Branco', side: 'Frente', zoom: 1, dx: 0, dy: 0, scale: 1 };
@@ -42,21 +56,57 @@ function setProduct(id) {
   state.side = 'Frente';
   state.dx = 0; state.dy = 0; state.scale = 1;
   applyPrintTransform();
-  shirtImage.src = product.front;
-  shirtImage.alt = `Pré-visualização de ${product.name}`;
   printZone.style.left = product.zone.l;
   printZone.style.top = product.zone.t;
   printZone.style.width = product.zone.w;
   printZone.style.height = product.zone.h;
-  colorSection.style.display = product.colorable ? '' : 'none';
   sideToggle.style.display = product.hasBack ? '' : 'none';
   printGuide.textContent = product.printLabel;
   $('#summary-product').textContent = product.name;
-  const meta = product.colorable ? `${state.color} · Frente personalizada` : 'Personalização total';
-  $('.summary-meta').textContent = meta;
   $$('.side-toggle button').forEach(b => b.classList.toggle('active', b.dataset.side === 'front'));
   shirtWrap.classList.remove('back-view');
+  $('#price-line-label').textContent = product.name + (product.sizes[0] === 'Único' || /ml|×/.test(product.sizes[0]) ? '' : 's');
+  renderColors(product);
+  renderSizes(product);
+  setColor(product.colors[0]);
   updatePrice();
+}
+
+function setColor(color) {
+  state.color = color.name;
+  shirtImage.src = color.img;
+  shirtImage.alt = `Pré-visualização de ${state.product} ${color.name}`;
+  $('#summary-color').textContent = color.name;
+  $('.summary-meta').textContent = `${color.name} · Personalização frontal`;
+  $$('#color-section .swatch').forEach(s => s.classList.toggle('selected', s.dataset.color === color.name));
+}
+
+function renderColors(product) {
+  const single = product.colors.length <= 1;
+  colorSection.style.display = single ? 'none' : '';
+  $('#color-name').textContent = product.colors[0].name;
+  const swatches = $('#color-section .swatches');
+  swatches.innerHTML = '';
+  product.colors.forEach((color, i) => {
+    const button = document.createElement('button');
+    button.className = 'swatch' + (i === 0 ? ' selected' : '');
+    button.style.setProperty('--swatch', color.hex);
+    button.dataset.color = color.name;
+    button.title = color.name;
+    button.addEventListener('click', () => { setColor(color); $('#color-name').textContent = color.name; });
+    swatches.appendChild(button);
+  });
+}
+
+function renderSizes(product) {
+  const grid = $('.size-grid');
+  grid.innerHTML = '';
+  product.sizes.forEach((size, i) => {
+    const label = document.createElement('label');
+    label.innerHTML = `${size}<input class="size-qty" type="number" min="0" value="${i === 0 ? 1 : 0}">`;
+    grid.appendChild(label);
+  });
+  $$('.size-qty').forEach(input => input.addEventListener('input', updatePrice));
 }
 
 $$('.tool').forEach(button => button.addEventListener('click', () => {
@@ -70,19 +120,6 @@ $$('.product-option').forEach(button => button.addEventListener('click', () => {
   $$('.product-option').forEach(item => item.classList.remove('selected'));
   button.classList.add('selected');
   setProduct(button.dataset.product);
-}));
-
-$$('.swatch').forEach(button => button.addEventListener('click', () => {
-  $$('.swatch').forEach(item => item.classList.remove('selected'));
-  button.classList.add('selected');
-  state.color = button.dataset.color;
-  const filters = { 'Azul-marinho': 'brightness(.25) sepia(1) hue-rotate(168deg) saturate(2)' };
-  shirtImage.style.setProperty('--shirt-filter', filters[state.color] || button.dataset.filter);
-  const darkShirt = ['Preto', 'Azul-marinho', 'Vermelho', 'Verde'].includes(state.color);
-  printZone.style.mixBlendMode = darkShirt ? 'normal' : 'multiply';
-  designContent.style.color = darkShirt ? '#ffffff' : '';
-  $('#color-name').textContent = state.color;
-  $('#summary-color').textContent = state.color;
 }));
 
 $$('.side-toggle button').forEach(button => button.addEventListener('click', () => {
@@ -167,7 +204,7 @@ function renderApplyToStrip() {
     button.type = 'button';
     button.className = 'apply-chip';
     button.title = `${product.name} · ${product.price} MT`;
-    button.innerHTML = `<img src="${product.front}" alt=""><span>${product.name.split(' ')[0]}</span>`;
+    button.innerHTML = `<img src="${product.colors[0].img}" alt=""><span>${product.name.split(' ')[0]}</span>`;
     button.addEventListener('click', () => {
       $$('.product-option').forEach(b => b.classList.toggle('selected', b.dataset.product === id));
       setProduct(id);

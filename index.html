@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621g">
+  <link rel="stylesheet" href="styles.css?v=20260621h">
   <link rel="stylesheet" href="mobile.css?v=20260621a">
 </head>
 <body>
@@ -87,7 +87,7 @@
             <p class="cat-divider">DECORAÇÃO &amp; OFERTAS</p>
             <button class="product-option" data-product="frame"><span class="product-thumb frame">Q</span><span><b>Quadro personalizado</b><small>30×40cm · moldura madeira</small></span><strong>1.200 MT</strong></button>
             <button class="product-option giftkit-option" data-product="giftkit"><span class="product-thumb giftkit">★</span><span><b>Kit corporativo</b><small>T-shirt + mug + boné + caderno · embrulhado</small></span><strong>2.500 MT</strong></button>
-            <div class="color-section" id="color-section"><div><b>Cor da camiseta</b><span id="color-name">Branco</span></div><div class="swatches"><button class="swatch selected" style="--swatch:#f7f4ec" data-color="Branco" data-filter="none"></button><button class="swatch" style="--swatch:#18191d" data-color="Preto" data-filter="brightness(.22)"></button><button class="swatch" style="--swatch:#17304f" data-color="Azul-marinho" data-filter="brightness(.42) sepia(1) hue-rotate(168deg) saturate(3.2)"></button><button class="swatch" style="--swatch:#a62d38" data-color="Vermelho" data-filter="brightness(.72) sepia(1) hue-rotate(305deg) saturate(4)"></button><button class="swatch" style="--swatch:#1e6f50" data-color="Verde" data-filter="brightness(.65) sepia(1) hue-rotate(95deg) saturate(2.5)"></button><button class="swatch" style="--swatch:#e2a92f" data-color="Mostarda" data-filter="brightness(.9) sepia(1) hue-rotate(355deg) saturate(2.3)"></button></div></div>
+            <div class="color-section" id="color-section"><div><b>Cor</b><span id="color-name">Branco</span></div><div class="swatches"><button class="swatch selected" style="--swatch:#f7f4ec" data-color="Branco" data-filter="none"></button><button class="swatch" style="--swatch:#18191d" data-color="Preto" data-filter="brightness(.22)"></button><button class="swatch" style="--swatch:#17304f" data-color="Azul-marinho" data-filter="brightness(.42) sepia(1) hue-rotate(168deg) saturate(3.2)"></button><button class="swatch" style="--swatch:#a62d38" data-color="Vermelho" data-filter="brightness(.72) sepia(1) hue-rotate(305deg) saturate(4)"></button><button class="swatch" style="--swatch:#1e6f50" data-color="Verde" data-filter="brightness(.65) sepia(1) hue-rotate(95deg) saturate(2.5)"></button><button class="swatch" style="--swatch:#e2a92f" data-color="Mostarda" data-filter="brightness(.9) sepia(1) hue-rotate(355deg) saturate(2.3)"></button></div></div>
           </section>
 
           <section class="panel" id="upload-panel"><p class="panel-kicker">A SUA ARTE</p><h3>Carregue um ficheiro</h3><label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label><input id="art-upload" type="file" accept="image/png,image/jpeg" hidden><p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p></section>
@@ -116,7 +116,7 @@
           <div class="quality-row"><span>Qualidade de impressão</span><b>HD</b></div>
           <div class="size-head"><b>Tamanhos e quantidades</b><small>Total: <span id="total-units">1</span></small></div>
           <div class="size-grid"><label>S<input class="size-qty" type="number" min="0" value="0"></label><label>M<input class="size-qty" type="number" min="0" value="1"></label><label>L<input class="size-qty" type="number" min="0" value="0"></label><label>XL<input class="size-qty" type="number" min="0" value="0"></label><label>2XL<input class="size-qty" type="number" min="0" value="0"></label></div>
-          <div class="price-box"><div><span>Camisetas</span><b id="shirts-price">650 MT</b></div><div><span>Preparação da arte</span><b>Incluída</b></div><div><span>Entrega em Maputo</span><b>A calcular</b></div><div class="total"><span>Total estimado</span><strong id="order-total">650 MT</strong></div><small id="unit-price">650 MT por unidade</small></div>
+          <div class="price-box"><div><span id="price-line-label">Camisetas</span><b id="shirts-price">650 MT</b></div><div><span>Preparação da arte</span><b>Incluída</b></div><div><span>Entrega em Maputo</span><b>A calcular</b></div><div class="total"><span>Total estimado</span><strong id="order-total">650 MT</strong></div><small id="unit-price">650 MT por unidade</small></div>
           <button class="checkout-button" id="continue-order">Continuar pedido <span>→</span></button>
           <p class="secure-note">✓ Revisão humana antes de imprimir</p>
         </aside>
@@ -133,6 +133,6 @@
   <a class="whatsapp" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20quero%20criar%20uma%20camiseta." target="_blank" rel="noopener"><span>WA</span><b>Ajuda</b></a>
 
   <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
-  <script src="script.js?v=20260621i"></script>
+  <script src="script.js?v=20260621j"></script>
 </body>
 </html>
