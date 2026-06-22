@@ -318,41 +318,46 @@ if (initSlide >= 0) showCat(initSlide);
 // if arriving with ?product=, jump straight to the design step
 if (queryProduct && PRODUCTS[queryProduct]) goStep(1);
 
-const templates = {
-  maputo: ['style-maputo', 'FEITO EM', 'MAPUTO', '✦'],
-  team: ['style-team', 'A NOSSA', 'EQUIPA', '●'],
-  event: ['style-event', 'VIVA', '2026', '✦'],
-  brand: ['style-brand', 'A SUA', 'MARCA', '+']
+/* ---- Stamp library (Modelos step) — original Scolor Print art by category ---- */
+const STAMPS = {
+  'desenhos-animados': { label: 'Desenhos animados', imgs: [
+    'assets/estampas/desenhos-animados-1.png', 'assets/estampas/desenhos-animados-2.png', 'assets/estampas/desenhos-animados-3.png',
+    'assets/cartoon-leao-v1.png', 'assets/cartoon-robo-v1.png', 'assets/cartoon-danca-v1.png', 'assets/cartoon-camaleao-v1.png'] },
+  'princesas': { label: 'Princesas', imgs: ['assets/estampas/princesas-1.png', 'assets/estampas/princesas-2.png', 'assets/estampas/princesas-3.png'] },
+  'super-herois': { label: 'Super-heróis', imgs: ['assets/estampas/super-herois-1.png', 'assets/estampas/super-herois-2.png', 'assets/estampas/super-herois-3.png'] },
+  'fe-frases': { label: 'Fé & Frases', imgs: ['assets/estampas/fe-frases-1.png', 'assets/estampas/fe-frases-2.png', 'assets/estampas/fe-frases-3.png'] },
+  'desporto': { label: 'Desporto', imgs: ['assets/estampas/desporto-1.png', 'assets/estampas/desporto-2.png', 'assets/estampas/desporto-3.png'] },
+  'streetwear': { label: 'Streetwear', imgs: ['assets/estampas/streetwear-1.png', 'assets/estampas/streetwear-2.png', 'assets/estampas/streetwear-3.png'] }
 };
-$$('[data-template]').forEach(button => button.addEventListener('click', () => {
-  const [style, small, strong, icon] = templates[button.dataset.template];
-  designContent.className = `design-content ${style}`;
-  designContent.innerHTML = `<small>${small}</small><strong>${strong}</strong><i>${icon}</i>`;
-  designContent.style.color = ['Preto', 'Azul-marinho', 'Vermelho', 'Verde'].includes(state.color) ? '#ffffff' : '';
-  uploadedArt.style.display = 'none';
-  designContent.style.opacity = '1';
-}));
-
-const cartoonModels = [
-  { name: 'Leão skater', src: 'assets/cartoon-leao-v1.png' },
-  { name: 'Robô criativo', src: 'assets/cartoon-robo-v1.png' },
-  { name: 'Dança urbana', src: 'assets/cartoon-danca-v1.png' },
-  { name: 'Camaleão DJ', src: 'assets/cartoon-camaleao-v1.png' }
-];
-const templateGrid = $('.template-grid');
-cartoonModels.forEach(model => {
-  const button = document.createElement('button');
-  button.className = 'cartoon-option';
-  button.type = 'button';
-  button.innerHTML = `<img class="cartoon-thumb" src="${model.src}" alt="${model.name}"><span>${model.name}</span>`;
-  button.addEventListener('click', () => {
-    uploadedArt.src = model.src;
-    uploadedArt.alt = model.name;
-    uploadedArt.style.display = 'block';
-    designContent.style.opacity = '0';
-  });
-  templateGrid.appendChild(button);
-});
+function applyStamp(src, label) {
+  uploadedArt.src = src;
+  uploadedArt.alt = label || 'Estampa';
+  uploadedArt.style.display = 'block';
+  designContent.style.opacity = '0';
+  if (typeof renderApplyToStrip === 'function') renderApplyToStrip();
+}
+(function buildStampLibrary() {
+  const cats = $('#stamp-cats');
+  const grid = $('#stamp-grid');
+  if (!cats || !grid) return;
+  const slugs = Object.keys(STAMPS);
+  function showCat(slug) {
+    $$('.stamp-cat', cats).forEach(b => b.classList.toggle('active', b.dataset.cat === slug));
+    grid.innerHTML = '';
+    STAMPS[slug].imgs.forEach((src, i) => {
+      const button = document.createElement('button');
+      button.className = 'stamp-thumb';
+      button.type = 'button';
+      button.title = `${STAMPS[slug].label} ${i + 1}`;
+      button.innerHTML = `<img src="${src}" alt="${STAMPS[slug].label} ${i + 1}" loading="lazy" onerror="this.closest('.stamp-thumb').classList.add('missing')">`;
+      button.addEventListener('click', () => applyStamp(src, `${STAMPS[slug].label} ${i + 1}`));
+      grid.appendChild(button);
+    });
+  }
+  cats.innerHTML = slugs.map((s, i) => `<button class="stamp-cat${i === 0 ? ' active' : ''}" type="button" data-cat="${s}">${STAMPS[s].label}</button>`).join('');
+  $$('.stamp-cat', cats).forEach(btn => btn.addEventListener('click', () => showCat(btn.dataset.cat)));
+  showCat(slugs[0]);
+})();
 
 $('#zoom-in').addEventListener('click', () => setZoom(Math.min(1.25, state.zoom + .05)));
 $('#zoom-out').addEventListener('click', () => setZoom(Math.max(.75, state.zoom - .05)));
