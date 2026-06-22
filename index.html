@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621k">
+  <link rel="stylesheet" href="styles.css?v=20260621n">
   <link rel="stylesheet" href="mobile.css?v=20260621a">
 </head>
 <body>
@@ -104,12 +104,11 @@
             </section>
 
             <section class="wstep" data-step="1">
-              <p class="panel-kicker">PASSO 2 · DESIGN</p><h3>Crie o seu design</h3>
+              <p class="panel-kicker">PASSO 2 · DESIGN</p><h3>Como quer criar?</h3>
               <div class="design-subtabs">
-                <button class="dsub active" data-sub="ai"><span>✦</span>IA</button>
+                <button class="dsub active" data-sub="ai"><span>✦</span>Criar com IA</button>
                 <button class="dsub" data-sub="templates"><span>▦</span>Modelos</button>
-                <button class="dsub" data-sub="text"><span>T</span>Texto</button>
-                <button class="dsub" data-sub="upload"><span>↑</span>Carregar</button>
+                <button class="dsub" data-sub="blank"><span>✎</span>Em branco</button>
               </div>
               <div class="dsub-content active" data-sub="ai">
                 <label>O que devemos criar?<textarea id="ai-prompt" rows="4" placeholder="Ex.: restaurante de mariscos em Maputo, moderno e vibrante..."></textarea></label>
@@ -122,13 +121,15 @@
               <div class="dsub-content" data-sub="templates">
                 <div class="template-grid"><button data-template="maputo"><span class="template maputo">MAPUTO<br><b>CRIA</b></span>Maputo</button><button data-template="team"><span class="template team">NOSSA<br>EQUIPA</span>Equipa</button><button data-template="event"><span class="template event">VIVA<br>2026</span>Evento</button><button data-template="brand"><span class="template brand-template">SUA<br>MARCA</span>Marca</button></div>
               </div>
-              <div class="dsub-content" data-sub="text">
+              <div class="dsub-content" data-sub="blank">
+                <p class="blank-kicker">ESCREVER TEXTO</p>
                 <label>O seu texto<input id="custom-text" value="MAPUTO CRIA"></label>
-                <label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label>
-                <label>Cor<input id="text-color" type="color" value="#111111"></label>
+                <div class="blank-row">
+                  <label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label>
+                  <label>Cor<input id="text-color" type="color" value="#111111"></label>
+                </div>
                 <button class="panel-action" id="add-text">Aplicar texto</button>
-              </div>
-              <div class="dsub-content" data-sub="upload">
+                <p class="blank-kicker" style="margin-top:20px">OU CARREGAR IMAGEM</p>
                 <label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label>
                 <input id="art-upload" type="file" accept="image/png,image/jpeg" hidden>
                 <p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p>
@@ -189,6 +190,6 @@
   </aside>
 
   <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
-  <script src="script.js?v=20260621n"></script>
+  <script src="script.js?v=20260621o"></script>
 </body>
 </html>

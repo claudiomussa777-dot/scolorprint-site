@@ -161,3 +161,13 @@
 .design-subtabs{grid-template-columns:repeat(4,1fr);gap:6px}
 .dsub{flex-direction:column;gap:5px;padding:10px 3px;font-size:10px}
 .dsub span{font-size:15px;font-weight:800}
+
+/* design step: 3 paths + blank-canvas panel */
+.design-subtabs{grid-template-columns:repeat(3,1fr)}
+.blank-kicker{font:800 9px "DM Sans";letter-spacing:1.6px;color:#aaa;margin:0 0 10px}
+.blank-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:end}
+.blank-row label{margin-bottom:0}
+.wstep .upload-box{margin-top:4px}
+.wstep [hidden]{display:none!important}
+.blank-row{grid-template-columns:1fr 64px;gap:10px;align-items:start}
+.blank-row input[type=color]{width:100%;height:38px;margin-top:7px;border:1px solid var(--line);border-radius:6px;padding:2px;background:#fff}

@@ -120,12 +120,14 @@ function goStep(n) {
   wSteps.forEach((s, i) => s.classList.toggle('active', i === wCurrent));
   wTabs.forEach((t, i) => { t.classList.toggle('active', i === wCurrent); t.classList.toggle('done', i < wCurrent); });
   stepBack.disabled = wCurrent === 0;
-  stepNext.innerHTML = wCurrent === wSteps.length - 1 ? 'Concluir ✓' : 'Seguinte <span>→</span>';
+  stepNext.innerHTML = wCurrent === wSteps.length - 1 ? 'Finalizar pedido <span>→</span>' : 'Seguinte <span>→</span>';
   $('.wizard-body').scrollTop = 0;
 }
 stepNext.addEventListener('click', () => {
-  if (wCurrent === wSteps.length - 1) document.querySelector('.order-panel').scrollIntoView({ behavior: 'smooth', block: 'center' });
-  else goStep(wCurrent + 1);
+  if (wCurrent === wSteps.length - 1) {
+    const price = updatePrice();
+    openCheckout([{ name: state.product, color: state.color, sizeLabel: sizeSummary(price), qty: price.quantity, total: price.total }]);
+  } else goStep(wCurrent + 1);
 });
 stepBack.addEventListener('click', () => goStep(wCurrent - 1));
 wTabs.forEach((t, i) => t.addEventListener('click', () => goStep(i)));
