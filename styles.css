@@ -154,3 +154,10 @@
 .wizard-nav .ghost-button{margin-top:0;width:auto;padding:13px 18px}
 .wizard-nav .ghost-button:disabled{opacity:.4;cursor:not-allowed}
 .wizard-nav .checkout-button{padding:13px}
+
+/* wizard: 2 steps + 4 design sub-options */
+.wizard-steps{display:flex}
+.wstep-tab{flex:1}
+.design-subtabs{grid-template-columns:repeat(4,1fr);gap:6px}
+.dsub{flex-direction:column;gap:5px;padding:10px 3px;font-size:10px}
+.dsub span{font-size:15px;font-weight:800}
