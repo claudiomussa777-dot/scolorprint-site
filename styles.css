@@ -76,3 +76,31 @@
 .resize-handle{position:absolute;right:-7px;bottom:-7px;width:16px;height:16px;background:var(--purple);border:2px solid #fff;border-radius:50%;cursor:nwse-resize;box-shadow:0 2px 6px #0003;z-index:5;mix-blend-mode:normal;touch-action:none}
 .resize-handle:hover{transform:scale(1.18)}
 .shirt-wrap.back-view .resize-handle{display:none}
+
+/* Cart — header button, badge, drawer */
+.cart-button{position:relative;justify-self:end;border:0;background:none;font-size:20px;padding:6px;line-height:1;cursor:pointer}
+.cart-badge{position:absolute;top:-2px;right:-4px;min-width:17px;height:17px;padding:0 4px;background:var(--pink);color:#fff;border-radius:9px;font:800 10px "DM Sans";display:flex;align-items:center;justify-content:center}
+.ghost-button{width:100%;margin-top:8px;border:1px solid var(--line);background:#fff;border-radius:7px;padding:12px;font-size:12px;font-weight:700;color:var(--ink);transition:.15s}
+.ghost-button:hover{border-color:var(--ink)}
+.cart-overlay{position:fixed;inset:0;background:#111b;backdrop-filter:blur(3px);z-index:40}
+.cart-drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:50;transform:translateX(100%);transition:transform .28s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;box-shadow:-20px 0 60px #0003}
+.cart-drawer.open{transform:translateX(0)}
+.cart-head{display:flex;align-items:center;justify-content:space-between;padding:22px 24px;border-bottom:1px solid var(--line)}
+.cart-head b{font:800 18px "Manrope";letter-spacing:-.5px}
+.cart-close{border:0;background:none;font-size:28px;line-height:1;cursor:pointer;color:#888}
+.cart-items{flex:1;overflow-y:auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.cart-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#999;font-size:13px;text-align:center;padding:30px}
+.cart-empty span{font-size:11px;color:#bbb}
+.cart-item{display:grid;grid-template-columns:64px 1fr auto;gap:12px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:10px}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:7px;background:#f4f2ec}
+.cart-item-info b{font:700 13px "Manrope";display:block}
+.cart-item-info small{font-size:10px;color:#888;display:block;margin-top:2px;line-height:1.5}
+.cart-item-info .ci-price{font:800 12px "Manrope";color:var(--ink);margin-top:4px}
+.cart-item-remove{border:0;background:none;font-size:18px;color:#bbb;cursor:pointer;align-self:start}
+.cart-item-remove:hover{color:#a52044}
+.cart-foot{border-top:1px solid var(--line);padding:18px 22px;display:flex;flex-direction:column;gap:10px}
+.cart-total{display:flex;justify-content:space-between;align-items:center}
+.cart-total span{font-size:12px;color:#666}
+.cart-total strong{font:800 24px "Manrope";letter-spacing:-1px}
+.cart-foot .secure-note{margin:0}
+@media(max-width:520px){.cart-drawer{width:100%}}

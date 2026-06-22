@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621h">
+  <link rel="stylesheet" href="styles.css?v=20260621i">
   <link rel="stylesheet" href="mobile.css?v=20260621a">
 </head>
 <body>
@@ -17,6 +17,7 @@
     <a class="brand" href="#top" aria-label="S Color Print"><span class="brand-bars"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>CAMISETAS PERSONALIZADAS</small></span></a>
     <nav><a href="#editor">Criar</a><a href="produtos.html">Produtos</a><a href="designers.html">Designers</a><a href="parceiros.html">Parceiros</a></nav>
     <a class="header-help" href="https://wa.me/258849900402" target="_blank" rel="noopener">Falar connosco</a>
+    <button class="cart-button" id="cart-button" aria-label="Ver carrinho"><span class="cart-ico">🛒</span><span class="cart-badge" id="cart-badge" hidden>0</span></button>
     <button class="menu-button" aria-label="Abrir menu">☰</button>
   </header>
 
@@ -117,7 +118,8 @@
           <div class="size-head"><b>Tamanhos e quantidades</b><small>Total: <span id="total-units">1</span></small></div>
           <div class="size-grid"><label>S<input class="size-qty" type="number" min="0" value="0"></label><label>M<input class="size-qty" type="number" min="0" value="1"></label><label>L<input class="size-qty" type="number" min="0" value="0"></label><label>XL<input class="size-qty" type="number" min="0" value="0"></label><label>2XL<input class="size-qty" type="number" min="0" value="0"></label></div>
           <div class="price-box"><div><span id="price-line-label">Camisetas</span><b id="shirts-price">650 MT</b></div><div><span>Preparação da arte</span><b>Incluída</b></div><div><span>Entrega em Maputo</span><b>A calcular</b></div><div class="total"><span>Total estimado</span><strong id="order-total">650 MT</strong></div><small id="unit-price">650 MT por unidade</small></div>
-          <button class="checkout-button" id="continue-order">Continuar pedido <span>→</span></button>
+          <button class="checkout-button" id="add-to-cart">Adicionar ao carrinho <span>→</span></button>
+          <button class="ghost-button" id="continue-order">Comprar agora</button>
           <p class="secure-note">✓ Revisão humana antes de imprimir</p>
         </aside>
       </div>
@@ -132,7 +134,19 @@
 
   <a class="whatsapp" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20quero%20criar%20uma%20camiseta." target="_blank" rel="noopener"><span>WA</span><b>Ajuda</b></a>
 
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho" aria-hidden="true">
+    <div class="cart-head"><b>O seu carrinho</b><button class="cart-close" id="cart-close" aria-label="Fechar">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty">O carrinho está vazio.<span>Adicione produtos do estúdio.</span></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total estimado</span><strong id="cart-total">0 MT</strong></div>
+      <button class="checkout-button" id="cart-checkout">Finalizar pedido <span>→</span></button>
+      <p class="secure-note">Entrega e pagamento confirmados antes de produzir</p>
+    </div>
+  </aside>
+
   <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
-  <script src="script.js?v=20260621j"></script>
+  <script src="script.js?v=20260621k"></script>
 </body>
 </html>

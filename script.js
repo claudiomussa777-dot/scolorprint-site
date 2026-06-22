@@ -365,16 +365,85 @@ function updatePrice() {
 function formatMzn(value) { return `${new Intl.NumberFormat('pt-PT').format(value)} MT`; }
 
 const modal = $('#order-modal');
+
+/* ---------- Cart ---------- */
+const CART_KEY = 'scolor_cart_v1';
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch { cart = []; }
+const cartDrawer = $('#cart-drawer');
+const cartOverlay = $('#cart-overlay');
+
+function saveCart() { localStorage.setItem(CART_KEY, JSON.stringify(cart)); renderCart(); }
+
+function currentSizes() {
+  const map = {};
+  $$('.size-grid label').forEach(label => {
+    const size = label.childNodes[0].textContent.trim();
+    const qty = Math.max(0, Number(label.querySelector('input').value) || 0);
+    if (qty > 0) map[size] = qty;
+  });
+  return map;
+}
+function sizeSummary(price) {
+  const sizes = currentSizes();
+  return Object.keys(sizes).length ? Object.entries(sizes).map(([s, q]) => `${q}×${s}`).join(', ') : `${price.quantity} un`;
+}
+
+function addToCart() {
+  const price = updatePrice();
+  cart.push({ id: Date.now() + Math.random().toString(36).slice(2, 6), name: state.product, color: state.color, thumb: shirtImage.src, sizeLabel: sizeSummary(price), qty: price.quantity, total: price.total });
+  saveCart();
+  openCart();
+}
+function removeFromCart(id) { cart = cart.filter(i => i.id !== id); saveCart(); }
+function cartTotal() { return cart.reduce((s, i) => s + i.total, 0); }
+
+function renderCart() {
+  const badge = $('#cart-badge');
+  badge.textContent = cart.length;
+  badge.hidden = cart.length === 0;
+  const items = $('#cart-items');
+  $('#cart-empty').style.display = cart.length ? 'none' : '';
+  $('.cart-foot').style.display = cart.length ? '' : 'none';
+  items.innerHTML = '';
+  cart.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'cart-item';
+    el.innerHTML = `<img src="${escapeHtml(item.thumb)}" alt=""><div class="cart-item-info"><b>${escapeHtml(item.name)}</b><small>${escapeHtml(item.color)} · ${escapeHtml(item.sizeLabel)}</small><span class="ci-price">${formatMzn(item.total)}</span></div><button class="cart-item-remove" title="Remover">×</button>`;
+    el.querySelector('.cart-item-remove').addEventListener('click', () => removeFromCart(item.id));
+    items.appendChild(el);
+  });
+  $('#cart-total').textContent = formatMzn(cartTotal());
+}
+
+function openCart() { cartDrawer.classList.add('open'); cartDrawer.setAttribute('aria-hidden', 'false'); cartOverlay.hidden = false; }
+function closeCart() { cartDrawer.classList.remove('open'); cartDrawer.setAttribute('aria-hidden', 'true'); cartOverlay.hidden = true; }
+
+function openCheckout(items) {
+  const lines = items.map(i => `• ${i.qty}× ${i.name} (${i.color}, ${i.sizeLabel}) — ${formatMzn(i.total)}`).join('\n');
+  const total = items.reduce((s, i) => s + i.total, 0);
+  const units = items.reduce((n, i) => n + i.qty, 0);
+  $('#order-summary').value = `${lines}\nTOTAL ESTIMADO: ${formatMzn(total)}`;
+  $('#modal-recap-text').textContent = `${items.length} ${items.length === 1 ? 'artigo' : 'artigos'} · ${units} un`;
+  $('#modal-recap-price').textContent = formatMzn(total);
+  closeCart();
+  modal.showModal();
+}
+
+$('#add-to-cart').addEventListener('click', addToCart);
+$('#cart-button').addEventListener('click', openCart);
+$('#cart-close').addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+$('#cart-checkout').addEventListener('click', () => { if (cart.length) openCheckout(cart); });
+
 $('#continue-order').addEventListener('click', () => {
   const price = updatePrice();
-  const summary = `${price.quantity} × ${state.product}, cor ${state.color}, impressão nas ${state.side.toLowerCase()}, total estimado ${formatMzn(price.total)}`;
-  $('#order-summary').value = summary;
-  $('#modal-recap-text').textContent = `${price.quantity} × ${state.product} · ${state.color}`;
-  $('#modal-recap-price').textContent = formatMzn(price.total);
-  modal.showModal();
+  openCheckout([{ name: state.product, color: state.color, sizeLabel: sizeSummary(price), qty: price.quantity, total: price.total }]);
 });
+
 $('.modal-close').addEventListener('click', () => modal.close());
 modal.addEventListener('click', event => { if (event.target === modal) modal.close(); });
+renderCart();
 
 $('#order-form').addEventListener('submit', async event => {
   event.preventDefault();
@@ -385,6 +454,7 @@ $('#order-form').addEventListener('submit', async event => {
     const response = await fetch(event.target.action, { method: 'POST', body: new FormData(event.target), headers: { Accept: 'application/json' } });
     if (!response.ok) throw new Error();
     status.className = 'form-status success'; status.textContent = 'Pedido enviado. Vamos responder em breve.'; submit.textContent = 'Pedido enviado ✓';
+    cart = []; saveCart();
   } catch {
     status.className = 'form-status error'; status.textContent = 'Não foi possível enviar. Contacte info@scolorprint.com ou +258 84 990 0402.'; submit.disabled = false; submit.textContent = 'Tentar novamente';
   }
