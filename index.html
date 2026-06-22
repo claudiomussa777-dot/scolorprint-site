@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621i">
+  <link rel="stylesheet" href="styles.css?v=20260621j">
   <link rel="stylesheet" href="mobile.css?v=20260621a">
 </head>
 <body>
@@ -63,41 +63,87 @@
       <div class="editor-app">
         <div class="editor-topbar"><div><span class="status"></span><b>Design sem título</b><small>Guardado neste dispositivo</small></div><div><button id="reset-design">Recomeçar</button><button id="share-design">Partilhar</button></div></div>
 
-        <aside class="tool-rail" aria-label="Ferramentas de design">
-          <button class="tool active" data-panel="product-panel"><span>◫</span>Produto</button>
-          <button class="tool" data-panel="upload-panel"><span>↑</span>Carregar</button>
-          <button class="tool" data-panel="text-panel"><span>T</span>Texto</button>
-          <button class="tool" data-panel="ai-panel"><span>✦</span>IA</button>
-          <button class="tool" data-panel="templates-panel"><span>▦</span>Modelos</button>
-        </aside>
+        <aside class="wizard-panel" aria-label="Assistente de criação">
+          <div class="wizard-steps">
+            <button class="wstep-tab active" data-goto="0"><i>1</i><span>Produto</span></button>
+            <button class="wstep-tab" data-goto="1"><i>2</i><span>Design</span></button>
+            <button class="wstep-tab" data-goto="2"><i>3</i><span>Texto</span></button>
+            <button class="wstep-tab" data-goto="3"><i>4</i><span>Carregar</span></button>
+          </div>
 
-        <aside class="tool-panel">
-          <section class="panel active" id="product-panel">
-            <p class="panel-kicker">PRODUTO</p><h3>Escolha o seu produto</h3>
-            <p class="cat-divider">VESTUÁRIO</p>
-            <button class="product-option selected" data-product="tshirt"><span class="product-thumb">T</span><span><b>Camiseta</b><small>100% algodão · 160g · S a 2XL</small></span><strong>650 MT</strong></button>
-            <button class="product-option" data-product="hoodie"><span class="product-thumb hoodie">H</span><span><b>Hoodie</b><small>Moletom 320g · com bolso canguru</small></span><strong>1.500 MT</strong></button>
-            <button class="product-option" data-product="cap"><span class="product-thumb cap">B</span><span><b>Boné</b><small>Brim · ajustável · bordado/DTG</small></span><strong>450 MT</strong></button>
-            <p class="cat-divider">CASA &amp; HIDRATAÇÃO</p>
-            <button class="product-option" data-product="mug"><span class="product-thumb mug">M</span><span><b>Mug</b><small>Cerâmica 330ml · sublimação 360°</small></span><strong>380 MT</strong></button>
-            <button class="product-option" data-product="bottle"><span class="product-thumb bottle">G</span><span><b>Garrafa térmica</b><small>Inox 500ml · gravação laser</small></span><strong>950 MT</strong></button>
-            <button class="product-option" data-product="pillow"><span class="product-thumb pillow">A</span><span><b>Almofada</b><small>40×40cm · sublimação total</small></span><strong>720 MT</strong></button>
-            <p class="cat-divider">ACESSÓRIOS</p>
-            <button class="product-option" data-product="tote"><span class="product-thumb tote">T</span><span><b>Tote bag</b><small>Algodão cru · 38×42cm · alças longas</small></span><strong>550 MT</strong></button>
-            <button class="product-option" data-product="keychain"><span class="product-thumb keychain">K</span><span><b>Chaveiro</b><small>Acrílico 6×6cm · impressão UV</small></span><strong>180 MT</strong></button>
-            <p class="cat-divider">DECORAÇÃO &amp; OFERTAS</p>
-            <button class="product-option" data-product="frame"><span class="product-thumb frame">Q</span><span><b>Quadro personalizado</b><small>30×40cm · moldura madeira</small></span><strong>1.200 MT</strong></button>
-            <button class="product-option giftkit-option" data-product="giftkit"><span class="product-thumb giftkit">★</span><span><b>Kit corporativo</b><small>T-shirt + mug + boné + caderno · embrulhado</small></span><strong>2.500 MT</strong></button>
-            <div class="color-section" id="color-section"><div><b>Cor</b><span id="color-name">Branco</span></div><div class="swatches"><button class="swatch selected" style="--swatch:#f7f4ec" data-color="Branco" data-filter="none"></button><button class="swatch" style="--swatch:#18191d" data-color="Preto" data-filter="brightness(.22)"></button><button class="swatch" style="--swatch:#17304f" data-color="Azul-marinho" data-filter="brightness(.42) sepia(1) hue-rotate(168deg) saturate(3.2)"></button><button class="swatch" style="--swatch:#a62d38" data-color="Vermelho" data-filter="brightness(.72) sepia(1) hue-rotate(305deg) saturate(4)"></button><button class="swatch" style="--swatch:#1e6f50" data-color="Verde" data-filter="brightness(.65) sepia(1) hue-rotate(95deg) saturate(2.5)"></button><button class="swatch" style="--swatch:#e2a92f" data-color="Mostarda" data-filter="brightness(.9) sepia(1) hue-rotate(355deg) saturate(2.3)"></button></div></div>
-          </section>
+          <div class="wizard-body">
+            <section class="wstep active" data-step="0">
+              <p class="panel-kicker">PASSO 1 · PRODUTO</p><h3>Escolha o seu produto</h3>
+              <div class="cat-carousel">
+                <div class="cat-carousel-head">
+                  <button class="cat-arrow" id="cat-prev" aria-label="Categoria anterior">‹</button>
+                  <div class="cat-title"><b id="cat-name">Vestuário</b><small id="cat-count">1 / 4</small></div>
+                  <button class="cat-arrow" id="cat-next" aria-label="Categoria seguinte">›</button>
+                </div>
+                <div class="cat-track" id="cat-track">
+                  <div class="cat-slide active" data-cat="Vestuário">
+                    <button class="product-option selected" data-product="tshirt"><span class="product-thumb">T</span><span><b>Camiseta</b><small>100% algodão · 160g · S a 2XL</small></span><strong>650 MT</strong></button>
+                    <button class="product-option" data-product="hoodie"><span class="product-thumb hoodie">H</span><span><b>Hoodie</b><small>Moletom 320g · com bolso canguru</small></span><strong>1.500 MT</strong></button>
+                    <button class="product-option" data-product="cap"><span class="product-thumb cap">B</span><span><b>Boné</b><small>Brim · ajustável · bordado/DTG</small></span><strong>450 MT</strong></button>
+                  </div>
+                  <div class="cat-slide" data-cat="Casa &amp; Hidratação">
+                    <button class="product-option" data-product="mug"><span class="product-thumb mug">M</span><span><b>Mug</b><small>Cerâmica 330ml · sublimação 360°</small></span><strong>380 MT</strong></button>
+                    <button class="product-option" data-product="bottle"><span class="product-thumb bottle">G</span><span><b>Garrafa térmica</b><small>Inox 500ml · gravação laser</small></span><strong>950 MT</strong></button>
+                    <button class="product-option" data-product="pillow"><span class="product-thumb pillow">A</span><span><b>Almofada</b><small>40×40cm · sublimação total</small></span><strong>720 MT</strong></button>
+                  </div>
+                  <div class="cat-slide" data-cat="Acessórios">
+                    <button class="product-option" data-product="tote"><span class="product-thumb tote">T</span><span><b>Tote bag</b><small>Algodão cru · 38×42cm · alças longas</small></span><strong>550 MT</strong></button>
+                    <button class="product-option" data-product="keychain"><span class="product-thumb keychain">K</span><span><b>Chaveiro</b><small>Acrílico 6×6cm · impressão UV</small></span><strong>180 MT</strong></button>
+                  </div>
+                  <div class="cat-slide" data-cat="Decoração &amp; Ofertas">
+                    <button class="product-option" data-product="frame"><span class="product-thumb frame">Q</span><span><b>Quadro personalizado</b><small>30×40cm · moldura madeira</small></span><strong>1.200 MT</strong></button>
+                    <button class="product-option giftkit-option" data-product="giftkit"><span class="product-thumb giftkit">★</span><span><b>Kit corporativo</b><small>T-shirt + mug + boné + caderno</small></span><strong>2.500 MT</strong></button>
+                  </div>
+                </div>
+                <div class="cat-dots" id="cat-dots"></div>
+              </div>
+              <div class="color-section" id="color-section"><div><b>Cor</b><span id="color-name">Branco</span></div><div class="swatches"></div></div>
+            </section>
 
-          <section class="panel" id="upload-panel"><p class="panel-kicker">A SUA ARTE</p><h3>Carregue um ficheiro</h3><label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label><input id="art-upload" type="file" accept="image/png,image/jpeg" hidden><p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p></section>
+            <section class="wstep" data-step="1">
+              <p class="panel-kicker">PASSO 2 · DESIGN</p><h3>Crie ou escolha o design</h3>
+              <div class="design-subtabs">
+                <button class="dsub active" data-sub="ai"><span>✦</span> Criar com IA</button>
+                <button class="dsub" data-sub="templates"><span>▦</span> Modelos prontos</button>
+              </div>
+              <div class="dsub-content active" data-sub="ai">
+                <label>O que devemos criar?<textarea id="ai-prompt" rows="4" placeholder="Ex.: restaurante de mariscos em Maputo, moderno e vibrante..."></textarea></label>
+                <div class="style-chips"><button class="selected" data-style="vibrante">Vibrante</button><button data-style="minimalista">Minimalista</button><button data-style="elegante">Elegante</button><button data-style="cartoon">Cartoon</button></div>
+                <button class="panel-action gradient" id="generate-ai"><span>✦</span> Gerar 4 conceitos</button>
+                <div class="ai-credits" id="ai-credits"></div>
+                <div class="ai-results" id="ai-results" aria-live="polite"></div>
+                <small class="ai-note">A nossa equipa revê a arte antes da impressão. Previews em baixa resolução com marca de água.</small>
+              </div>
+              <div class="dsub-content" data-sub="templates">
+                <div class="template-grid"><button data-template="maputo"><span class="template maputo">MAPUTO<br><b>CRIA</b></span>Maputo</button><button data-template="team"><span class="template team">NOSSA<br>EQUIPA</span>Equipa</button><button data-template="event"><span class="template event">VIVA<br>2026</span>Evento</button><button data-template="brand"><span class="template brand-template">SUA<br>MARCA</span>Marca</button></div>
+              </div>
+            </section>
 
-          <section class="panel" id="text-panel"><p class="panel-kicker">TEXTO</p><h3>Adicione uma mensagem</h3><label>O seu texto<input id="custom-text" value="MAPUTO CRIA"></label><label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label><label>Cor<input id="text-color" type="color" value="#111111"></label><button class="panel-action" id="add-text">Aplicar texto</button></section>
+            <section class="wstep" data-step="2">
+              <p class="panel-kicker">PASSO 3 · TEXTO</p><h3>Adicione uma mensagem <small class="step-optional">(opcional)</small></h3>
+              <label>O seu texto<input id="custom-text" value="MAPUTO CRIA"></label>
+              <label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label>
+              <label>Cor<input id="text-color" type="color" value="#111111"></label>
+              <button class="panel-action" id="add-text">Aplicar texto</button>
+            </section>
 
-          <section class="panel" id="ai-panel"><p class="panel-kicker">DESIGN COM IA</p><h3>Descreva a sua ideia</h3><label>O que devemos criar?<textarea id="ai-prompt" rows="5" placeholder="Ex.: Camiseta para um restaurante de mariscos em Maputo, moderna e vibrante..."></textarea></label><div class="style-chips"><button class="selected" data-style="vibrante">Vibrante</button><button data-style="minimalista">Minimalista</button><button data-style="elegante">Elegante</button><button data-style="cartoon">Cartoon</button></div><button class="panel-action gradient" id="generate-ai"><span>✦</span> Gerar 4 conceitos</button><div class="ai-credits" id="ai-credits"></div><div class="ai-results" id="ai-results" aria-live="polite"></div><small class="ai-note">A nossa equipa revê a arte antes da impressão. Previews em baixa resolução com marca de água.</small></section>
+            <section class="wstep" data-step="3">
+              <p class="panel-kicker">PASSO 4 · CARREGAR</p><h3>Carregue a sua arte <small class="step-optional">(opcional)</small></h3>
+              <label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label>
+              <input id="art-upload" type="file" accept="image/png,image/jpeg" hidden>
+              <p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p>
+            </section>
+          </div>
 
-          <section class="panel" id="templates-panel"><p class="panel-kicker">MODELOS</p><h3>Comece com uma ideia</h3><div class="template-grid"><button data-template="maputo"><span class="template maputo">MAPUTO<br><b>CRIA</b></span>Maputo</button><button data-template="team"><span class="template team">NOSSA<br>EQUIPA</span>Equipa</button><button data-template="event"><span class="template event">VIVA<br>2026</span>Evento</button><button data-template="brand"><span class="template brand-template">SUA<br>MARCA</span>Marca</button></div></section>
+          <div class="wizard-nav">
+            <button class="ghost-button" id="step-back" disabled>← Voltar</button>
+            <button class="checkout-button" id="step-next">Seguinte <span>→</span></button>
+          </div>
         </aside>
 
         <section class="design-workspace">
@@ -147,6 +193,6 @@
   </aside>
 
   <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
-  <script src="script.js?v=20260621l"></script>
+  <script src="script.js?v=20260621m"></script>
 </body>
 </html>

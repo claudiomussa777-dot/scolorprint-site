@@ -109,11 +109,48 @@ function renderSizes(product) {
   $$('.size-qty').forEach(input => input.addEventListener('input', updatePrice));
 }
 
-$$('.tool').forEach(button => button.addEventListener('click', () => {
-  $$('.tool').forEach(item => item.classList.remove('active'));
-  $$('.panel').forEach(panel => panel.classList.remove('active'));
-  button.classList.add('active');
-  $('#' + button.dataset.panel).classList.add('active');
+/* ---- Guided wizard ---- */
+const wSteps = $$('.wstep');
+const wTabs = $$('.wstep-tab');
+const stepBack = $('#step-back');
+const stepNext = $('#step-next');
+let wCurrent = 0;
+function goStep(n) {
+  wCurrent = Math.max(0, Math.min(wSteps.length - 1, n));
+  wSteps.forEach((s, i) => s.classList.toggle('active', i === wCurrent));
+  wTabs.forEach((t, i) => { t.classList.toggle('active', i === wCurrent); t.classList.toggle('done', i < wCurrent); });
+  stepBack.disabled = wCurrent === 0;
+  stepNext.innerHTML = wCurrent === wSteps.length - 1 ? 'Concluir ✓' : 'Seguinte <span>→</span>';
+  $('.wizard-body').scrollTop = 0;
+}
+stepNext.addEventListener('click', () => {
+  if (wCurrent === wSteps.length - 1) document.querySelector('.order-panel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  else goStep(wCurrent + 1);
+});
+stepBack.addEventListener('click', () => goStep(wCurrent - 1));
+wTabs.forEach((t, i) => t.addEventListener('click', () => goStep(i)));
+
+/* ---- Category carousel (step 1) ---- */
+const catSlides = $$('.cat-slide');
+const catDots = $('#cat-dots');
+let catCurrent = 0;
+catSlides.forEach((_, i) => { const d = document.createElement('button'); d.type = 'button'; d.addEventListener('click', () => showCat(i)); catDots.appendChild(d); });
+function showCat(n) {
+  catCurrent = (n + catSlides.length) % catSlides.length;
+  catSlides.forEach((s, i) => s.classList.toggle('active', i === catCurrent));
+  $$('#cat-dots button').forEach((d, i) => d.classList.toggle('active', i === catCurrent));
+  $('#cat-name').textContent = catSlides[catCurrent].dataset.cat;
+  $('#cat-count').textContent = `${catCurrent + 1} / ${catSlides.length}`;
+}
+$('#cat-prev').addEventListener('click', () => showCat(catCurrent - 1));
+$('#cat-next').addEventListener('click', () => showCat(catCurrent + 1));
+showCat(0);
+
+/* ---- Design sub-tabs (step 2) ---- */
+$$('.dsub').forEach(btn => btn.addEventListener('click', () => {
+  $$('.dsub').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  $$('.dsub-content').forEach(c => c.classList.toggle('active', c.dataset.sub === btn.dataset.sub));
 }));
 
 $$('.product-option').forEach(button => button.addEventListener('click', () => {
@@ -273,6 +310,11 @@ const queryProduct = new URLSearchParams(location.search).get('product');
 const initialProduct = (queryProduct && PRODUCTS[queryProduct]) ? queryProduct : 'tshirt';
 $$('.product-option').forEach(b => b.classList.toggle('selected', b.dataset.product === initialProduct));
 setProduct(initialProduct);
+// open the carousel on the category that holds the initial product
+const initSlide = catSlides.findIndex(s => s.querySelector(`[data-product="${initialProduct}"]`));
+if (initSlide >= 0) showCat(initSlide);
+// if arriving with ?product=, jump straight to the design step
+if (queryProduct && PRODUCTS[queryProduct]) goStep(1);
 
 const templates = {
   maputo: ['style-maputo', 'FEITO EM', 'MAPUTO', '✦'],
