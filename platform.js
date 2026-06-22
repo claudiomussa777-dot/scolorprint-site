@@ -63,7 +63,7 @@ async function submitForm(form) {
     const response = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
     if (!response.ok) throw new Error('Falha no envio');
     status.className = 'form-status success';
-    status.textContent = form.id === 'partner-form' ? 'Candidatura enviada. A nossa equipa fará a análise e entrará em contacto.' : 'Pedido enviado. Vamos responder com orientação, preço e prazo.';
+    status.textContent = form.id === 'partner-form' ? 'Obrigado pela candidatura. A equipa Scolor Print irá analisar os seus dados e entrar em contacto pelo WhatsApp.' : 'Pedido enviado. Vamos responder pelo WhatsApp com orientação, preço e prazo.';
     button.innerHTML = 'Enviado com sucesso ✓';
     form.reset();
     $$('.file-field span b', form).forEach(item => item.textContent = '↑ Escolher ficheiro');
