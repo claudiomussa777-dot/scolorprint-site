@@ -1,195 +1,153 @@
 <!doctype html>
-<html lang="pt">
+<html lang="pt-MZ">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>S Color Print — Crie a sua camiseta</title>
-  <meta name="description" content="Crie camisetas personalizadas online. Escolha o modelo, cor, arte e tamanhos, veja o preço e receba em Moçambique.">
+  <title>Scolor Print | Serviços Gráficos Personalizados e Revenda Assistida</title>
+  <meta name="description" content="Peça camisetas, brindes, cartões, banners, flyers e outros serviços gráficos personalizados com apoio pelo WhatsApp. Cadastre-se também como revendedor e ganhe dinheiro com a Scolor Print.">
+  <meta name="keywords" content="serviços gráficos em Moçambique, gráfica em Maputo, camisetas personalizadas, brindes personalizados, impressão personalizada, cartões de visita, banners e flyers, revender serviços gráficos, gráfica com WhatsApp">
+  <meta name="theme-color" content="#111111">
+  <meta property="og:title" content="Scolor Print — Serviços gráficos e revenda assistida">
+  <meta property="og:description" content="Peça serviços personalizados com apoio pelo WhatsApp, produção controlada e entrega acompanhada.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://scolorprint.com/">
+  <meta property="og:image" content="https://scolorprint.com/assets/hero-platform-v1.jpg">
+  <link rel="canonical" href="https://scolorprint.com/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260621n">
-  <link rel="stylesheet" href="mobile.css?v=20260621a">
+  <link rel="stylesheet" href="platform.css?v=20260622a">
+  <link rel="stylesheet" href="platform-responsive.css?v=20260622a">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Scolor Print","alternateName":"Smart Color Print","url":"https://scolorprint.com/","email":"info@scolorprint.com","telephone":"+258849900402","areaServed":"Mozambique","address":{"@type":"PostalAddress","addressLocality":"Maputo","addressCountry":"MZ"},"description":"Plataforma fechada de serviços gráficos personalizados e revenda assistida com apoio pelo WhatsApp."}</script>
 </head>
 <body>
-  <div class="announcement"><span>Produção local em Maputo</span><span>Orçamento imediato</span><span>WhatsApp +258 84 990 0402</span></div>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="S Color Print"><span class="brand-bars"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>CAMISETAS PERSONALIZADAS</small></span></a>
-    <nav><a href="#editor">Criar</a><a href="produtos.html">Produtos</a><a href="designers.html">Designers</a><a href="parceiros.html">Parceiros</a></nav>
-    <a class="header-help" href="https://wa.me/258849900402" target="_blank" rel="noopener">Falar connosco</a>
-    <button class="cart-button" id="cart-button" aria-label="Ver carrinho"><span class="cart-ico">🛒</span><span class="cart-badge" id="cart-badge" hidden>0</span></button>
-    <button class="menu-button" aria-label="Abrir menu">☰</button>
+  <div class="top-strip"><span>Atendimento pelo WhatsApp</span><span>Produção controlada</span><span>Entrega acompanhada em Moçambique</span></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Scolor Print — início">
+      <span class="brand-bars"><i></i><i></i><i></i></span>
+      <span><strong>SCOLOR</strong> <b>PRINT</b><small>SMART COLOR PRINT</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="designer.html">Criar camiseta</a>
+      <a href="#revendedores">Revendedores</a>
+      <a href="#confianca">Confiança</a>
+    </nav>
+    <div class="header-actions">
+      <button class="track-button" type="button" data-open-tracking>Acompanhar pedido</button>
+      <a class="header-quote" href="#pedido">Pedir cotação</a>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </header>
 
-  <main id="top">
-    <section class="hero">
+  <main>
+    <section class="hero section-shell">
       <div class="hero-copy">
-        <p class="eyebrow"><span>✦</span> DESIGN STUDIO S COLOR</p>
-        <h1>A sua ideia.<br><em>Na sua camiseta.</em></h1>
-        <p>Crie uniformes, merchandising, camisetas para eventos ou para a sua marca. Personalize online, veja o resultado e receba em Moçambique.</p>
-        <div class="hero-actions"><a class="primary-button" href="#editor">Começar a criar <span>→</span></a><a class="text-link" href="#como-funciona">Ver como funciona</a></div>
-        <div class="trust"><span>✓ Sem quantidade mínima</span><span>✓ Revisão da arte</span><span>✓ Entrega local</span></div>
+        <p class="eyebrow"><span>●</span> PLATAFORMA FECHADA DE SERVIÇOS GRÁFICOS</p>
+        <h1>Serviços gráficos personalizados com apoio pelo <em>WhatsApp.</em></h1>
+        <p class="hero-lead">Peça camisetas, brindes, cartões, banners, flyers e outros materiais de forma simples, rápida e segura. A Scolor Print avalia preço, prazo e qualidade antes da produção.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#pedido">Pedir cotação agora <span>→</span></a>
+          <a class="button secondary" href="#revendedores">Quero ser revendedor</a>
+        </div>
+        <div class="hero-trust"><span><b>✓</b> Marca única e confiável</span><span><b>✓</b> Pedido acompanhado</span><span><b>✓</b> Apoio para o design</span></div>
       </div>
-      <div class="hero-product">
-        <span class="hero-badge">A partir de<br><b>650 MT</b></span>
-        <img src="assets/tshirt-designer-white-v1.png" alt="Camiseta branca personalizável">
-        <div class="hero-print"><small>FEITO EM</small><strong>MAPUTO</strong><i>✦</i></div>
+      <div class="hero-visual">
+        <img src="assets/hero-platform-v1.jpg" alt="Produtos personalizados pela Scolor Print">
+        <div class="hero-float float-one"><span>01</span><div><small>O SEU PEDIDO</small><b>Acompanhado do início à entrega</b></div></div>
+        <div class="hero-float float-two"><span>✓</span><div><small>CONTROLO INTERNO</small><b>Preço · Prazo · Qualidade</b></div></div>
       </div>
-    </section>
-
-    <section class="three-doors" aria-label="Escolha o seu caminho">
-      <a class="door door-customer" href="#editor">
-        <span class="door-kicker">CLIENTE</span>
-        <strong>Quero criar uma camiseta</strong>
-        <small>Personalize com IA e receba em Moçambique</small>
-        <span class="door-arrow">→</span>
-      </a>
-      <a class="door door-designer" href="designers.html">
-        <span class="door-kicker">DESIGNER</span>
-        <strong>Quero vender os meus designs</strong>
-        <small>Carregue templates e ganhe royalties em cada venda</small>
-        <span class="door-arrow">→</span>
-      </a>
-      <a class="door door-partner" href="parceiros.html">
-        <span class="door-kicker">GRÁFICA</span>
-        <strong>Quero receber pedidos</strong>
-        <small>Encha a sua capacidade ociosa com pedidos automáticos</small>
-        <span class="door-arrow">→</span>
-      </a>
-    </section>
-
-    <section class="editor-wrap" id="editor">
-      <div class="editor-heading"><div><p class="eyebrow"><span>01</span> CRIE ONLINE</p><h2>Estúdio de camisetas</h2></div><p>Escolha o produto, personalize a frente ou as costas e veja o orçamento em tempo real.</p></div>
-      <div class="editor-app">
-        <div class="editor-topbar"><div><span class="status"></span><b>Design sem título</b><small>Guardado neste dispositivo</small></div><div><button id="reset-design">Recomeçar</button><button id="share-design">Partilhar</button></div></div>
-
-        <aside class="wizard-panel" aria-label="Assistente de criação">
-          <div class="wizard-steps">
-            <button class="wstep-tab active" data-goto="0"><i>1</i><span>Produto</span></button>
-            <button class="wstep-tab" data-goto="1"><i>2</i><span>Design</span></button>
-          </div>
-
-          <div class="wizard-body">
-            <section class="wstep active" data-step="0">
-              <p class="panel-kicker">PASSO 1 · PRODUTO</p><h3>Escolha o seu produto</h3>
-              <div class="cat-carousel">
-                <div class="cat-carousel-head">
-                  <button class="cat-arrow" id="cat-prev" aria-label="Categoria anterior">‹</button>
-                  <div class="cat-title"><b id="cat-name">Vestuário</b><small id="cat-count">1 / 4</small></div>
-                  <button class="cat-arrow" id="cat-next" aria-label="Categoria seguinte">›</button>
-                </div>
-                <div class="cat-track" id="cat-track">
-                  <div class="cat-slide active" data-cat="Vestuário">
-                    <button class="product-option selected" data-product="tshirt"><span class="product-thumb">T</span><span><b>Camiseta</b><small>100% algodão · 160g · S a 2XL</small></span><strong>650 MT</strong></button>
-                    <button class="product-option" data-product="hoodie"><span class="product-thumb hoodie">H</span><span><b>Hoodie</b><small>Moletom 320g · com bolso canguru</small></span><strong>1.500 MT</strong></button>
-                    <button class="product-option" data-product="cap"><span class="product-thumb cap">B</span><span><b>Boné</b><small>Brim · ajustável · bordado/DTG</small></span><strong>450 MT</strong></button>
-                  </div>
-                  <div class="cat-slide" data-cat="Casa &amp; Hidratação">
-                    <button class="product-option" data-product="mug"><span class="product-thumb mug">M</span><span><b>Mug</b><small>Cerâmica 330ml · sublimação 360°</small></span><strong>380 MT</strong></button>
-                    <button class="product-option" data-product="bottle"><span class="product-thumb bottle">G</span><span><b>Garrafa térmica</b><small>Inox 500ml · gravação laser</small></span><strong>950 MT</strong></button>
-                    <button class="product-option" data-product="pillow"><span class="product-thumb pillow">A</span><span><b>Almofada</b><small>40×40cm · sublimação total</small></span><strong>720 MT</strong></button>
-                  </div>
-                  <div class="cat-slide" data-cat="Acessórios">
-                    <button class="product-option" data-product="tote"><span class="product-thumb tote">T</span><span><b>Tote bag</b><small>Algodão cru · 38×42cm · alças longas</small></span><strong>550 MT</strong></button>
-                    <button class="product-option" data-product="keychain"><span class="product-thumb keychain">K</span><span><b>Chaveiro</b><small>Acrílico 6×6cm · impressão UV</small></span><strong>180 MT</strong></button>
-                  </div>
-                  <div class="cat-slide" data-cat="Decoração &amp; Ofertas">
-                    <button class="product-option" data-product="frame"><span class="product-thumb frame">Q</span><span><b>Quadro personalizado</b><small>30×40cm · moldura madeira</small></span><strong>1.200 MT</strong></button>
-                    <button class="product-option giftkit-option" data-product="giftkit"><span class="product-thumb giftkit">★</span><span><b>Kit corporativo</b><small>T-shirt + mug + boné + caderno</small></span><strong>2.500 MT</strong></button>
-                  </div>
-                </div>
-                <div class="cat-dots" id="cat-dots"></div>
-              </div>
-              <div class="color-section" id="color-section"><div><b>Cor</b><span id="color-name">Branco</span></div><div class="swatches"></div></div>
-            </section>
-
-            <section class="wstep" data-step="1">
-              <p class="panel-kicker">PASSO 2 · DESIGN</p><h3>Como quer criar?</h3>
-              <div class="design-subtabs">
-                <button class="dsub active" data-sub="ai"><span>✦</span>Criar com IA</button>
-                <button class="dsub" data-sub="templates"><span>▦</span>Modelos</button>
-                <button class="dsub" data-sub="blank"><span>✎</span>Em branco</button>
-              </div>
-              <div class="dsub-content active" data-sub="ai">
-                <label>O que devemos criar?<textarea id="ai-prompt" rows="4" placeholder="Ex.: restaurante de mariscos em Maputo, moderno e vibrante..."></textarea></label>
-                <div class="style-chips"><button class="selected" data-style="vibrante">Vibrante</button><button data-style="minimalista">Minimalista</button><button data-style="elegante">Elegante</button><button data-style="cartoon">Cartoon</button></div>
-                <button class="panel-action gradient" id="generate-ai"><span>✦</span> Gerar 4 conceitos</button>
-                <div class="ai-credits" id="ai-credits"></div>
-                <div class="ai-results" id="ai-results" aria-live="polite"></div>
-                <small class="ai-note">A nossa equipa revê a arte antes da impressão. Previews em baixa resolução com marca de água.</small>
-              </div>
-              <div class="dsub-content" data-sub="templates">
-                <div class="template-grid"><button data-template="maputo"><span class="template maputo">MAPUTO<br><b>CRIA</b></span>Maputo</button><button data-template="team"><span class="template team">NOSSA<br>EQUIPA</span>Equipa</button><button data-template="event"><span class="template event">VIVA<br>2026</span>Evento</button><button data-template="brand"><span class="template brand-template">SUA<br>MARCA</span>Marca</button></div>
-              </div>
-              <div class="dsub-content" data-sub="blank">
-                <p class="blank-kicker">ESCREVER TEXTO</p>
-                <label>O seu texto<input id="custom-text" value="MAPUTO CRIA"></label>
-                <div class="blank-row">
-                  <label>Tipo de letra<select id="font-select"><option value="Manrope">Forte</option><option value="Georgia">Clássico</option><option value="DM Sans">Moderno</option></select></label>
-                  <label>Cor<input id="text-color" type="color" value="#111111"></label>
-                </div>
-                <button class="panel-action" id="add-text">Aplicar texto</button>
-                <p class="blank-kicker" style="margin-top:20px">OU CARREGAR IMAGEM</p>
-                <label class="upload-box" for="art-upload"><span>↑</span><b>Escolher imagem</b><small>PNG ou JPG · máximo 8 MB</small></label>
-                <input id="art-upload" type="file" accept="image/png,image/jpeg" hidden>
-                <p class="panel-note">Para melhor impressão, use uma imagem com fundo transparente e boa resolução.</p>
-              </div>
-            </section>
-          </div>
-
-          <div class="wizard-nav">
-            <button class="ghost-button" id="step-back" disabled>← Voltar</button>
-            <button class="checkout-button" id="step-next">Seguinte <span>→</span></button>
-          </div>
-        </aside>
-
-        <section class="design-workspace">
-          <div class="canvas-toolbar"><div class="side-toggle"><button class="active" data-side="front">Frente</button><button data-side="back">Costas</button></div><div class="zoom-controls"><button id="zoom-out">−</button><span id="zoom-value">100%</span><button id="zoom-in">+</button></div></div>
-          <div class="shirt-canvas">
-            <div class="shirt-wrap" id="shirt-wrap">
-              <img class="shirt-image" id="shirt-image" src="assets/tshirt-designer-white-v1.png" alt="Pré-visualização da camiseta">
-              <div class="print-zone" id="print-zone"><div class="design-content style-maputo" id="design-content"><small>FEITO EM</small><strong>MAPUTO</strong><i>✦</i></div><img id="uploaded-art" alt="Arte carregada"><span class="resize-handle" id="resize-handle" title="Arraste para redimensionar"></span></div>
-            </div>
-            <span class="print-guide">ÁREA DE IMPRESSÃO</span>
-          </div>
-          <div class="canvas-help"><span>↔ Arraste para posicionar · puxe o canto ⟲ para redimensionar</span><span>Impressão incluída</span></div>
-        </section>
-
-        <aside class="order-panel">
-          <p class="panel-kicker">O SEU PEDIDO</p><h3 id="summary-product">Camiseta Clássica</h3><p class="summary-meta"><span id="summary-color">Branco</span> · Frente personalizada</p>
-          <div class="quality-row"><span>Qualidade de impressão</span><b>HD</b></div>
-          <div class="size-head"><b>Tamanhos e quantidades</b><small>Total: <span id="total-units">1</span></small></div>
-          <div class="size-grid"><label>S<input class="size-qty" type="number" min="0" value="0"></label><label>M<input class="size-qty" type="number" min="0" value="1"></label><label>L<input class="size-qty" type="number" min="0" value="0"></label><label>XL<input class="size-qty" type="number" min="0" value="0"></label><label>2XL<input class="size-qty" type="number" min="0" value="0"></label></div>
-          <div class="price-box"><div><span id="price-line-label">Camisetas</span><b id="shirts-price">650 MT</b></div><div><span>Preparação da arte</span><b>Incluída</b></div><div><span>Entrega em Maputo</span><b>A calcular</b></div><div class="total"><span>Total estimado</span><strong id="order-total">650 MT</strong></div><small id="unit-price">650 MT por unidade</small></div>
-          <button class="checkout-button" id="add-to-cart">Adicionar ao carrinho <span>→</span></button>
-          <button class="ghost-button" id="continue-order">Comprar agora</button>
-          <p class="secure-note">✓ Revisão humana antes de imprimir</p>
-        </aside>
+      <div class="hero-network">
+        <div><strong>1</strong><span>marca responsável pelo seu pedido</span></div>
+        <div><strong>3</strong><span>controlos antes da produção</span></div>
+        <div><strong>100%</strong><span>apoio humano pelo WhatsApp</span></div>
       </div>
     </section>
 
-    <section class="benefits" id="qualidade"><article><span>01</span><h3>Impressão que dura</h3><p>Técnica escolhida conforme a arte, o tecido e a quantidade.</p></article><article><span>02</span><h3>Uma ou mil peças</h3><p>Produzimos pedidos individuais, equipas, eventos e marcas.</p></article><article><span>03</span><h3>Entrega em Moçambique</h3><p>Prazo e transporte confirmados antes do pagamento.</p></article><article><span>04</span><h3>Ajuda de verdade</h3><p>Revemos resolução, cores, posição e tamanho da impressão.</p></article></section>
+    <section class="client-flow section-pad" id="como-funciona">
+      <div class="section-heading"><div><p class="eyebrow"><span>01</span> PARA CLIENTES</p><h2>Encomendar ficou<br><em>muito mais simples.</em></h2></div><p>Envie o que precisa. Nós orientamos, avaliamos e acompanhamos tudo até à entrega.</p></div>
+      <div class="steps-grid">
+        <article><span>01</span><div class="step-icon">▦</div><h3>Escolha o serviço</h3><p>Camisetas, brindes, cartões, banners, flyers ou outro material personalizado.</p></article>
+        <article><span>02</span><div class="step-icon">WA</div><h3>Envie a sua ideia</h3><p>Partilhe imagem, logotipo, referência, texto ou explique pelo WhatsApp.</p></article>
+        <article><span>03</span><div class="step-icon">MT</div><h3>Receba preço e prazo</h3><p>Avaliamos a solução mais segura para o seu orçamento e prazo desejado.</p></article>
+        <article><span>04</span><div class="step-icon">✓</div><h3>Confirme e acompanhe</h3><p>Após aprovação, o pedido segue para produção e entrega acompanhada.</p></article>
+      </div>
+      <a class="inline-cta" href="#pedido">Começar o meu pedido <span>→</span></a>
+    </section>
 
-    <section class="how" id="como-funciona"><div><p class="eyebrow"><span>02</span> SIMPLES E RÁPIDO</p><h2>Da ideia à camiseta<br><em>em quatro passos.</em></h2></div><ol><li><b>Escolha</b><span>Modelo, cor e tamanhos.</span></li><li><b>Crie</b><span>Carregue a arte, escreva ou use IA.</span></li><li><b>Confirme</b><span>Receba o preço e aprove o mockup.</span></li><li><b>Receba</b><span>Produção e entrega local.</span></li></ol></section>
+    <section class="products section-pad" id="servicos">
+      <div class="section-heading"><div><p class="eyebrow"><span>02</span> CATÁLOGO DE SERVIÇOS</p><h2>Uma plataforma.<br><em>Muitas possibilidades.</em></h2></div><p>Escolha uma categoria e peça a sua cotação directamente à Scolor Print.</p></div>
+      <div class="product-grid">
+        <article class="product-card"><img loading="lazy" src="assets/mockup-tshirt-real-v2.jpg" alt="Camisetas personalizadas"><div><small>VESTUÁRIO</small><h3>Camisetas personalizadas</h3><p>Para marcas, equipas, eventos e particulares.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20camisetas%20personalizadas." target="_blank" rel="noopener">Pedir este serviço →</a><a class="design-link" href="designer.html">Criar online</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-hoodie-real-v2.jpg" alt="Hoodies personalizados"><div><small>VESTUÁRIO</small><h3>Hoodies</h3><p>Personalização confortável para grupos e marcas.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20hoodies." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-mug-real-v2.jpg" alt="Mugs personalizadas"><div><small>BRINDES</small><h3>Mugs</h3><p>Presentes, campanhas e lembranças personalizadas.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20mugs%20personalizadas." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-cap-real-v2.jpg" alt="Bonés personalizados"><div><small>VESTUÁRIO</small><h3>Bonés</h3><p>Identidade visual para equipas, eventos e negócios.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20bon%C3%A9s%20personalizados." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-cartao-real-v1.jpg" alt="Cartões de visita"><div><small>EMPRESAS</small><h3>Cartões de visita</h3><p>Apresentação profissional com bom acabamento.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20cart%C3%B5es%20de%20visita." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-papel-real-v1.jpg" alt="Flyers e panfletos"><div><small>PROMOÇÃO</small><h3>Flyers e panfletos</h3><p>Divulgação clara para produtos, serviços e eventos.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20flyers%20ou%20panfletos." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-banner-real-v1.jpg" alt="Banners e roll-ups"><div><small>VISIBILIDADE</small><h3>Banners e roll-ups</h3><p>Comunicação de grande formato para qualquer ocasião.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20banner%20ou%20roll-up." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-autocolante-real-v1.jpg" alt="Autocolantes personalizados"><div><small>PERSONALIZAÇÃO</small><h3>Autocolantes</h3><p>Etiquetas e stickers em formatos personalizados.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20autocolantes." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-giftkit-real-v2.jpg" alt="Brindes corporativos"><div><small>EMPRESAS</small><h3>Brindes corporativos</h3><p>Kits personalizados para clientes e colaboradores.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20brindes%20corporativos." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-bottle-real-v2.jpg" alt="Material para eventos"><div><small>EVENTOS</small><h3>Material para eventos</h3><p>Peças coordenadas para celebrações e activações.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20cota%C3%A7%C3%A3o%20para%20material%20de%20evento." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-frame-real-v2.jpg" alt="Design gráfico"><div><small>CRIAÇÃO</small><h3>Design gráfico</h3><p>Apoio para transformar a sua ideia numa arte pronta.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20preciso%20de%20apoio%20com%20design%20gr%C3%A1fico." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+        <article class="product-card"><img loading="lazy" src="assets/mockup-tote-real-v2.jpg" alt="Impressão personalizada"><div><small>SOB MEDIDA</small><h3>Impressão personalizada</h3><p>Conte-nos o que precisa e avaliamos a produção.</p><a href="https://wa.me/258849900402?text=Ol%C3%A1%2C%20quero%20pedir%20uma%20impress%C3%A3o%20personalizada." target="_blank" rel="noopener">Pedir este serviço →</a></div></article>
+      </div>
+    </section>
+
+    <section class="control-section">
+      <div class="control-copy"><p class="eyebrow light"><span>03</span> CONTROLO DA PLATAFORMA</p><h2>Preço, prazo e qualidade <em>controlados.</em></h2><p>O cliente compra da Scolor Print. Cada pedido é avaliado antes da produção para garantir uma solução comercial segura, prazo claro e bom acabamento.</p><div class="closed-note"><b>Ecossistema fechado</b><span>Revendedores aprovados ajudam a captar e acompanhar. A Scolor Print controla cotação, produção, pagamento e entrega.</span></div></div>
+      <div class="control-cards"><article><span>MT</span><h3>Preço</h3><p>Procuramos a melhor solução comercial e protegemos o preço mínimo da plataforma.</p></article><article><span>⌁</span><h3>Prazo</h3><p>Indicamos prazos claros antes da confirmação e acompanhamos cada etapa.</p></article><article><span>✓</span><h3>Qualidade</h3><p>A produção é verificada para assegurar apresentação e acabamento consistentes.</p></article></div>
+    </section>
+
+    <section class="reseller section-pad" id="revendedores">
+      <div class="reseller-copy"><p class="eyebrow"><span>04</span> REVENDA ASSISTIDA</p><h2>Venda serviços gráficos <em>sem máquinas, sem loja e sem stock.</em></h2><p>É promotor, estudante, designer, criador de conteúdo ou jovem empreendedor? Candidate-se como parceiro Scolor Print e use a sua rede para gerar rendimento.</p><ul><li>Receba catálogo, apoio e código individual;</li><li>Partilhe serviços e ajude o cliente a escolher;</li><li>Registe ou encaminhe pedidos para a plataforma;</li><li>Nós tratamos da cotação, produção, qualidade e entrega;</li><li>Ganhe comissão ou margem nos pedidos confirmados.</li></ul><a class="button partner" href="#candidatura">Cadastrar como revendedor <span>→</span></a><small>As candidaturas são avaliadas. O acesso não é automático.</small></div>
+      <div class="partner-preview"><div class="preview-head"><span class="status-dot"></span><div><small>PARCEIRO APROVADO</small><b>Painel do revendedor</b></div><span class="partner-code">SCP-024</span></div><div class="preview-balance"><small>COMISSÃO DISPONÍVEL</small><strong>4.850 MT</strong><span>+12% este mês</span></div><div class="preview-stats"><div><b>14</b><small>Pedidos indicados</small></div><div><b>09</b><small>Confirmados</small></div><div><b>03</b><small>Em produção</small></div></div><div class="preview-order"><span>Pedido #SCP-1842</span><b>Em produção</b></div><div class="preview-order"><span>Pedido #SCP-1836</span><b class="delivered">Entregue</b></div><p>Exemplo da futura área reservada aos parceiros aprovados.</p></div>
+    </section>
+
+    <section class="partner-flow section-pad">
+      <div class="section-heading"><div><p class="eyebrow"><span>05</span> PARA PARCEIROS</p><h2>Como funciona a<br><em>revenda assistida.</em></h2></div><p>A plataforma mantém o controlo e você concentra-se em encontrar e acompanhar clientes.</p></div>
+      <div class="partner-steps"><article><b>1</b><h3>Candidate-se</h3><p>Envie os seus dados, WhatsApp, experiência e rede de contactos.</p></article><article><b>2</b><h3>Receba o seu código</h3><p>Depois da aprovação, receba catálogo, regras e identificação de parceiro.</p></article><article><b>3</b><h3>Venda os serviços</h3><p>Partilhe produtos, indique clientes e ajude a organizar os pedidos.</p></article><article><b>4</b><h3>Acompanhe e ganhe</h3><p>A comissão é calculada após confirmação, produção e entrega do pedido.</p></article></div>
+    </section>
+
+    <section class="trust-section section-pad" id="confianca">
+      <div class="section-heading"><div><p class="eyebrow"><span>06</span> CONFIANÇA</p><h2>Por que escolher a<br><em>Scolor Print.</em></h2></div><p>Uma experiência simples para quem pede e uma estrutura segura para quem revende.</p></div>
+      <div class="trust-grid"><span>Atendimento rápido pelo WhatsApp</span><span>Serviços para particulares e empresas</span><span>Produção acompanhada</span><span>Preço, prazo e qualidade avaliados</span><span>Revendedores cadastrados</span><span>Processo simples de encomenda</span><span>Apoio para quem não tem design</span><span>Entrega acompanhada</span></div>
+      <div class="institutional"><span class="brand-seal">SCP</span><p><b>A Scolor Print é uma plataforma fechada de serviços gráficos, personalização e revenda assistida.</b> Ligamos clientes a soluções gráficas com apoio de revendedores cadastrados, mantendo controlo interno sobre preço, prazo, qualidade e entrega.</p></div>
+    </section>
+
+    <section class="forms-zone" id="pedido">
+      <div class="form-intro"><p class="eyebrow light"><span>07</span> PEDIDO RÁPIDO</p><h2>Conte-nos o que precisa.</h2><p>Preencha os dados e envie a sua referência. A nossa equipa responde com orientação, preço e prazo.</p><div class="whatsapp-direct"><span>WA</span><div><small>PREFERE CONVERSAR?</small><a href="https://wa.me/258849900402?text=Ol%C3%A1%20Scolor%20Print%2C%20quero%20pedir%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener">Abrir WhatsApp →</a></div></div></div>
+      <form class="smart-form quote-form" id="quote-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Novo pedido de cotação — Scolor Print">
+        <div class="form-head"><span>01</span><div><b>Pedido de cotação</b><small>Campos com * são obrigatórios</small></div></div>
+        <div class="form-grid"><label>Nome *<input name="Nome" autocomplete="name" required></label><label>WhatsApp *<input name="WhatsApp" type="tel" autocomplete="tel" placeholder="+258" required></label><label>Tipo de serviço *<select name="Servico" required><option value="">Seleccione</option><option>Camisetas personalizadas</option><option>Hoodies</option><option>Mugs</option><option>Bonés</option><option>Cartões de visita</option><option>Flyers e panfletos</option><option>Banners e roll-ups</option><option>Autocolantes</option><option>Brindes corporativos</option><option>Material para eventos</option><option>Design gráfico</option><option>Outro</option></select></label><label>Quantidade *<input name="Quantidade" type="number" min="1" required></label><label>Prazo desejado<input name="Prazo" type="date"></label><label>Cidade / entrega *<input name="Local de entrega" required></label></div>
+        <label class="file-field">Imagem, logotipo ou referência<input name="Anexo" type="file" accept="image/*,.pdf"><span><b>↑ Escolher ficheiro</b><small>Imagem ou PDF até 8 MB</small></span></label>
+        <label>Explique o que pretende *<textarea name="Descricao" rows="4" required placeholder="Produto, cores, tamanhos, texto e outras informações importantes..."></textarea></label>
+        <label class="check-row"><input name="Precisa de design" type="checkbox" value="Sim"><span>Preciso de ajuda com o design</span></label>
+        <button class="submit-button" type="submit">Enviar pedido de cotação <span>→</span></button><p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="application section-pad" id="candidatura">
+      <div class="application-copy"><p class="eyebrow"><span>08</span> CANDIDATURA</p><h2>Quer crescer connosco?</h2><p>Procuramos pessoas responsáveis, comerciais e próximas das suas comunidades. Envie a candidatura; a equipa pode aprovar, rejeitar ou pedir mais informações.</p><div class="application-rules"><b>Antes de se candidatar</b><span>O cliente compra da Scolor Print.</span><span>O parceiro não controla a produção.</span><span>A comissão depende de pedidos confirmados.</span><span>A parceria pode ser suspensa por incumprimento.</span></div></div>
+      <form class="smart-form partner-form" id="partner-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST">
+        <input type="hidden" name="_subject" value="Nova candidatura de revendedor — Scolor Print">
+        <div class="form-head"><span>02</span><div><b>Candidatura de revendedor</b><small>Sujeita a análise e aprovação</small></div></div>
+        <div class="form-grid"><label>Nome completo *<input name="Nome completo" autocomplete="name" required></label><label>WhatsApp *<input name="WhatsApp" type="tel" autocomplete="tel" placeholder="+258" required></label><label>Cidade *<input name="Cidade" required></label><label>Idade *<input name="Idade" type="number" min="16" max="100" required></label><label>Ocupação *<input name="Ocupacao" required></label><label>Redes sociais<input name="Redes sociais" placeholder="Instagram, Facebook ou TikTok"></label><label>Já vende produtos ou serviços? *<select name="Ja vende" required><option value="">Seleccione</option><option>Sim</option><option>Não</option><option>Às vezes</option></select></label><label>Tem experiência com vendas? *<select name="Experiencia" required><option value="">Seleccione</option><option>Sim</option><option>Não</option><option>Alguma experiência</option></select></label></div>
+        <label>Que tipo de clientes consegue alcançar? *<textarea name="Clientes" rows="3" required placeholder="Empresas, estudantes, igrejas, eventos, seguidores..."></textarea></label><label>Por que quer ser revendedor? *<textarea name="Motivacao" rows="3" required></textarea></label>
+        <label class="check-row"><input name="Termos" type="checkbox" value="Aceito" required><span>Li e aceito as regras da parceria e compreendo que a candidatura depende de aprovação. *</span></label>
+        <button class="submit-button partner-submit" type="submit">Enviar candidatura <span>→</span></button><p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="final-cta"><div><p class="eyebrow light"><span>09</span> PRONTO PARA COMEÇAR?</p><h2>Peça, acompanhe<br>e receba com confiança.</h2></div><div><a class="button primary" href="#pedido">Pedir cotação agora <span>→</span></a><a class="button outline-light" href="#candidatura">Quero ser revendedor</a></div></section>
   </main>
 
-  <footer id="ajuda"><div class="brand footer-brand"><span class="brand-bars"><i></i><i></i><i></i></span><span>S COLOR <b>PRINT</b><small>MARKETPLACE</small></span></div><div><b>Marketplace</b><a href="#editor">Criar camiseta</a><a href="designers.html">Designers</a><a href="parceiros.html">Gráficas parceiras</a></div><div><b>Ajuda</b><a href="mailto:info@scolorprint.com">info@scolorprint.com</a><a href="tel:+258849900402">+258 84 990 0402</a></div><small>© <span id="year"></span> S Color Print · Maputo, Moçambique</small></footer>
+  <footer><div class="footer-brand"><a class="brand" href="#top"><span class="brand-bars"><i></i><i></i><i></i></span><span><strong>SCOLOR</strong> <b>PRINT</b><small>SMART COLOR PRINT</small></span></a><p>Plataforma fechada de serviços gráficos, personalização e revenda assistida.</p></div><div><b>Serviços</b><a href="#servicos">Catálogo</a><a href="#pedido">Pedir cotação</a><a href="designer.html">Criar camiseta</a><button type="button" data-open-tracking>Acompanhar pedido</button></div><div><b>Parceiros</b><a href="#revendedores">Como funciona</a><a href="#candidatura">Enviar candidatura</a><span>Acesso sujeito a aprovação</span></div><div><b>Contactos</b><a href="mailto:info@scolorprint.com">info@scolorprint.com</a><a href="tel:+258849900402">+258 84 990 0402</a><span>Maputo, Moçambique</span></div><div class="footer-bottom"><span>© <span id="year"></span> Scolor Print</span><span>Preço · Prazo · Qualidade · Entrega</span></div></footer>
 
-  <a class="whatsapp" href="https://wa.me/258849900402?text=Ol%C3%A1%20S%20Color%20Print%2C%20quero%20criar%20uma%20camiseta." target="_blank" rel="noopener"><span>WA</span><b>Ajuda</b></a>
+  <a class="whatsapp-float" href="https://wa.me/258849900402?text=Ol%C3%A1%20Scolor%20Print%2C%20preciso%20de%20apoio." target="_blank" rel="noopener" aria-label="Falar com Scolor Print no WhatsApp"><span>WA</span><b>Fale connosco</b></a>
 
-  <div class="cart-overlay" id="cart-overlay" hidden></div>
-  <aside class="cart-drawer" id="cart-drawer" aria-label="Carrinho" aria-hidden="true">
-    <div class="cart-head"><b>O seu carrinho</b><button class="cart-close" id="cart-close" aria-label="Fechar">×</button></div>
-    <div class="cart-items" id="cart-items"></div>
-    <div class="cart-empty" id="cart-empty">O carrinho está vazio.<span>Adicione produtos do estúdio.</span></div>
-    <div class="cart-foot">
-      <div class="cart-total"><span>Total estimado</span><strong id="cart-total">0 MT</strong></div>
-      <button class="checkout-button" id="cart-checkout">Finalizar pedido <span>→</span></button>
-      <p class="secure-note">Entrega e pagamento confirmados antes de produzir</p>
-    </div>
-  </aside>
-
-  <dialog class="order-modal" id="order-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><div class="modal-title"><span>03</span><div><p class="panel-kicker">FINALIZAR</p><h2>Enviar pedido</h2><p>Confirme os seus dados. Respondemos por email ou telefone com entrega e pagamento.</p></div></div><form id="order-form" action="https://formsubmit.co/ajax/info@scolorprint.com" method="POST"><input type="hidden" name="_subject" value="Novo pedido de camisetas — S Color Print"><input type="hidden" name="Resumo" id="order-summary"><div class="form-row"><label>Nome completo<input name="Nome" required></label><label>Telefone / WhatsApp<input name="Telefone" required></label></div><label>Email<input type="email" name="Email" required></label><label>Local de entrega<input name="Entrega" placeholder="Bairro, cidade ou província" required></label><label>Observações<textarea name="Observacoes" rows="3" placeholder="Prazo, cores adicionais ou instruções..."></textarea></label><div class="modal-recap"><span id="modal-recap-text">1 Camiseta Clássica</span><b id="modal-recap-price">650 MT</b></div><button class="checkout-button" type="submit">Enviar para a S Color Print <span>→</span></button><p class="form-status" id="form-status"></p></form></dialog>
-  <script src="script.js?v=20260621o"></script>
+  <dialog class="tracking-modal" id="tracking-modal"><button class="modal-close" type="button" aria-label="Fechar">×</button><p class="eyebrow"><span>●</span> ACOMPANHAR PEDIDO</p><h2>Consulte com o seu código.</h2><p>Introduza o código recebido na confirmação. O atendimento verifica o estado do pedido consigo pelo WhatsApp.</p><label>Código do pedido<input id="tracking-code" placeholder="Ex.: SCP-1842"></label><button class="submit-button" id="track-order" type="button">Consultar pelo WhatsApp <span>→</span></button><small>Não tem código? Fale connosco pelo +258 84 990 0402.</small></dialog>
+  <script src="platform.js?v=20260622a"></script>
 </body>
 </html>
