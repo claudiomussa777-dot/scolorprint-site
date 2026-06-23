@@ -321,6 +321,7 @@ if (queryProduct && PRODUCTS[queryProduct]) goStep(1);
 /* ---- Stamp library (Modelos step) — original Scolor Print art by category ---- */
 const stampPaths = (slug, n) => Array.from({ length: n }, (_, i) => `assets/estampas/${slug}-${i + 1}.png`);
 const STAMPS = {
+  'estilo-fas': { label: '★ Estilo Fãs', imgs: stampPaths('estilo-fas', 8) },
   'desenhos-animados': { label: 'Desenhos animados', imgs: [...stampPaths('desenhos-animados', 3), 'assets/cartoon-leao-v1.png', 'assets/cartoon-robo-v1.png', 'assets/cartoon-danca-v1.png', 'assets/cartoon-camaleao-v1.png'] },
   'anime': { label: 'Anime', imgs: stampPaths('anime', 3) },
   'super-herois': { label: 'Super-heróis', imgs: stampPaths('super-herois', 3) },
