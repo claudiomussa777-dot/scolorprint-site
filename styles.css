@@ -181,3 +181,10 @@
 .stamp-thumb:hover{border-color:var(--purple);transform:translateY(-2px);box-shadow:0 4px 12px #0001}
 .stamp-thumb img{max-width:100%;max-height:100%;object-fit:contain}
 .stamp-thumb.missing{display:none}
+
+/* Embed mode (editor inside an iframe on the landing) */
+html.embed .announcement,html.embed .site-header,html.embed footer,html.embed .whatsapp,html.embed .editor-heading{display:none!important}
+html.embed body{background:#fff}
+html.embed .editor-wrap{margin:0!important;padding:12px}
+html.embed .editor-app{border:0;border-radius:0;box-shadow:none;min-height:560px}
+html.embed .benefits,html.embed .how{display:none!important}
