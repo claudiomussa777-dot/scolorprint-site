@@ -11,7 +11,7 @@ $('#year').textContent = new Date().getFullYear();
 $('.menu-button').addEventListener('click', () => $('.site-header').classList.toggle('open'));
 
 const PRODUCTS = {
-  tshirt:   { name:'Camiseta', price:650,  zone:{l:'35%',t:'33%',w:'30%',h:'30%'}, hasBack:false, printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm',
+  tshirt:   { name:'Camiseta', price:650,  zone:{l:'24%',t:'22%',w:'50%',h:'52%'}, hasBack:false, printLabel:'ÁREA DE IMPRESSÃO · FRENTE 30×40cm',
               sizes:['S','M','L','XL','2XL'],
               colors:[{name:'Branco',hex:'#f4f2ec',img:'assets/mockup-tshirt-real-v2.jpg'},{name:'Preto',hex:'#18191d',img:'assets/mockup-tshirt-black-v2.jpg'},{name:'Azul-marinho',hex:'#17304f',img:'assets/mockup-tshirt-navy-v2.jpg'},{name:'Vermelho',hex:'#a62d38',img:'assets/mockup-tshirt-red-v2.jpg'}] },
   hoodie:   { name:'Hoodie', price:1500, zone:{l:'39%',t:'46%',w:'22%',h:'22%'}, hasBack:false, printLabel:'IMPRESSÃO · PEITO 25×25cm · DTG',
