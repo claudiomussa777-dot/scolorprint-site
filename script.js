@@ -319,15 +319,22 @@ if (initSlide >= 0) showCat(initSlide);
 if (queryProduct && PRODUCTS[queryProduct]) goStep(1);
 
 /* ---- Stamp library (Modelos step) — original Scolor Print art by category ---- */
+const stampPaths = (slug, n) => Array.from({ length: n }, (_, i) => `assets/estampas/${slug}-${i + 1}.png`);
 const STAMPS = {
-  'desenhos-animados': { label: 'Desenhos animados', imgs: [
-    'assets/estampas/desenhos-animados-1.png', 'assets/estampas/desenhos-animados-2.png', 'assets/estampas/desenhos-animados-3.png',
-    'assets/cartoon-leao-v1.png', 'assets/cartoon-robo-v1.png', 'assets/cartoon-danca-v1.png', 'assets/cartoon-camaleao-v1.png'] },
-  'princesas': { label: 'Princesas', imgs: ['assets/estampas/princesas-1.png', 'assets/estampas/princesas-2.png', 'assets/estampas/princesas-3.png'] },
-  'super-herois': { label: 'Super-heróis', imgs: ['assets/estampas/super-herois-1.png', 'assets/estampas/super-herois-2.png', 'assets/estampas/super-herois-3.png'] },
-  'fe-frases': { label: 'Fé & Frases', imgs: ['assets/estampas/fe-frases-1.png', 'assets/estampas/fe-frases-2.png', 'assets/estampas/fe-frases-3.png'] },
-  'desporto': { label: 'Desporto', imgs: ['assets/estampas/desporto-1.png', 'assets/estampas/desporto-2.png', 'assets/estampas/desporto-3.png'] },
-  'streetwear': { label: 'Streetwear', imgs: ['assets/estampas/streetwear-1.png', 'assets/estampas/streetwear-2.png', 'assets/estampas/streetwear-3.png'] }
+  'desenhos-animados': { label: 'Desenhos animados', imgs: [...stampPaths('desenhos-animados', 3), 'assets/cartoon-leao-v1.png', 'assets/cartoon-robo-v1.png', 'assets/cartoon-danca-v1.png', 'assets/cartoon-camaleao-v1.png'] },
+  'anime': { label: 'Anime', imgs: stampPaths('anime', 3) },
+  'super-herois': { label: 'Super-heróis', imgs: stampPaths('super-herois', 3) },
+  'princesas': { label: 'Princesas', imgs: stampPaths('princesas', 3) },
+  'caveiras': { label: 'Caveiras', imgs: stampPaths('caveiras', 3) },
+  'streetwear': { label: 'Streetwear', imgs: stampPaths('streetwear', 3) },
+  'fe-frases': { label: 'Fé & Frases', imgs: stampPaths('fe-frases', 3) },
+  'motivacional': { label: 'Motivacional', imgs: stampPaths('motivacional', 3) },
+  'desporto': { label: 'Desporto', imgs: stampPaths('desporto', 3) },
+  'musica': { label: 'Música', imgs: stampPaths('musica', 3) },
+  'cultura-mz': { label: 'Cultura MZ', imgs: stampPaths('cultura-mz', 3) },
+  'animais': { label: 'Animais', imgs: stampPaths('animais', 3) },
+  'floral': { label: 'Floral', imgs: stampPaths('floral', 3) },
+  'datas-festas': { label: 'Datas & Festas', imgs: stampPaths('datas-festas', 3) }
 };
 function applyStamp(src, label) {
   uploadedArt.src = src;
