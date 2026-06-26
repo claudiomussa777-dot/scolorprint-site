@@ -1,82 +1,123 @@
 const $ = (selector, scope = document) => scope.querySelector(selector);
-const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
+const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
 
-$('#year').textContent = new Date().getFullYear();
+const phone = '258849900402';
+const form = $('#order-form');
+const productInput = $('#selected-product');
+const productSummary = $('#summary-product');
+const previewImage = $('#preview-image');
+const whatsappOrder = $('#whatsapp-order');
+const status = $('.form-status', form);
 
-const header = $('.site-header');
-const menuToggle = $('.menu-toggle');
-menuToggle.addEventListener('click', () => {
-  const open = header.classList.toggle('menu-open');
-  menuToggle.setAttribute('aria-expanded', String(open));
+function whatsappUrl(message) {
+  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+}
+
+function buildMessage() {
+  const data = new FormData(form);
+  const product = data.get('Produto') || 'produto personalizado';
+  const name = data.get('Nome') || '';
+  const qty = data.get('Quantidade') || '';
+  const city = data.get('Cidade') || '';
+  const idea = data.get('Ideia') || '';
+
+  return [
+    'Olá Smart Color Print, quero pedir um orçamento.',
+    `Produto: ${product}`,
+    name && `Nome: ${name}`,
+    qty && `Quantidade: ${qty}`,
+    city && `Cidade: ${city}`,
+    idea && `Ideia: ${idea}`
+  ].filter(Boolean).join('\n');
+}
+
+function refreshWhatsAppLink() {
+  whatsappOrder.href = whatsappUrl(buildMessage());
+}
+
+$$('[data-product]').forEach(card => {
+  card.addEventListener('click', () => {
+    const product = card.dataset.product;
+    const image = card.dataset.img;
+
+    $$('[data-product]').forEach(item => item.classList.remove('is-selected'));
+    card.classList.add('is-selected');
+
+    productInput.value = product;
+    productSummary.textContent = product;
+    previewImage.src = image;
+    previewImage.alt = `Pré-visualização: ${product}`;
+    refreshWhatsAppLink();
+    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 });
-$$('.main-nav a').forEach(link => link.addEventListener('click', () => {
-  header.classList.remove('menu-open');
-  menuToggle.setAttribute('aria-expanded', 'false');
-}));
 
-const trackingModal = $('#tracking-modal');
-$$('[data-open-tracking]').forEach(button => button.addEventListener('click', () => trackingModal.showModal()));
-$('.modal-close', trackingModal).addEventListener('click', () => trackingModal.close());
-trackingModal.addEventListener('click', event => { if (event.target === trackingModal) trackingModal.close(); });
-$('#track-order').addEventListener('click', () => {
-  const code = $('#tracking-code').value.trim().toUpperCase();
-  if (!code) {
-    $('#tracking-code').focus();
-    $('#tracking-code').setCustomValidity('Introduza o código do pedido.');
-    $('#tracking-code').reportValidity();
+$$('input, textarea', form).forEach(field => {
+  field.addEventListener('input', refreshWhatsAppLink);
+  field.addEventListener('change', refreshWhatsAppLink);
+});
+
+$('.file-field input', form).addEventListener('change', event => {
+  const file = event.target.files[0];
+  const label = $('.file-field strong', form);
+  const hint = $('.file-field small', form);
+
+  if (!file) {
+    label.textContent = 'Anexar imagem ou logotipo';
+    hint.textContent = 'Opcional. Pode enviar referência, arte ou PDF.';
     return;
   }
-  $('#tracking-code').setCustomValidity('');
-  const message = encodeURIComponent(`Olá Scolor Print, quero consultar o estado do pedido ${code}.`);
-  window.open(`https://wa.me/258849900402?text=${message}`, '_blank', 'noopener');
-});
-$('#tracking-code').addEventListener('input', event => event.target.setCustomValidity(''));
 
-$$('.file-field input[type="file"]').forEach(input => input.addEventListener('change', () => {
-  const file = input.files[0];
-  const title = $('b', input.nextElementSibling);
-  const note = $('small', input.nextElementSibling);
-  if (!file) return;
   if (file.size > 8 * 1024 * 1024) {
-    input.value = '';
-    title.textContent = 'Ficheiro demasiado grande';
-    note.textContent = 'Escolha um ficheiro até 8 MB';
+    event.target.value = '';
+    label.textContent = 'Ficheiro demasiado grande';
+    hint.textContent = 'Escolha imagem ou PDF até 8 MB.';
     return;
   }
-  title.textContent = file.name;
-  note.textContent = `${Math.max(1, Math.round(file.size / 1024))} KB · pronto para enviar`;
-}));
 
-async function submitForm(form) {
+  label.textContent = file.name;
+  hint.textContent = 'Ficheiro pronto para enviar.';
+});
+
+form.addEventListener('submit', async event => {
+  event.preventDefault();
+  if (!form.reportValidity()) return;
+
   const button = $('button[type="submit"]', form);
-  const status = $('.form-status', form);
-  const original = button.innerHTML;
+  const originalLabel = button.textContent;
+  const data = new FormData(form);
+  data.append('_url', location.href);
+
   button.disabled = true;
   button.textContent = 'A enviar...';
   status.className = 'form-status';
   status.textContent = '';
-  const data = new FormData(form);
-  data.append('_captcha', 'false');
-  data.append('_template', 'table');
-  data.append('_url', location.href);
+
   try {
-    const response = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
-    if (!response.ok) throw new Error('Falha no envio');
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { Accept: 'application/json' }
+    });
+
+    if (!response.ok) throw new Error('Form submission failed');
+
     status.className = 'form-status success';
-    status.textContent = form.id === 'partner-form' ? 'Obrigado pela candidatura. A equipa Scolor Print irá analisar os seus dados e entrar em contacto pelo WhatsApp.' : 'Pedido enviado. Vamos responder pelo WhatsApp com orientação, preço e prazo.';
-    button.innerHTML = 'Enviado com sucesso ✓';
+    status.textContent = 'Pedido enviado. Vamos responder pelo WhatsApp com preço e prazo.';
+    button.textContent = 'Pedido enviado ✓';
     form.reset();
-    $$('.file-field span b', form).forEach(item => item.textContent = '↑ Escolher ficheiro');
+    productInput.value = productSummary.textContent;
+    $('.file-field strong', form).textContent = 'Anexar imagem ou logotipo';
+    $('.file-field small', form).textContent = 'Opcional. Pode enviar referência, arte ou PDF.';
+    refreshWhatsAppLink();
   } catch {
     status.className = 'form-status error';
-    status.innerHTML = 'Não foi possível enviar agora. <a href="https://wa.me/258849900402" target="_blank" rel="noopener">Envie pelo WhatsApp</a> ou contacte info@scolorprint.com.';
+    status.textContent = 'Não foi possível enviar por email. Use o botão de WhatsApp abaixo.';
+    whatsappOrder.href = whatsappUrl(buildMessage());
+    whatsappOrder.focus();
     button.disabled = false;
-    button.innerHTML = original;
+    button.textContent = originalLabel;
   }
-}
+});
 
-$$('.smart-form').forEach(form => form.addEventListener('submit', event => {
-  event.preventDefault();
-  if (!form.reportValidity()) return;
-  submitForm(form);
-}));
+refreshWhatsAppLink();
