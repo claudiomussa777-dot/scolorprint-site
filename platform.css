@@ -740,6 +740,33 @@ select:focus {
   margin-inline: auto;
 }
 
+.seo-content {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(320px, 1.05fr);
+  gap: clamp(22px, 5vw, 60px);
+  align-items: start;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,243,223,.72));
+  padding: clamp(24px, 5vw, 56px);
+  box-shadow: 0 16px 44px rgba(58, 34, 17, .055);
+}
+
+.seo-content h2 {
+  margin-bottom: 0;
+}
+
+.seo-copy {
+  display: grid;
+  gap: 14px;
+}
+
+.seo-copy p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
 .faq {
   display: grid;
   gap: 12px;
@@ -837,7 +864,8 @@ select:focus {
   .hero,
   .order-shell,
   .section-head,
-  .benefits {
+  .benefits,
+  .seo-content {
     grid-template-columns: 1fr;
   }
 
