@@ -168,6 +168,12 @@ button {
   color: var(--ink);
 }
 
+.button-soft {
+  border: 1px solid rgba(242, 45, 122, .22);
+  background: rgba(242, 45, 122, .10);
+  color: var(--brand-dark);
+}
+
 .button-full {
   width: 100%;
   background: var(--brand);
@@ -698,6 +704,158 @@ select:focus {
   color: var(--ink);
 }
 
+.reseller-strip {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(20px, 4vw, 46px);
+  align-items: center;
+  border: 1px solid rgba(242, 45, 122, .20);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 92% 16%, rgba(255,183,3,.28), transparent 25vw),
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,243,223,.78));
+  padding: clamp(24px, 5vw, 54px);
+  box-shadow: 0 18px 54px rgba(58, 34, 17, .07);
+}
+
+.reseller-strip h2 {
+  max-width: 850px;
+}
+
+.reseller-strip p:not(.eyebrow) {
+  max-width: 760px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.page-hero {
+  width: min(var(--max), calc(100% - 32px));
+  margin: clamp(28px, 5vw, 64px) auto 0;
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,183,3,.32), transparent 28vw),
+    radial-gradient(circle at 88% 12%, rgba(242,45,122,.30), transparent 30vw),
+    linear-gradient(145deg, #17110f, #050505);
+  color: #fff;
+  padding: clamp(34px, 7vw, 86px);
+  box-shadow: 0 30px 90px rgba(23, 17, 15, .20);
+}
+
+.page-hero .eyebrow {
+  color: #ffb703;
+}
+
+.page-hero h1 {
+  max-width: 950px;
+}
+
+.page-hero .lead {
+  color: rgba(255,255,255,.78);
+}
+
+.page-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .52fr);
+  gap: clamp(22px, 5vw, 64px);
+  align-items: end;
+}
+
+.hero-stat-card {
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 30px;
+  background: rgba(255,255,255,.10);
+  padding: clamp(20px, 4vw, 32px);
+  backdrop-filter: blur(18px);
+}
+
+.hero-stat-card strong {
+  display: block;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+
+.hero-stat-card span {
+  color: rgba(255,255,255,.74);
+  font-weight: 780;
+}
+
+.partner-grid,
+.rules-grid,
+.admin-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.partner-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.partner-card,
+.rules-grid article,
+.admin-grid article,
+.partner-form {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: 0 16px 44px rgba(58, 34, 17, .055);
+}
+
+.partner-card,
+.rules-grid article,
+.admin-grid article {
+  padding: 22px;
+}
+
+.partner-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
+  border-radius: 999px;
+  background: var(--surface-soft);
+  color: var(--brand-dark);
+  font-weight: 950;
+}
+
+.partner-card p,
+.rules-grid p,
+.admin-grid p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.rules-grid,
+.admin-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-form-section {
+  display: grid;
+  grid-template-columns: minmax(0, .86fr) minmax(360px, 1fr);
+  gap: clamp(22px, 5vw, 54px);
+  align-items: start;
+}
+
+.partner-form {
+  display: grid;
+  gap: 14px;
+  padding: clamp(20px, 4vw, 32px);
+}
+
+.note-box {
+  border: 1px solid rgba(0, 167, 127, .22);
+  border-radius: 24px;
+  background: rgba(0, 167, 127, .08);
+  padding: 18px;
+  color: #0b634e;
+  font-weight: 760;
+}
+
 .featured-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -865,7 +1023,10 @@ select:focus {
   .order-shell,
   .section-head,
   .benefits,
-  .seo-content {
+  .seo-content,
+  .reseller-strip,
+  .page-hero-grid,
+  .partner-form-section {
     grid-template-columns: 1fr;
   }
 
@@ -882,7 +1043,10 @@ select:focus {
   }
 
   .product-grid,
-  .steps {
+  .steps,
+  .partner-grid,
+  .rules-grid,
+  .admin-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -903,8 +1067,14 @@ select:focus {
   .section,
   .order-shell,
   .final-cta,
-  .site-footer {
+    .site-footer {
     width: min(100% - 24px, var(--max));
+  }
+
+  .page-hero {
+    width: min(100% - 24px, var(--max));
+    padding: 30px 18px;
+    border-radius: 28px;
   }
 
   .site-header {
@@ -1026,7 +1196,10 @@ select:focus {
 
   .form-row,
   .steps,
-  .featured-grid {
+  .featured-grid,
+  .partner-grid,
+  .rules-grid,
+  .admin-grid {
     grid-template-columns: 1fr;
   }
 

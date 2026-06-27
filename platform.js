@@ -22,7 +22,7 @@ function buildMessage() {
   const idea = data.get('Ideia') || '';
 
   return [
-    'Olá Smart Color Print, quero pedir um orçamento.',
+    'Olá Smart Color Print, quero receber orçamento em até 10 minutos.',
     `Produto: ${product}`,
     name && `Nome: ${name}`,
     qty && `Quantidade: ${qty}`,
@@ -103,7 +103,7 @@ form.addEventListener('submit', async event => {
     if (!response.ok) throw new Error('Form submission failed');
 
     status.className = 'form-status success';
-    status.textContent = 'Pedido enviado. Vamos responder pelo WhatsApp com preço e prazo.';
+    status.textContent = 'Pedido enviado. Vamos responder pelo WhatsApp com preço e prazo em até 10 minutos.';
     button.textContent = 'Pedido enviado ✓';
     form.reset();
     productInput.value = productSummary.textContent;
