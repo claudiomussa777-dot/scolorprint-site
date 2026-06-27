@@ -22,7 +22,7 @@ function buildMessage() {
   const idea = data.get('Ideia') || '';
 
   return [
-    'Olá Smart Color Print, quero receber orçamento em até 10 minutos.',
+    'Olá Smart Color Print, quero saber o preço em até 10 minutos.',
     `Produto: ${product}`,
     name && `Nome: ${name}`,
     qty && `Quantidade: ${qty}`,
