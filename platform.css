@@ -883,6 +883,47 @@ select:focus {
   padding-bottom: 18px;
 }
 
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.work-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: var(--surface);
+  box-shadow: 0 16px 44px rgba(58, 34, 17, .06);
+}
+
+.work-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.work-card div {
+  display: grid;
+  gap: 8px;
+  padding: 18px;
+}
+
+.work-card h3,
+.work-card p {
+  margin: 0;
+}
+
+.work-card p {
+  color: var(--muted);
+}
+
+.work-card a {
+  margin-top: 6px;
+  color: var(--brand-dark);
+  font-weight: 900;
+}
+
 .proof {
   padding: clamp(24px, 5vw, 56px);
   text-align: center;
@@ -1046,6 +1087,7 @@ select:focus {
   .steps,
   .partner-grid,
   .rules-grid,
+  .work-grid,
   .admin-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1199,8 +1241,13 @@ select:focus {
   .featured-grid,
   .partner-grid,
   .rules-grid,
+  .work-grid,
   .admin-grid {
     grid-template-columns: 1fr;
+  }
+
+  .work-card img {
+    height: 240px;
   }
 
   .site-footer {
