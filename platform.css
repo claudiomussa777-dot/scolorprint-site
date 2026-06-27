@@ -414,7 +414,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--surface);
-  padding: 20px;
+  padding: 12px;
+  overflow: hidden;
   box-shadow: 0 16px 44px rgba(58, 34, 17, .055);
 }
 
@@ -430,9 +431,48 @@ h3 {
   box-shadow: 0 22px 62px rgba(242, 45, 122, .12);
 }
 
+.price-grid figure,
+.package-grid figure {
+  position: relative;
+  min-height: 154px;
+  margin: 0 0 4px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--surface-soft);
+}
+
+.package-grid figure {
+  min-height: 168px;
+}
+
+.price-grid figure::after,
+.package-grid figure::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 46%;
+  background: linear-gradient(180deg, transparent, rgba(23, 17, 15, .30));
+}
+
+.price-grid img,
+.package-grid img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  display: block;
+  transition: transform .25s ease;
+}
+
+.price-grid article:hover img,
+.package-grid article:hover img {
+  transform: scale(1.035);
+}
+
 .price-grid em,
 .package-grid em {
   justify-self: start;
+  margin-left: 8px;
   border-radius: 999px;
   background: var(--ink);
   color: #fff;
@@ -449,6 +489,7 @@ h3 {
 
 .price-grid span,
 .package-grid span {
+  padding: 0 8px;
   color: var(--brand-dark);
   font-size: .78rem;
   font-weight: 950;
@@ -458,7 +499,8 @@ h3 {
 
 .price-grid strong {
   display: block;
-  min-height: 60px;
+  min-height: 54px;
+  padding: 0 8px;
   font-size: clamp(1.45rem, 2.7vw, 2.15rem);
   line-height: .98;
   letter-spacing: -.055em;
@@ -466,6 +508,7 @@ h3 {
 
 .price-grid small,
 .package-grid p {
+  padding: 0 8px;
   color: var(--muted);
 }
 
@@ -493,7 +536,9 @@ h3 {
 }
 
 .package-grid h3 {
-  font-size: 1.24rem;
+  min-height: 74px;
+  padding: 0 8px;
+  font-size: 1.16rem;
 }
 
 .product-card {
