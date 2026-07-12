@@ -167,9 +167,10 @@ button { color: inherit; }
 .lab-summary span { color: var(--cyan); font-size: .72rem; text-transform: uppercase; }
 .lab-summary strong { grid-column: 1; font-family: var(--display); font-size: 1.4rem; }
 .lab-summary small { grid-column: 2; grid-row: 1 / 3; align-self: center; color: rgba(255,255,255,.6); }
-.quote-wizard { display: flex; flex-direction: column; min-height: 700px; }
+.quote-wizard { display: flex; flex-direction: column; min-height: 0; }
 .wizard-top { display: flex; justify-content: space-between; gap: 30px; align-items: end; }
 .wizard-top h2 { font-size: clamp(2.5rem,4.5vw,5rem); }
+.wizard-intro { max-width: 560px; margin: 12px 0 28px; color: rgba(255,255,255,.6); line-height: 1.6; }
 .wizard-counter { display: inline-flex; align-items: baseline; color: rgba(255,255,255,.44); font-family: var(--display); font-size: 1.2rem; }
 .wizard-counter b { color: var(--yellow); font-size: 2.2rem; }
 .progress-track { height: 2px; margin: 30px 0 38px; background: rgba(255,255,255,.14); }
@@ -178,6 +179,7 @@ button { color: inherit; }
 .wizard-step[hidden] { display: none; }
 .wizard-step fieldset { display: grid; gap: 18px; min-width: 0; margin: 0; border: 0; padding: 0; }
 .wizard-step legend { margin-bottom: 20px; font-family: var(--display); font-size: 1.25rem; font-weight: 600; }
+.optional-label { color: rgba(255,255,255,.42); font-weight: 400; }
 .choice-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; }
 .choice-card { position: relative; display: flex; gap: 12px; align-items: center; min-height: 78px; border: 1px solid rgba(255,255,255,.15); border-radius: 14px; background: rgba(255,255,255,.04); padding: 10px; cursor: pointer; transition: .2s; }
 .choice-card:hover, .choice-card.is-selected { border-color: var(--yellow); background: rgba(223,255,56,.08); }
@@ -203,6 +205,7 @@ button { color: inherit; }
 .consent { display: flex !important; align-items: flex-start; gap: 10px; }
 .consent input { width: 18px; height: 18px; accent-color: var(--yellow); }
 .wizard-actions { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin-top: 28px; }
+.wizard-actions.single-action small { max-width: 290px; color: rgba(255,255,255,.45); line-height: 1.45; }
 .back-link { border: 0; background: transparent; color: rgba(255,255,255,.62); cursor: pointer; padding: 12px 0; }
 .quote-reference { display: grid; border: 1px solid rgba(223,255,56,.25); border-radius: 14px; background: rgba(223,255,56,.07); margin-top: 20px; padding: 15px; }
 .quote-reference span { color: rgba(255,255,255,.58); font-size: .7rem; text-transform: uppercase; }
@@ -333,7 +336,7 @@ footer { width: min(calc(100% - 40px),var(--max)); margin: 100px auto 0; padding
   .filter-list { justify-content: flex-start; }
   .lab-shell { grid-template-columns: 1fr; }
   .lab-visual { max-width: 650px; }
-  .quote-wizard { min-height: 650px; }
+  .quote-wizard { min-height: 0; }
   .process, .faq { grid-template-columns: 1fr; gap: 50px; }
   .process-sticky, .faq-title { position: static; }
   .footer-main { grid-template-columns: 1fr 1fr; }
@@ -371,7 +374,8 @@ footer { width: min(calc(100% - 40px),var(--max)); margin: 100px auto 0; padding
   .lab-summary small { grid-column: 1; grid-row: auto; }
   .wizard-top h2 { font-size: 2.65rem; }
   .choice-grid, .field-grid { grid-template-columns: 1fr; }
-  .choice-grid { max-height: 350px; overflow-y: auto; padding-right: 4px; }
+  .wizard-actions.single-action { align-items: stretch; flex-direction: column; }
+  .wizard-actions.single-action small { max-width: none; }
   .wizard-actions .button { min-width: 145px; padding-inline: 16px; }
   .work-card, .work-card.work-tall { flex-basis: 82vw; height: 460px; }
   .portfolio-controls { justify-content: flex-start; }

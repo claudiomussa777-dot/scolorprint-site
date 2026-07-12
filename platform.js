@@ -201,22 +201,16 @@ function openProductDialog(id) {
 function renderWizardProducts() {
   const container = $('[data-wizard-products]');
   if (!container) return;
-  container.innerHTML = products.slice(0, 8).map(product => `<label class="choice-card ${state.selectedId === product.id ? 'is-selected' : ''}">
-    <input type="radio" name="product" value="${product.id}" ${state.selectedId === product.id ? 'checked' : ''} required>
-    <img src="${product.image}" alt="" loading="lazy"><span><strong>${product.short}</strong><small>${product.price}</small></span>
-  </label>`).join('');
-
-  $$('input[name="product"]', container).forEach(input => input.addEventListener('change', () => selectProduct(input.value)));
+  container.innerHTML = products.map(product => `<option value="${product.id}" ${state.selectedId === product.id ? 'selected' : ''}>${product.name}</option>`).join('');
+  container.addEventListener('change', () => selectProduct(container.value));
 }
 
 function selectProduct(id, options = {}) {
   const product = productById(id);
   state.selectedId = product.id;
   sessionStorage.setItem('scp-product', product.id);
-  $$('input[name="product"]').forEach(input => {
-    input.checked = input.value === product.id;
-    input.closest('.choice-card')?.classList.toggle('is-selected', input.checked);
-  });
+  const productSelect = $('[data-wizard-products]');
+  if (productSelect) productSelect.value = product.id;
   const quantityInput = $('[data-quantity]');
   if (quantityInput && options.quantity) quantityInput.value = options.quantity;
   const designInput = $('[name="design_help"]');
@@ -242,14 +236,14 @@ function updateQuoteSummary() {
 }
 
 function setStep(step) {
-  state.step = Math.max(1, Math.min(3, step));
+  state.step = 1;
   $$('[data-step]').forEach(panel => {
     const active = Number(panel.dataset.step) === state.step;
     panel.hidden = !active;
     panel.classList.toggle('is-active', active);
   });
   if ($('[data-step-current]')) $('[data-step-current]').textContent = state.step;
-  if ($('[data-progress]')) $('[data-progress]').style.width = `${state.step * 33.333}%`;
+  if ($('[data-progress]')) $('[data-progress]').style.width = '100%';
 }
 
 function validateCurrentStep() {
