@@ -99,6 +99,20 @@ Estrutura de `pedido-instagram.json`:
 
 Para a Smart Home, use `"account": "smart_home"`. O campo é obrigatório; valores ausentes ou diferentes dos dois identificadores permitidos são rejeitados antes de qualquer chamada de publicação.
 
+Para publicar um carrossel, substitua `image_url` por `image_urls` com 2 a 10 ligações HTTPS, já na ordem de publicação:
+
+```json
+{
+  "account": "smart_home",
+  "idempotency_key": "campanha-smarthome-carrossel-v1",
+  "image_urls": [
+    "https://smarthomemz.com/campaigns/exemplo/01.jpg",
+    "https://smarthomemz.com/campaigns/exemplo/02.jpg"
+  ],
+  "caption": "Legenda aprovada"
+}
+```
+
 ## Testes seguros
 
 Os testes automatizados validam os identificadores e o isolamento estrutural sem criar contentores nem publicar no Instagram:

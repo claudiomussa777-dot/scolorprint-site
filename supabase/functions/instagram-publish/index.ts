@@ -18,6 +18,7 @@ import {
 type PublishInput = {
   account?: unknown;
   image_url?: unknown;
+  image_urls?: unknown;
   caption?: unknown;
   idempotency_key?: unknown;
 };
@@ -27,6 +28,7 @@ type PublishJob = {
   account: InstagramAccount;
   idempotency_key: string;
   image_url: string;
+  image_urls: string[];
   caption: string;
   status: 'creating' | 'processing' | 'publishing' | 'published' | 'failed';
   container_id: string | null;
@@ -60,9 +62,11 @@ const authorizeRequest = (request: Request): void => {
   }
 };
 
-export const validateInput = (body: PublishInput): { account: InstagramAccount; imageUrl: string; caption: string; idempotencyKey: string } => {
+export const validateInput = (body: PublishInput): { account: InstagramAccount; imageUrls: string[]; caption: string; idempotencyKey: string } => {
   const account = parseInstagramAccount(body.account);
-  const imageUrl = typeof body.image_url === 'string' ? body.image_url.trim() : '';
+  const rawImageUrls = Array.isArray(body.image_urls)
+    ? body.image_urls
+    : typeof body.image_url === 'string' ? [body.image_url] : [];
   const caption = typeof body.caption === 'string' ? body.caption.trim() : '';
   const idempotencyKey = typeof body.idempotency_key === 'string' ? body.idempotency_key.trim() : '';
 
@@ -73,27 +77,34 @@ export const validateInput = (body: PublishInput): { account: InstagramAccount; 
     throw new SafeError('INVALID_CAPTION', 'A legenda deve ter entre 1 e 2200 caracteres', 400);
   }
 
-  let parsedUrl: URL;
-  try {
-    parsedUrl = new URL(imageUrl);
-  } catch {
-    throw new SafeError('INVALID_IMAGE_URL', 'Ligação da imagem inválida', 400);
-  }
-  if (parsedUrl.protocol !== 'https:' || parsedUrl.username || parsedUrl.password) {
-    throw new SafeError('INVALID_IMAGE_URL', 'A imagem deve usar uma ligação HTTPS pública', 400);
+  if (rawImageUrls.length < 1 || rawImageUrls.length > 10) {
+    throw new SafeError('INVALID_IMAGE_COUNT', 'Envie entre 1 e 10 imagens', 400);
   }
 
-  const defaultHosts = 'scolorprint.com,www.scolorprint.com,ljhylqpsfvmjhvhjkokk.supabase.co';
+  const defaultHosts = 'scolorprint.com,www.scolorprint.com,smarthomemz.com,www.smarthomemz.com,ljhylqpsfvmjhvhjkokk.supabase.co';
   const allowedHosts = new Set(
     (Deno.env.get('INSTAGRAM_ALLOWED_MEDIA_HOSTS') || defaultHosts)
       .split(',')
       .map((host) => host.trim().toLowerCase())
       .filter(Boolean)
   );
-  if (!allowedHosts.has(parsedUrl.hostname.toLowerCase())) {
-    throw new SafeError('MEDIA_HOST_NOT_ALLOWED', 'O domínio da imagem não está autorizado', 400);
-  }
-  return { account, imageUrl: parsedUrl.toString(), caption, idempotencyKey };
+  const imageUrls = rawImageUrls.map((value) => {
+    if (typeof value !== 'string') throw new SafeError('INVALID_IMAGE_URL', 'Ligação da imagem inválida', 400);
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(value.trim());
+    } catch {
+      throw new SafeError('INVALID_IMAGE_URL', 'Ligação da imagem inválida', 400);
+    }
+    if (parsedUrl.protocol !== 'https:' || parsedUrl.username || parsedUrl.password) {
+      throw new SafeError('INVALID_IMAGE_URL', 'A imagem deve usar uma ligação HTTPS pública', 400);
+    }
+    if (!allowedHosts.has(parsedUrl.hostname.toLowerCase())) {
+      throw new SafeError('MEDIA_HOST_NOT_ALLOWED', 'O domínio da imagem não está autorizado', 400);
+    }
+    return parsedUrl.toString();
+  });
+  return { account, imageUrls, caption, idempotencyKey };
 };
 
 const getJob = async (account: InstagramAccount, idempotencyKey: string): Promise<PublishJob | null> => {
@@ -111,7 +122,8 @@ const claimJob = async (input: ReturnType<typeof validateInput>): Promise<{ job:
     body: JSON.stringify({
       account: input.account,
       idempotency_key: input.idempotencyKey,
-      image_url: input.imageUrl,
+      image_url: input.imageUrls[0],
+      image_urls: input.imageUrls,
       caption: input.caption,
       status: 'creating'
     })
@@ -123,7 +135,7 @@ const claimJob = async (input: ReturnType<typeof validateInput>): Promise<{ job:
 
   const existing = await getJob(input.account, input.idempotencyKey);
   if (!existing) throw new SafeError('PUBLISH_JOB_CONFLICT', 'A publicação já foi iniciada', 409);
-  if (existing.image_url !== input.imageUrl || existing.caption !== input.caption) {
+  if (JSON.stringify(existing.image_urls) !== JSON.stringify(input.imageUrls) || existing.caption !== input.caption) {
     throw new SafeError('IDEMPOTENCY_KEY_REUSED', 'Este identificador já pertence a outro conteúdo', 409);
   }
   return { job: existing, created: false };
@@ -191,6 +203,32 @@ const createContainer = async (
   });
   if (!result.id) throw new SafeError('CONTAINER_ID_MISSING', 'O Instagram não devolveu o contentor da publicação', 502);
   return result.id;
+};
+
+const createCarouselContainer = async (
+  instagramUserId: string,
+  token: string,
+  imageUrls: string[],
+  caption: string
+): Promise<string> => {
+  const childIds: string[] = [];
+  for (const imageUrl of imageUrls) {
+    const child = await metaJson<IdResponse>(graphUrl(`${instagramUserId}/media`), {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ image_url: imageUrl, is_carousel_item: true })
+    });
+    if (!child.id) throw new SafeError('CAROUSEL_CHILD_MISSING', 'O Instagram não devolveu um item do carrossel', 502);
+    childIds.push(child.id);
+  }
+
+  const parent = await metaJson<IdResponse>(graphUrl(`${instagramUserId}/media`), {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ media_type: 'CAROUSEL', children: childIds, caption })
+  });
+  if (!parent.id) throw new SafeError('CAROUSEL_CONTAINER_MISSING', 'O Instagram não devolveu o contentor do carrossel', 502);
+  return parent.id;
 };
 
 const waitForContainer = async (containerId: string, token: string): Promise<boolean> => {
@@ -261,7 +299,9 @@ Deno.serve(async (request: Request) => {
     const token = await tokenForPublishing(credential);
     let containerId = activeJob.container_id;
     if (!containerId) {
-      containerId = await createContainer(credential.instagram_user_id, token, input.imageUrl, input.caption);
+      containerId = input.imageUrls.length === 1
+        ? await createContainer(credential.instagram_user_id, token, input.imageUrls[0], input.caption)
+        : await createCarouselContainer(credential.instagram_user_id, token, input.imageUrls, input.caption);
       await updateJob(activeJob.id, { status: 'processing', container_id: containerId, error_code: null });
       activeJob = { ...activeJob, status: 'processing', container_id: containerId };
     }
