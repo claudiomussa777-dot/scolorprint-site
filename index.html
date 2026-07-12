@@ -154,34 +154,22 @@
         <form class="quote-wizard" id="quote-form" novalidate data-quote-form>
           <input type="hidden" name="source" value="website">
           <input name="company_website" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" hidden>
-          <div class="wizard-top"><div><p class="eyebrow light">Estúdio de pedido</p><h2>Configure em poucos passos.</h2></div><span class="wizard-counter"><b data-step-current>1</b>/3</span></div>
-          <div class="progress-track"><span data-progress></span></div>
+          <input type="hidden" name="city" value="A confirmar">
+          <input type="hidden" name="deadline" value="flexivel">
+          <div class="wizard-top"><div><p class="eyebrow light">Pedido rápido</p><h2>Conte-nos o essencial.</h2><p class="wizard-intro">Leva cerca de 1 minuto. Confirmamos cidade, prazo e detalhes pelo WhatsApp.</p></div></div>
 
           <div class="wizard-step is-active" data-step="1">
-            <fieldset><legend>1. O que pretende personalizar?</legend><div class="choice-grid" data-wizard-products></div></fieldset>
-            <div class="wizard-actions"><span></span><button class="button button-acid" type="button" data-next-step>Continuar <span>→</span></button></div>
-          </div>
-
-          <div class="wizard-step" data-step="2" hidden>
-            <fieldset><legend>2. Dê-nos alguns detalhes.</legend>
+            <fieldset><legend>O que pretende encomendar?</legend>
+              <label>Produto<select name="product" required data-wizard-products aria-label="Escolha o produto"></select></label>
               <div class="field-grid">
                 <label>Quantidade<input name="quantity" type="number" min="1" max="100000" step="1" value="10" required data-quantity></label>
-                <label>Cidade<input name="city" autocomplete="address-level2" maxlength="120" placeholder="Ex.: Maputo" required></label>
+                <label>Nome<input name="name" autocomplete="name" maxlength="160" required></label>
               </div>
-              <label>Quando precisa?<select name="deadline"><option value="flexivel">Prazo flexível</option><option value="1-semana">Dentro de 1 semana</option><option value="2-semanas">Dentro de 2 semanas</option><option value="data">Tenho uma data específica</option></select></label>
-              <label class="toggle-line"><input name="design_help" type="checkbox" value="sim"><span class="toggle-ui"></span><span><strong>Preciso de ajuda com a arte</strong><small>Pode enviar apenas uma ideia ou referência.</small></span></label>
+              <label>WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" pattern="\+?[0-9 ()-]{7,30}" title="Use entre 7 e 15 algarismos; o sinal + só pode aparecer no início." placeholder="+258 84 000 0000" required></label>
+              <label>Descreva o pedido <span class="optional-label">(opcional)</span><textarea name="description" rows="3" maxlength="2000" placeholder="Ex.: camisetas pretas com logótipo à frente"></textarea></label>
             </fieldset>
-            <div class="wizard-actions"><button class="back-link" type="button" data-prev-step>← Voltar</button><button class="button button-acid" type="button" data-next-step>Continuar <span>→</span></button></div>
-          </div>
-
-          <div class="wizard-step" data-step="3" hidden>
-            <fieldset><legend>3. Como respondemos?</legend>
-              <div class="field-grid"><label>Nome<input name="name" autocomplete="name" maxlength="160" required></label><label>WhatsApp<input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" pattern="\+?[0-9 ()-]{7,30}" title="Use entre 7 e 15 algarismos; o sinal + só pode aparecer no início." placeholder="+258 84 000 0000" required></label></div>
-              <label>Conte a sua ideia<textarea name="description" rows="4" maxlength="2000" placeholder="Cores, tamanhos, aplicação, referência ou qualquer detalhe importante."></textarea></label>
-              <label class="consent"><input type="checkbox" required><span>Autorizo o contacto para responder a este pedido.</span></label>
-            </fieldset>
-            <div class="quote-reference"><span>Referência inicial</span><strong data-quote-reference>Desde 800 MT/un.</strong><small>Preço final confirmado após análise da quantidade, arte, material, acabamento e prazo.</small></div>
-            <div class="wizard-actions"><button class="back-link" type="button" data-prev-step>← Voltar</button><button class="button button-acid" type="submit">Enviar pedido <span>↗</span></button></div>
+            <div class="quote-reference"><span>Referência inicial</span><strong data-quote-reference>Desde 800 MT/un.</strong><small>Preço final confirmado após análise da quantidade, arte e acabamento.</small></div>
+            <div class="wizard-actions single-action"><small>Ao enviar, autoriza o nosso contacto sobre este pedido.</small><button class="button button-acid" type="submit">Pedir orçamento <span>↗</span></button></div>
             <a class="whatsapp-direct" href="https://wa.me/258849900402" target="_blank" rel="noopener" data-whatsapp-link>Ou continuar diretamente no WhatsApp</a>
             <p class="form-status" aria-live="polite" data-form-status></p>
           </div>
@@ -209,7 +197,7 @@
         <button class="button button-dark" type="button" data-open-quote>Começar pedido</button>
       </div>
       <div class="process-list">
-        <article class="reveal"><span>01</span><div><h3>Escolha e configure</h3><p>Selecione o produto, indique quantidade, cidade e prazo desejado.</p></div><b>↘</b></article>
+        <article class="reveal"><span>01</span><div><h3>Faça o pedido rápido</h3><p>Escolha o produto e indique apenas quantidade, nome, WhatsApp e a sua ideia.</p></div><b>↘</b></article>
         <article class="reveal"><span>02</span><div><h3>Receba orientação</h3><p>Analisamos a ideia, esclarecemos materiais e ajudamos com a arte quando necessário.</p></div><b>↘</b></article>
         <article class="reveal"><span>03</span><div><h3>Confirme tudo</h3><p>Preço, prazo, pagamento e arte são confirmados antes da produção.</p></div><b>↘</b></article>
         <article class="reveal"><span>04</span><div><h3>Produção e entrega</h3><p>Acompanhamos o trabalho até à recolha ou entrega combinada.</p></div><b>✓</b></article>
