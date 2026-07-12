@@ -33,7 +33,7 @@ module.exports = async function handler(request, response) {
   }
 
   try {
-    const result = await fetch(`${supabaseUrl.replace(/\/$/, '')}/rest/v1/quote_requests`, {
+    const result = await fetch(`${supabaseUrl.replace(/\/$/, '')}/rest/v1/scp_quote_requests`, {
       method: 'POST',
       headers: {
         apikey: serviceKey,
