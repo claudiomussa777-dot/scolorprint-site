@@ -276,9 +276,37 @@ function buildPayload() {
     customer_name: String(data.get('name') || '').trim(),
     whatsapp: String(data.get('whatsapp') || '').trim(),
     description: String(data.get('description') || '').trim(),
-    source: 'website',
-    page_url: location.href
+    page_url: `${location.origin}${location.pathname}`.slice(0, 500)
   };
+}
+
+function getSupabaseConfig() {
+  const config = window.SCP_SUPABASE || {};
+  const url = String(config.url || '').replace(/\/$/, '');
+  const publishableKey = String(config.publishableKey || '');
+  const validUrl = /^https:\/\/[a-z0-9]{20}\.supabase\.co$/i.test(url);
+  const validKey = (publishableKey.startsWith('sb_publishable_') || publishableKey.startsWith('eyJ'))
+    && !publishableKey.includes('SUBSTITUA');
+  if (!validUrl || !validKey) throw new Error('SUPABASE_NOT_CONFIGURED');
+  return { url, publishableKey };
+}
+
+async function saveQuoteRequest(payload) {
+  const { url, publishableKey } = getSupabaseConfig();
+  const response = await fetch(`${url}/rest/v1/scp_quote_requests`, {
+    method: 'POST',
+    headers: {
+      apikey: publishableKey,
+      'Content-Type': 'application/json',
+      Prefer: 'return=minimal'
+    },
+    body: JSON.stringify(payload)
+  });
+
+  if (!response.ok) {
+    console.warn('Não foi possível registar o pedido no Supabase.', response.status);
+    throw new Error('QUOTE_INSERT_FAILED');
+  }
 }
 
 function buildWhatsAppMessage(payload = buildPayload()) {
@@ -306,6 +334,18 @@ function openQuote() {
 function initQuoteWizard() {
   const form = $('[data-quote-form]');
   if (!form) return;
+  const whatsappField = $('[name="whatsapp"]', form);
+  const validateWhatsApp = () => {
+    if (!whatsappField) return;
+    if (!whatsappField.value) {
+      whatsappField.setCustomValidity('');
+      return;
+    }
+    const value = whatsappField.value.trim();
+    const digitCount = value.replace(/\D/g, '').length;
+    const valid = /^\+?[0-9 ()-]{7,30}$/.test(value) && digitCount >= 7 && digitCount <= 15;
+    whatsappField.setCustomValidity(valid ? '' : 'Indique um WhatsApp válido com 7 a 15 algarismos.');
+  };
   renderWizardProducts();
   updateQuoteSummary();
   setStep(1);
@@ -314,12 +354,13 @@ function initQuoteWizard() {
   $$('[data-next-step]').forEach(button => button.addEventListener('click', () => { if (validateCurrentStep()) setStep(state.step + 1); }));
   $$('[data-prev-step]').forEach(button => button.addEventListener('click', () => setStep(state.step - 1)));
   $$('input, select, textarea', form).forEach(field => {
-    field.addEventListener('input', () => { updateQuoteSummary(); updateWhatsAppLink(); });
-    field.addEventListener('change', () => { updateQuoteSummary(); updateWhatsAppLink(); });
+    field.addEventListener('input', () => { if (field === whatsappField) validateWhatsApp(); updateQuoteSummary(); updateWhatsAppLink(); });
+    field.addEventListener('change', () => { if (field === whatsappField) validateWhatsApp(); updateQuoteSummary(); updateWhatsAppLink(); });
   });
 
   form.addEventListener('submit', async event => {
     event.preventDefault();
+    validateWhatsApp();
     if (!form.reportValidity()) return;
     const status = $('[data-form-status]');
     const submit = $('button[type="submit"]', form);
@@ -331,22 +372,22 @@ function initQuoteWizard() {
     status.textContent = '';
 
     try {
-      let response = await fetch('/api/quote', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
-      if (!response.ok) {
-        const fallback = new FormData();
-        Object.entries(payload).forEach(([key, value]) => fallback.append(key, String(value)));
-        fallback.append('_subject', `Novo pedido — ${payload.product_name}`);
-        fallback.append('_captcha', 'false');
-        response = await fetch('https://formsubmit.co/ajax/info@scolorprint.com', { method: 'POST', headers: { Accept: 'application/json' }, body: fallback });
+      if ($('[name="company_website"]', form)?.value) {
+        status.className = 'form-status success';
+        status.textContent = 'Pedido registado. Vamos responder pelo WhatsApp.';
+        submit.textContent = 'Pedido registado ✓';
+        return;
       }
-      if (!response.ok) throw new Error('Falha no envio');
+      await saveQuoteRequest(payload);
       status.className = 'form-status success';
-      status.textContent = 'Pedido recebido. Vamos responder pelo WhatsApp com preço, prazo e condições.';
-      submit.textContent = 'Pedido enviado ✓';
+      status.textContent = 'Pedido registado. Vamos responder pelo WhatsApp com preço, prazo e condições.';
+      submit.textContent = 'Pedido registado ✓';
       sessionStorage.removeItem('scp-product');
-    } catch {
+    } catch (error) {
       status.className = 'form-status error';
-      status.textContent = 'Não foi possível enviar agora. Continue pelo WhatsApp abaixo.';
+      status.textContent = error?.message === 'SUPABASE_NOT_CONFIGURED'
+        ? 'O registo online está a ser configurado. Continue pelo WhatsApp abaixo.'
+        : 'Não foi possível registar agora. Os seus dados continuam preenchidos; continue pelo WhatsApp abaixo.';
       submit.disabled = false;
       submit.innerHTML = original;
       $('[data-whatsapp-link]')?.focus();
