@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "/revendedor.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
