@@ -3,7 +3,24 @@ export const INSTAGRAM_SCOPES = [
   'instagram_business_content_publish'
 ] as const;
 
+export const INSTAGRAM_ACCOUNTS = ['smart_colorprint', 'smart_home'] as const;
+export type InstagramAccount = typeof INSTAGRAM_ACCOUNTS[number];
+
+export const parseInstagramAccount = (value: unknown): InstagramAccount => {
+  if (typeof value === 'string' && INSTAGRAM_ACCOUNTS.includes(value as InstagramAccount)) {
+    return value as InstagramAccount;
+  }
+  throw new SafeError('INVALID_INSTAGRAM_ACCOUNT', 'Conta Instagram inválida ou em falta', 400);
+};
+
+export const credentialQueryPath = (account: InstagramAccount, select: string): string =>
+  `scp_instagram_credentials?select=${select}&account=eq.${encodeURIComponent(account)}&limit=1`;
+
+export const publishJobQueryPath = (account: InstagramAccount, idempotencyKey: string): string =>
+  `scp_instagram_publish_jobs?select=*&account=eq.${encodeURIComponent(account)}&idempotency_key=eq.${encodeURIComponent(idempotencyKey)}&limit=1`;
+
 export type CredentialRecord = {
+  account: InstagramAccount;
   instagram_user_id: string;
   username: string | null;
   access_token_ciphertext: string;
@@ -102,6 +119,7 @@ export const databaseRequest = async <T>(
 };
 
 export const saveCredential = async (input: {
+  account: InstagramAccount;
   instagramUserId: string;
   username?: string | null;
   accessToken: string;
@@ -109,11 +127,12 @@ export const saveCredential = async (input: {
 }): Promise<void> => {
   const encrypted = await encryptToken(input.accessToken);
   const { response } = await databaseRequest(
-    'scp_instagram_credentials?on_conflict=instagram_user_id',
+    'scp_instagram_credentials?on_conflict=account',
     {
       method: 'POST',
       headers: { Prefer: 'resolution=merge-duplicates,return=minimal' },
       body: JSON.stringify({
+        account: input.account,
         instagram_user_id: input.instagramUserId,
         username: input.username ?? null,
         access_token_ciphertext: encrypted.ciphertext,
@@ -127,8 +146,9 @@ export const saveCredential = async (input: {
   if (!response.ok) throw new SafeError('CREDENTIAL_STORE_FAILED', 'Não foi possível guardar a credencial', 502);
 };
 
-export const loadCredential = async (): Promise<CredentialRecord> => {
+export const loadCredential = async (account: InstagramAccount): Promise<CredentialRecord> => {
   const select = [
+    'account',
     'instagram_user_id',
     'username',
     'access_token_ciphertext',
@@ -138,7 +158,7 @@ export const loadCredential = async (): Promise<CredentialRecord> => {
     'updated_at'
   ].join(',');
   const { response, data } = await databaseRequest<CredentialRecord[]>(
-    `scp_instagram_credentials?select=${select}&order=updated_at.desc&limit=1`
+    credentialQueryPath(account, select)
   );
   if (!response.ok) throw new SafeError('CREDENTIAL_READ_FAILED', 'Não foi possível ler a credencial', 502);
   if (!data?.[0]) throw new SafeError('INSTAGRAM_NOT_CONNECTED', 'A conta Instagram ainda não foi ligada', 409);

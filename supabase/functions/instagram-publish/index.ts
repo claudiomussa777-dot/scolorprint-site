@@ -1,5 +1,6 @@
 import {
   CredentialRecord,
+  InstagramAccount,
   SafeError,
   constantTimeEqual,
   databaseRequest,
@@ -8,11 +9,14 @@ import {
   jsonResponse,
   loadCredential,
   metaJson,
+  parseInstagramAccount,
+  publishJobQueryPath,
   requireEnv,
   saveCredential
 } from '../_shared/instagram.ts';
 
 type PublishInput = {
+  account?: unknown;
   image_url?: unknown;
   caption?: unknown;
   idempotency_key?: unknown;
@@ -20,6 +24,7 @@ type PublishInput = {
 
 type PublishJob = {
   id: string;
+  account: InstagramAccount;
   idempotency_key: string;
   image_url: string;
   caption: string;
@@ -55,7 +60,8 @@ const authorizeRequest = (request: Request): void => {
   }
 };
 
-const validateInput = (body: PublishInput): { imageUrl: string; caption: string; idempotencyKey: string } => {
+export const validateInput = (body: PublishInput): { account: InstagramAccount; imageUrl: string; caption: string; idempotencyKey: string } => {
+  const account = parseInstagramAccount(body.account);
   const imageUrl = typeof body.image_url === 'string' ? body.image_url.trim() : '';
   const caption = typeof body.caption === 'string' ? body.caption.trim() : '';
   const idempotencyKey = typeof body.idempotency_key === 'string' ? body.idempotency_key.trim() : '';
@@ -87,12 +93,12 @@ const validateInput = (body: PublishInput): { imageUrl: string; caption: string;
   if (!allowedHosts.has(parsedUrl.hostname.toLowerCase())) {
     throw new SafeError('MEDIA_HOST_NOT_ALLOWED', 'O domínio da imagem não está autorizado', 400);
   }
-  return { imageUrl: parsedUrl.toString(), caption, idempotencyKey };
+  return { account, imageUrl: parsedUrl.toString(), caption, idempotencyKey };
 };
 
-const getJob = async (idempotencyKey: string): Promise<PublishJob | null> => {
+const getJob = async (account: InstagramAccount, idempotencyKey: string): Promise<PublishJob | null> => {
   const { response, data } = await databaseRequest<PublishJob[]>(
-    `scp_instagram_publish_jobs?select=*&idempotency_key=eq.${encodeURIComponent(idempotencyKey)}&limit=1`
+    publishJobQueryPath(account, idempotencyKey)
   );
   if (!response.ok) throw new SafeError('PUBLISH_JOB_READ_FAILED', 'Não foi possível ler o estado da publicação', 502);
   return data?.[0] ?? null;
@@ -103,6 +109,7 @@ const claimJob = async (input: ReturnType<typeof validateInput>): Promise<{ job:
     method: 'POST',
     headers: { Prefer: 'return=representation' },
     body: JSON.stringify({
+      account: input.account,
       idempotency_key: input.idempotencyKey,
       image_url: input.imageUrl,
       caption: input.caption,
@@ -114,7 +121,7 @@ const claimJob = async (input: ReturnType<typeof validateInput>): Promise<{ job:
     throw new SafeError('PUBLISH_JOB_CREATE_FAILED', 'Não foi possível iniciar a publicação', 502);
   }
 
-  const existing = await getJob(input.idempotencyKey);
+  const existing = await getJob(input.account, input.idempotencyKey);
   if (!existing) throw new SafeError('PUBLISH_JOB_CONFLICT', 'A publicação já foi iniciada', 409);
   if (existing.image_url !== input.imageUrl || existing.caption !== input.caption) {
     throw new SafeError('IDEMPOTENCY_KEY_REUSED', 'Este identificador já pertence a outro conteúdo', 409);
@@ -151,6 +158,7 @@ const tokenForPublishing = async (credential: CredentialRecord): Promise<string>
       ? new Date(Date.now() + expiresIn * 1000).toISOString()
       : credential.expires_at;
     await saveCredential({
+      account: credential.account,
       instagramUserId: credential.instagram_user_id,
       username: credential.username,
       accessToken: refreshed.access_token,
@@ -234,7 +242,7 @@ Deno.serve(async (request: Request) => {
     activeJob = claimed.job;
 
     if (activeJob.status === 'published') {
-      return jsonResponse({ ok: true, status: 'published', media_id: activeJob.media_id, duplicate: true });
+      return jsonResponse({ ok: true, account: input.account, status: 'published', media_id: activeJob.media_id, duplicate: true });
     }
     if (activeJob.status === 'failed') {
       throw new SafeError('PREVIOUS_ATTEMPT_FAILED', 'A tentativa anterior falhou; use um novo identificador após corrigir a causa', 409);
@@ -246,7 +254,10 @@ Deno.serve(async (request: Request) => {
       throw new SafeError('PUBLISH_STATE_UNCERTAIN', 'A tentativa anterior ficou incompleta; confirme o Instagram antes de repetir', 409);
     }
 
-    const credential = await loadCredential();
+    const credential = await loadCredential(input.account);
+    if (credential.account !== input.account) {
+      throw new SafeError('CREDENTIAL_ACCOUNT_MISMATCH', 'A credencial não corresponde à conta pedida', 409);
+    }
     const token = await tokenForPublishing(credential);
     let containerId = activeJob.container_id;
     if (!containerId) {
@@ -257,7 +268,7 @@ Deno.serve(async (request: Request) => {
 
     const ready = await waitForContainer(containerId, token);
     if (!ready) {
-      return jsonResponse({ ok: false, status: 'processing', retry_with_same_idempotency_key: true }, 202);
+      return jsonResponse({ ok: false, account: input.account, status: 'processing', retry_with_same_idempotency_key: true }, 202);
     }
 
     // Mudar primeiro para publishing é deliberado: se a rede cair depois do POST,
@@ -267,7 +278,7 @@ Deno.serve(async (request: Request) => {
     const mediaId = await publishContainer(credential.instagram_user_id, token, containerId);
     await updateJob(activeJob.id, { status: 'published', media_id: mediaId, error_code: null });
 
-    return jsonResponse({ ok: true, status: 'published', media_id: mediaId }, 201);
+    return jsonResponse({ ok: true, account: input.account, status: 'published', media_id: mediaId }, 201);
   } catch (error) {
     // Antes de chamar media_publish, uma falha explícita é segura para marcar.
     // Durante publishing deixamos o estado incerto para impedir repetição cega.

@@ -1,4 +1,4 @@
-# Publicação oficial no Instagram
+# Publicação oficial multi-conta no Instagram
 
 Esta implementação usa a **Instagram API with Instagram Login** e pede somente:
 
@@ -7,9 +7,19 @@ Esta implementação usa a **Instagram API with Instagram Login** e pede somente
 
 O token nunca é enviado ao site, escrito em logs ou guardado em texto simples. O callback cifra-o com AES-GCM antes de o guardar numa tabela sem acesso para `anon` ou `authenticated`.
 
+## Contas isoladas
+
+A integração aceita somente estes identificadores internos fixos:
+
+- `smart_colorprint`
+- `smart_home`
+
+Cada credencial é guardada por `account`. A função de publicação exige esse campo e nunca escolhe a credencial mais recente. A idempotência é composta por `account + idempotency_key`, permitindo a mesma chave lógica em contas diferentes sem misturar conteúdo ou estado.
+
 ## Componentes locais
 
-- `migrations/202607120003_create_instagram_automation.sql`: credencial cifrada e jobs idempotentes.
+- `migrations/202607120003_create_instagram_automation.sql`: credencial cifrada e jobs idempotentes originais.
+- `migrations/202607120004_instagram_multi_account.sql`: preserva os dados existentes como `smart_colorprint` e adiciona isolamento por conta.
 - `functions/instagram-oauth/index.ts`: início OAuth, validação `state` e callback.
 - `functions/instagram-publish/index.ts`: contentor, espera de processamento e `media_publish`.
 - `functions/_shared/instagram.ts`: cifra, PostgREST interno e erros sanitizados.
@@ -29,6 +39,8 @@ Guarde estes valores apenas como Supabase Edge Function secrets:
 - `INSTAGRAM_PUBLISHER_SECRET`
 - `INSTAGRAM_GRAPH_API_VERSION`
 - `INSTAGRAM_ALLOWED_MEDIA_HOSTS`
+- `INSTAGRAM_EXPECTED_USERNAME_SMART_COLORPRINT`
+- `INSTAGRAM_EXPECTED_USERNAME_SMART_HOME`
 
 `SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` já são fornecidos pelo runtime hospedado do Supabase. Não os copie para o frontend.
 
@@ -50,9 +62,15 @@ Estas instruções não foram executadas automaticamente: alteram o projeto remo
 
 Após o deploy, abra no navegador:
 
-`https://ljhylqpsfvmjhvhjkokk.supabase.co/functions/v1/instagram-oauth`
+Smart Color Print:
 
-O endpoint cria um `state` aleatório num cookie `HttpOnly`, redireciona para o Instagram, troca o código por uma credencial de longa duração e guarda somente a versão cifrada.
+`https://ljhylqpsfvmjhvhjkokk.supabase.co/functions/v1/instagram-oauth?account=smart_colorprint`
+
+Smart Home:
+
+`https://ljhylqpsfvmjhvhjkokk.supabase.co/functions/v1/instagram-oauth?account=smart_home`
+
+O endpoint mostra primeiro qual conta será ligada, cria um `state` aleatório num cookie `HttpOnly` separado por conta, redireciona para o Instagram e valida o `username` autorizado contra a configuração esperada. Só então troca e guarda a credencial cifrada. Uma conta incorreta é rejeitada sem substituir a credencial anterior.
 
 ## Publicar sem duplicar
 
@@ -72,11 +90,24 @@ Estrutura de `pedido-instagram.json`:
 
 ```json
 {
+  "account": "smart_colorprint",
   "idempotency_key": "instagram-isca-orcamento-v1",
   "image_url": "https://scolorprint.com/assets/campanhas/instagram-isca-orcamento-v1.jpg",
   "caption": "Legenda da publicação"
 }
 ```
+
+Para a Smart Home, use `"account": "smart_home"`. O campo é obrigatório; valores ausentes ou diferentes dos dois identificadores permitidos são rejeitados antes de qualquer chamada de publicação.
+
+## Testes seguros
+
+Os testes automatizados validam os identificadores e o isolamento estrutural sem criar contentores nem publicar no Instagram:
+
+```sh
+deno test supabase/functions/_shared/instagram_test.ts
+```
+
+Não use a função `instagram-publish` como teste sem aprovação explícita da imagem e da legenda: criar e publicar conteúdo é uma operação externa irreversível.
 
 Não guarde `pedido-instagram.json` no Git se a legenda ainda não for pública.
 
