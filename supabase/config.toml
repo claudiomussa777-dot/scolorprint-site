@@ -1,0 +1,2 @@
+[functions.notify-quote-email]
+verify_jwt = false
