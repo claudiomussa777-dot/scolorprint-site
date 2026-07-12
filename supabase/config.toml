@@ -1,2 +1,10 @@
 [functions.notify-quote-email]
 verify_jwt = false
+
+# O início/callback OAuth é uma navegação pública protegida por state + cookie
+# HttpOnly. O endpoint de publicação usa um segredo administrativo próprio.
+[functions.instagram-oauth]
+verify_jwt = false
+
+[functions.instagram-publish]
+verify_jwt = false
