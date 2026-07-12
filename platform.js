@@ -3,6 +3,27 @@ const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(sel
 
 const PHONE = '258849900402';
 
+const imageDimensions = {
+  'assets/generated/hero-studio-v1.webp': [1536, 1024],
+  'assets/generated/tshirt-studio-v1.webp': [1024, 1536],
+  'assets/generated/rollup-studio-v1.webp': [1024, 1536],
+  'assets/generated/cards-studio-v1.webp': [1254, 1254],
+  'assets/generated/vinyl-studio-v1.webp': [1024, 1536],
+  'assets/generated/gifts-studio-v1.webp': [1024, 1536],
+  'assets/trabalhos/folders-e-flyers-impressos.jpg': [675, 900],
+  'assets/mockup-giftkit-real-v2.jpg': [1024, 1024],
+  'assets/trabalhos/backdrop-evento-institucional.jpg': [900, 900],
+  'assets/mockup-cap-real-v2.jpg': [1024, 1024],
+  'assets/categorias/placas-sinaletica.jpg': [900, 675],
+  'assets/mockup-mug-real-v2.jpg': [1024, 1024],
+  'assets/categorias/coletes-uniformes.jpg': [900, 1200]
+};
+
+function imageSizeAttributes(src) {
+  const [width, height] = imageDimensions[src] || [1200, 900];
+  return `width="${width}" height="${height}"`;
+}
+
 const products = [
   { id: 'camisetas', name: 'Camisetas personalizadas', short: 'Camisetas', category: 'vestuario', categoryLabel: 'Vestuário', image: 'assets/generated/tshirt-studio-v1.webp', price: 'Desde 800 MT/un.', reference: 'Desde 800 MT por unidade', description: 'Para marcas, equipas, igrejas, escolas, aniversários e eventos.', badge: 'Mais pedido' },
   { id: 'rollup', name: 'Roll-up Executivo', short: 'Roll-up', category: 'eventos', categoryLabel: 'Eventos', image: 'assets/generated/rollup-studio-v1.webp', price: 'Desde 7.000 MT', reference: 'Desde 7.000 MT por unidade', description: 'Presença visual profissional para conferências, feiras e receções.', badge: 'Pronto para eventos' },
@@ -110,8 +131,11 @@ function initHero() {
     tabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.dataset.heroTheme === key)));
     card.classList.add('is-changing');
     setTimeout(() => {
+      const [width, height] = imageDimensions[theme.image] || [1200, 900];
       image.src = theme.image;
       image.alt = `${theme.label} personalizados pela Smart Color Print`;
+      image.width = width;
+      image.height = height;
       label.textContent = theme.label;
       price.textContent = theme.price;
       card.classList.remove('is-changing');
@@ -147,7 +171,7 @@ function renderProducts() {
   grid.innerHTML = visible.map((product, index) => {
     const sizeClass = index === 0 && visible.length > 2 ? 'is-wide' : index > 4 ? 'is-small' : '';
     return `<button class="product-card ${sizeClass}" type="button" data-product-id="${product.id}" aria-label="Configurar ${product.name}">
-      <span class="product-card-media"><img src="${product.image}" alt="${product.name}" loading="lazy"><span class="product-badge">${product.badge}</span><span class="product-arrow">↗</span></span>
+      <span class="product-card-media"><img src="${product.image}" alt="${product.name}" ${imageSizeAttributes(product.image)} loading="lazy"><span class="product-badge">${product.badge}</span><span class="product-arrow">↗</span></span>
       <span class="product-info"><span><small>${product.categoryLabel}</small><strong>${product.name}</strong></span><span class="product-price">${product.price}</span></span>
     </button>`;
   }).join('');
@@ -225,7 +249,13 @@ function updateQuoteSummary() {
   const quantity = Number($('[data-quantity]')?.value) || 1;
   if (canvas) canvas.classList.add('is-changing');
   setTimeout(() => {
-    if (image) { image.src = product.image; image.alt = `Pré-visualização: ${product.name}`; }
+    if (image) {
+      const [width, height] = imageDimensions[product.image] || [1200, 900];
+      image.src = product.image;
+      image.alt = `Pré-visualização: ${product.name}`;
+      image.width = width;
+      image.height = height;
+    }
     if (canvas) canvas.classList.remove('is-changing');
   }, 170);
   if ($('[data-summary-category]')) $('[data-summary-category]').textContent = product.categoryLabel;
