@@ -1,0 +1,9 @@
+Slide 1: Capa educativa com a pergunta “A sua impressão parece amadora?” e a indicação de três erros comuns.
+
+Slide 2: Primeiro erro: usar imagens de baixa qualidade, como prints de WhatsApp, em vez do ficheiro original em alta resolução.
+
+Slide 3: Segundo erro: preparar as cores apenas para o ecrã em RGB, sem adaptação para impressão em CMYK.
+
+Slide 4: Terceiro erro: colocar texto muito perto do corte, sem margem, sangria ou área de segurança.
+
+Slide 5: Convite para o leitor comentar qual erro já cometeu e guardar o carrossel antes da próxima impressão.
