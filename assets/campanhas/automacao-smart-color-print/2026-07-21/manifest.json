@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-21",
+  "timezone": "Africa/Maputo",
+  "theme": "3 erros que fazem uma impressão parecer amadora",
+  "format": "carousel",
+  "idempotency_key": "scp-2026-07-21-3-erros-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/instagram-3-erros-impressao-slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/instagram-3-erros-impressao-slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/instagram-3-erros-impressao-slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/instagram-3-erros-impressao-slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/instagram-3-erros-impressao-slide-05-v1.jpg"
+  ],
+  "caption_file": "assets/campanhas/instagram-3-erros-impressao-legenda.txt",
+  "payload_sha256": "cdbf8335cd39f56ad0dfeeb9281a9e4314060d9450c921002555ce844fc42675",
+  "status": "prepared",
+  "prepared_at": "2026-07-19T11:48:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
