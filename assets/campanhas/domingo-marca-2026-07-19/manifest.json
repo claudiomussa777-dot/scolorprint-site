@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-19",
+  "timezone": "Africa/Maputo",
+  "theme": "Domingo de preparação da marca para a nova semana",
+  "format": "single_image",
+  "idempotency_key": "scp-2026-07-19-domingo-marca-v1",
+  "image_url": "https://scolorprint.com/assets/campanhas/domingo-marca-2026-07-19/poster.jpg",
+  "caption_file": "assets/campanhas/domingo-marca-2026-07-19/legenda.txt",
+  "image_sha256": "d8392faee0f6e23e54f0e11aa7e955aecf4fb29b7367642912e833247b000e54",
+  "caption_sha256": "459604d57f6fe0618c5b6e3ac7dd24bf2c6b112ef97bfd5be8415ae6b0b33aad",
+  "payload_sha256": "0878368da1b178d54d3c06f30352ac37724f06ac571e75cdb422fbec7f2ebecd",
+  "status": "prepared",
+  "prepared_at": "2026-07-19T17:59:54+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
