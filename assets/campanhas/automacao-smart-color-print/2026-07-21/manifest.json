@@ -15,10 +15,10 @@
   ],
   "caption_file": "assets/campanhas/instagram-3-erros-impressao-legenda.txt",
   "payload_sha256": "cdbf8335cd39f56ad0dfeeb9281a9e4314060d9450c921002555ce844fc42675",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-07-19T11:48:00+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "17979910704110860",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DbDMuKIiHVp/",
+  "published_at": "2026-07-21T11:32:47+02:00",
   "error": null
 }
