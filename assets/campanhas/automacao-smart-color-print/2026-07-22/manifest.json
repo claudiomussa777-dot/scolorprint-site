@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-22",
+  "timezone": "Africa/Maputo",
+  "theme": "Portefólio real: folder com corte e vinco para apresentar melhor a marca",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-07-22-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/folder-criativo-corte-vinco.jpg"
+  ],
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-22/caption.txt",
+  "image_sha256": "584eb7e8aff10be94382d2cf8431f2fc752eadf64e356b1f1267eef74a5c1803",
+  "caption_sha256": "2c124896b9749fc44b5988dc3533c33095adab2417a1f2861ab0ebf762abc78d",
+  "payload_sha256": "991dbf0cd70db4d0aa5e40c2b9a1defbf88f08b2a6065e193a25595327338bfe",
+  "status": "prepared",
+  "prepared_at": "2026-07-22T09:03:41+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
