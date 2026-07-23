@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-23",
+  "timezone": "Africa/Maputo",
+  "theme": "Problema + solucao: vinil para montras com mais presenca e orientacao visual",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-07-23-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-23/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-23/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-23/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-23/slide-04-v1.jpg"
+  ],
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-23/caption.txt",
+  "image_sha256": [
+    "4868a2b71d608c2535beffaf182c6636aa3923f2fff31ea3b831f7c841b06622",
+    "672a4429c3d7cabe2e45c0b5d5ffd40c365e71f58f5b2153b546f951def216af",
+    "a510f5f79a30902005894f3b1d765a4ba939709dbbdfcb3ad008867ef978877b",
+    "af1fb984fd08f73f96f7cc40d2dbf8f550cd8ffd11fbd6628ec123762acb59df"
+  ],
+  "caption_sha256": "639a270ee76b68a6245bdb74da89d4185db9268311f96c6e95457e45aef51e82",
+  "payload_sha256": "02b36a43a95b99d2860ce77acdbb09767a2bbf31c3fc0b9d6ba75f4cd4d90594",
+  "status": "prepared",
+  "prepared_at": "2026-07-23T10:32:46+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
