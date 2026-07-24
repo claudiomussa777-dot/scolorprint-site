@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-24",
+  "timezone": "Africa/Maputo",
+  "theme": "Roll-ups e backdrops para eventos com foco em presença de marca",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-07-24-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-24/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-24/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-24/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-24/slide-04-v1.jpg"
+  ],
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-24/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-07-24/base-brand-v1.png",
+  "base_image_sha256": "794793d7b354b3b27fc1ab2893601ef682cda353f889ca60161a319d533e6526",
+  "image_sha256": {
+    "slide-01-v1.jpg": "dfa94d09dcf43150293e2d0ecb4bb89e7ed746d6221c309742ca033a534cd310",
+    "slide-02-v1.jpg": "e6d69bb71e260d17037ec05838eac128c3a00aab80a6f1d34ec53e6c2640e8c6",
+    "slide-03-v1.jpg": "ae4b106c23998f5c767359c1dfc5608b3dfc99b75cd10bf0ba0fb9a5917db291",
+    "slide-04-v1.jpg": "206463be3659b3f05df84a4201538cf55dd74b28e4f2f8c47022aca49805da77"
+  },
+  "caption_sha256": "e5d8ebd08696aefeb4fc416f218e324a9c9cd9f3b978135cb4e7b7272b10f91d",
+  "payload_sha256": "3f66d379062e220797e86c46fbe661bda1e261c025003e0877d70576d92ba2df",
+  "status": "prepared",
+  "prepared_at": "2026-07-24T09:08:49+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
