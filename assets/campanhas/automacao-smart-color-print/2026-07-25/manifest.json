@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-25",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiracao de sabado: kit corporativo com pecas uteis e presenca de marca",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-07-25-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-25/poster.jpg"
+  ],
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-25/caption.txt",
+  "image_sha256": "e9ff12cd7769ab7e69ddb7bffaa64d2d0ae15024fcf9ed296a395bb9376f6d7d",
+  "caption_sha256": "0aab585bc94b71a129209adc82a4581a6a85d8cb17de63426018bb2281983675",
+  "payload_sha256": "0d0368c498bb0397b65d8d3e42893751d269610986779e4b759c87fb7896ad5f",
+  "status": "prepared",
+  "prepared_at": "2026-07-25T09:03:34+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
