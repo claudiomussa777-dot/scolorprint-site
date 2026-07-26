@@ -26,10 +26,10 @@
   },
   "caption_sha256": "44b3b6f638a059bdd650c4bfc9464aa059a61a89f8f84acdf0cf778d88f5878f",
   "payload_sha256": "a89048d5d0b0e76126778aa08eda6102d7f4dd452c35d8638f7a4033d00db947",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-07-26T09:41:41+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18108869830955997",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DbP4VxnEXFb/",
+  "published_at": "2026-07-26T09:45:28+02:00",
   "error": null
 }
