@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-26",
+  "timezone": "Africa/Maputo",
+  "theme": "Checklist de domingo para preparar a marca para a semana",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-07-26-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-26/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-26/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-26/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-26/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-26/slide-05-v1.jpg"
+  ],
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-26/caption.txt",
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-07-26/image-urls.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-07-26/base-domingo-checklist-v1.png",
+  "base_image_sha256": "65763d4c9f70f1d91b8530f744bf57d7db3f4e12e54ca658cd3f04cd2ee728f2",
+  "image_sha256": {
+    "slide-01-v1.jpg": "f48936661ed65d201fae4a06ba98ffc91df45b4d37327d636f9573363cfeffea",
+    "slide-02-v1.jpg": "8dd1c523f7730dddb63093347ffccf145f15282db1c4d9de69726dac364d69c6",
+    "slide-03-v1.jpg": "c6b10a6dd0d70b65b8d3d403fe87133238e832f05b417ca40f6080fd217ee90f",
+    "slide-04-v1.jpg": "fc830eff1ade899f01326f993942cedf1f0424c2a8d13703b76543ac040b76d6",
+    "slide-05-v1.jpg": "405fbc1f41d96e9b3e9255160836ecf606b7872e5f1b5cee20a70369e82456fd"
+  },
+  "caption_sha256": "44b3b6f638a059bdd650c4bfc9464aa059a61a89f8f84acdf0cf778d88f5878f",
+  "payload_sha256": "a89048d5d0b0e76126778aa08eda6102d7f4dd452c35d8638f7a4033d00db947",
+  "status": "prepared",
+  "prepared_at": "2026-07-26T09:41:41+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
