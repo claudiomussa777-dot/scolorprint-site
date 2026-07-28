@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-28",
+  "timezone": "Africa/Maputo",
+  "theme": "Coletes, vinil ou placas: o que ajuda mais em cada necessidade?",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-07-28-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-28/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-28/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-28/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-07-28/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-07-28/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-28/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-07-28/base-educativo-v1.png",
+  "base_image_sha256": "41b4d06317a5cbfd469220ecbffae0bbc0e16cef93302cbe9e7b8313e8965b78",
+  "image_sha256": {
+    "slide-01-v1.jpg": "c2b3451330a04550e999469a6b4c49872666a3dd075fabd3175929033ecd9616",
+    "slide-02-v1.jpg": "2baf33324096e291bd7425accefa5578064543eeb95c2e7cec86aa8793b0544d",
+    "slide-03-v1.jpg": "5d4479d4082c747d2f85407aaa6deb282a5348b56f0b0a65f9444df836216921",
+    "slide-04-v1.jpg": "6e8b6f04c73c547d2bf71e5609f8f733139e7426fccb42e1085d11a2e9d40ba1"
+  },
+  "caption_sha256": "1ad0fdc2bbbe978e4b8f018aaf58ae064bab338ed81bff47d1aca383fa0c344b",
+  "payload_sha256": "a132a83b5d9ae857ccc1819c3038664886a78b84bf3052e4a8c0fc7e6f95ce6a",
+  "status": "prepared",
+  "prepared_at": "2026-07-28T09:09:09+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
