@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-07-29",
+  "timezone": "Africa/Maputo",
+  "theme": "Portefólio real: etiquetas e embalagens personalizadas para reforçar a marca na entrega",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-07-29-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-07-29/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-07-29/caption.txt",
+  "image_sha256": "37c29363d7fd7b91a7b267b5627a9b0b3274832d812f80718b3fd8da0d2530b5",
+  "caption_sha256": "9c18cee4f5d1d42bdb056a95567bf8e9159af622b64a1e1127f35562af234018",
+  "payload_sha256": "a56a272976be13236f8f6ba7535a8c1d560718b7180e94aedbbdcf1647522f9b",
+  "status": "prepared",
+  "prepared_at": "2026-07-29T09:04:15+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
