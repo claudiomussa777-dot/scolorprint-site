@@ -24,10 +24,10 @@
   },
   "caption_sha256": "61c237eaa833e1412ce4132952b5692019cff74aeb140b3404e41de83aca6162",
   "payload_sha256": "3787b8b104a0728ceac24b003b1a1cd1568a3a7c09f92333c4e79a1d79c0b58f",
-  "status": "prepared",
+  "status": "published_permalink_pending",
   "prepared_at": "2026-08-02T04:10:33+02:00",
-  "media_id": null,
+  "media_id": "17980114053105977",
   "permalink": null,
-  "published_at": null,
+  "published_at": "2026-08-02T09:07:23+02:00",
   "error": null
 }
