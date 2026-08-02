@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-01",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiracao de sabado: combinacao simples para eventos com backdrop, roll-up, brindes e vinil",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-01-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-01/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-01/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-01/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-01/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-01/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-01/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-01/caption.txt",
+  "image_sha256": {
+    "slide-01-v1.jpg": "a3bf92ad4e92b98c553343201bd7cdefd60009cbc3c1d9aa4627a8b987168ac5",
+    "slide-02-v1.jpg": "1d3db75b88582ac7bcf1db5cb273a5b8bffea767caf800b82d3ccfa22a3f4bef",
+    "slide-03-v1.jpg": "8cb7b195787cfc42e257f0cd68194c2fbb09bb94cb6c099566720a25d6842bd2",
+    "slide-04-v1.jpg": "14461191fa1ec0b468d133d0d88e8931510493c1df6f99e038f84faed5fc7057",
+    "slide-05-v1.jpg": "5595213db99648e7f53d52fc7b521ecc58abd085a9f49d81b8b954a667694f36"
+  },
+  "caption_sha256": "f1e293a04218fbb69a5b871473efadcab6ac5581bc6af8b5dc1e6ba0738e2c94",
+  "payload_sha256": "75deb70fd6771c647a344e506121b2c832cca67750956bb408892b3665bd1dfd",
+  "status": "prepared",
+  "prepared_at": "2026-08-02T04:08:06+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
