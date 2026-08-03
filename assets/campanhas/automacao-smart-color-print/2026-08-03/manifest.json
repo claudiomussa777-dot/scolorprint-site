@@ -14,10 +14,10 @@
   "image_sha256": "b42daab4c2906b5f0a270f98eb05c004b18e3badbfafa43053bcc3ecbe385da5",
   "caption_sha256": "15662d67358411a5bdb4e3a4f69fcb9ddb5e638344f1292eb15d6ff9355f639f",
   "payload_sha256": "5dac33eadc5c117c6897c1033abc13d64017f0ad8b2cb623c2167ef988fa3a1b",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-08-03T11:13:48+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18119978920657493",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DbkpUfkDI-o/",
+  "published_at": "2026-08-03T11:17:07+02:00",
   "error": null
 }
