@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-04",
+  "timezone": "Africa/Maputo",
+  "theme": "Cartão, flyer ou folder: como escolher a peça certa para cada contacto",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-04-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-04/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-04/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-04/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-04/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-04/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-04/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-04/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-04/base-brand-v1.png",
+  "base_image_sha256": "4eb0bb19097fc1c5d92761999f021d13e0d93a20cd9974773bc4c335dc5e058d",
+  "image_sha256": {
+    "slide-01-v1.jpg": "0e29a51885aa3a61a5e8a58096a28a242ae3631ab41e047fe962d3c66d1c4d7b",
+    "slide-02-v1.jpg": "93125557fb06e458e57be3c68f438d6f10859722f9719cd3104529b75f9f9317",
+    "slide-03-v1.jpg": "f3ad755b0eea8fbf2583d19b27793a6f236f953f92d71380cbcdbef79d42189e",
+    "slide-04-v1.jpg": "975eca07545996846553916f573b93247d72c4f49e2a529ed292616bd476a8e5",
+    "slide-05-v1.jpg": "d1fb079874938ef35737697808281c0dda807953b309568f548531885d61acbd"
+  },
+  "caption_sha256": "25ee450ec71730a6218dfa8080a380334ab226e355684e6ca8f354c88b0f58e5",
+  "payload_sha256": "bed28a73dee770223ae9e02aa369e6beb8d5e628052319dd18d564336f5465d5",
+  "status": "prepared",
+  "prepared_at": "2026-08-04T09:09:29+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
