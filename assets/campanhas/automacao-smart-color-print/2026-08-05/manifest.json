@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-05",
+  "timezone": "Africa/Maputo",
+  "theme": "Portefólio real: recorte em vinil para aplicações com contorno limpo e acabamento nítido",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-05-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/autocolantes-recorte-vinil.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-05/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-05/caption.txt",
+  "image_sha256": "7e541b9474964ba222128a87c766932adae90032d4b334012373b235edcc32f7",
+  "caption_sha256": "1634a1289dd36743d0dd6843be018acf157b118db00fbdeff092958feb61f3e1",
+  "payload_sha256": "9b08992dbc529e0d294c00261f2e2a247edb245ca5d10fdc1a7f15a81dcef446",
+  "status": "prepared",
+  "prepared_at": "2026-08-05T09:05:27+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
