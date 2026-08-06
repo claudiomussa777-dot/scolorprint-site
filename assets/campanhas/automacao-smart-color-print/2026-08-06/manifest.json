@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-06",
+  "timezone": "Africa/Maputo",
+  "theme": "Problema + solução: canetas personalizadas para prolongar a presença da marca depois da reunião",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-06-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-06/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-06/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-06/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-06/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-06/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-06/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-06/base-brand-v1.png",
+  "base_image_sha256": "8c2dad4378c4e64c3bda821dac688fb915924535c15cf91435015fb8bcfddda5",
+  "image_sha256": {
+    "slide-01-v1.jpg": "73510d16d14c543e157d3c11c36c191712bb11b633dc1524d81c06a8e95ed6d0",
+    "slide-02-v1.jpg": "9bc672b24365ad82d206e30294076b369a05b19647efbd12090420a198243575",
+    "slide-03-v1.jpg": "c356ebabcecf90836df4a3b3f41884762d62046c569e878f9f9d357c54e5c652",
+    "slide-04-v1.jpg": "31abf3256119677701ddd38785e6fc1de0bc04c1be5e03b82f84e9a54c1dc948"
+  },
+  "caption_sha256": "52219e1c6f78d371298a65a9233288a38228136c63fc3fab4b9be3f04f450545",
+  "payload_sha256": "6b1633383e92bd8a1251dc21622376d751ea181b960ede13d89be4ac21f065dc",
+  "status": "prepared",
+  "prepared_at": "2026-08-06T09:10:35+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
