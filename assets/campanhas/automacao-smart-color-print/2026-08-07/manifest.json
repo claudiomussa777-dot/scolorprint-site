@@ -17,10 +17,10 @@
   "image_sha256": "b0f37d8020201f53def9bc9f678c228d7407774e1fc2f4c1d3673e690a7208ad",
   "caption_sha256": "d358b813553f1233f753c44483a6c6c32cd1b6182df776d13f67853e4a9e91cc",
   "payload_sha256": "9b84fa4c59913612b4532a6b8fd0d0cef0975a3a3dafe11053c702871dde0330",
-  "status": "prepared",
+  "status": "published_permalink_pending",
   "prepared_at": "2026-08-07T09:12:00+02:00",
-  "media_id": null,
+  "media_id": "18085337348204145",
   "permalink": null,
-  "published_at": null,
+  "published_at": "2026-08-07T09:16:52+02:00",
   "error": null
 }
