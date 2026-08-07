@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-07",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: bonés personalizados para equipas, promotores e eventos",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-07-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-07/poster-v2.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-07/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-07/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-07/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram portrait poster background for personalized caps with cream gradient, navy base and subtle CMYK paper swashes; no text, no logos, no products, no watermark",
+  "base_image_sha256": "d2ed5793c910663cd4fbba39e40dbed3d005bbe2644b5af5c54f51973dce16a0",
+  "image_sha256": "b0f37d8020201f53def9bc9f678c228d7407774e1fc2f4c1d3673e690a7208ad",
+  "caption_sha256": "d358b813553f1233f753c44483a6c6c32cd1b6182df776d13f67853e4a9e91cc",
+  "payload_sha256": "9b84fa4c59913612b4532a6b8fd0d0cef0975a3a3dafe11053c702871dde0330",
+  "status": "prepared",
+  "prepared_at": "2026-08-07T09:12:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
