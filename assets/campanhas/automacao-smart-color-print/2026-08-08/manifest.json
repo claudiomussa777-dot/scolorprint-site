@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-08",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiração de sábado: entrada mais clara com vinil, placas e roll-up",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-08-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-08/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-08/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-08/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-08/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-08/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-08/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-08/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram carousel background for Smart Color Print about brand entrance and reception materials; bright off-white portrait base with navy, cyan, magenta and yellow layered paper forms, subtle glass reflections, no text, no logos, no products, no people",
+  "base_image_sha256": "e2465e15aa4144034a6eb02ed0aab006c486390bab363b552c3b938e185db505",
+  "image_sha256": {
+    "slide-01-v1.jpg": "9c09e5f6e68d4ef025f4b0fb0105045947505fc3a3e53a97710cefb97569e868",
+    "slide-02-v1.jpg": "4a1813de1f5b5aa8f46fecb84f94e566092fa102f571bb1182b10c02dcef152d",
+    "slide-03-v1.jpg": "f66f1d37912148f97b1afd6bf8cc6dda5af5ffda65dc9f8640cdcfb3e9f83819",
+    "slide-04-v1.jpg": "2189992e426f862596e26ac5b4fad1a8ae2d5d1f8e59a946fd739dd8005f17d8"
+  },
+  "caption_sha256": "a1d32b7f645e3edacdf03cf7658a6647c1e336742fdda561030556ff0973586b",
+  "payload_sha256": "f09124bab9dd84561972eab221065c2255eff3241af860c4cedb051ebb11dc0d",
+  "status": "prepared",
+  "prepared_at": "2026-08-08T09:07:33+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
