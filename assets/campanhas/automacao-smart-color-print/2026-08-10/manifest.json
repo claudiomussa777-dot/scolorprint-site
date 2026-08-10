@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-10",
+  "timezone": "Africa/Maputo",
+  "theme": "Preparacao de segunda: camiseta e roll-up alinhados para receber melhor",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-10-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/categorias/kits-eventos.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-10/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-10/caption.txt",
+  "image_sha256": "f61185c40b37b734b1c68f6cfe238e2e28f9e39df22eb8950a1aa0e7ba23099b",
+  "caption_sha256": "aa0b2830fd77d79e3a93df45a6e85edf60b88a2cbe109e7a06f043bee69a28cf",
+  "payload_sha256": "37e1bb2a7af63007471837a6b74b7edea7674ffd78a61552ff963e1c3a3d48c3",
+  "status": "prepared",
+  "prepared_at": "2026-08-10T09:04:35+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
