@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-11",
+  "timezone": "Africa/Maputo",
+  "theme": "Roll-up, banner flag ou backdrop: como escolher a peca certa para cada evento",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-11-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-11/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-11/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-11/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-11/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-11/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-11/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-11/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-11/base-brand-v1.png",
+  "base_image_sha256": "b166b027c2b0a14fd4b1d397e8f49273e4e27e0c1fa2c7153a99a8b4a2502c9b",
+  "image_sha256": {
+    "slide-01-v1.jpg": "756c0540efc3fa8cc7f7b9df3d83b2f6f002ec9aab0e01142bed24b14124e77b",
+    "slide-02-v1.jpg": "6f8b0030d3be6262a045cfb8ed81702e2a79bb3bc453f605fa96124475639653",
+    "slide-03-v1.jpg": "685e29cf89fadd3fe110ae780ab893e2b30e228930f72b4f01fcfc98d3e356ae",
+    "slide-04-v1.jpg": "9e3da5a6be3260b632a15f78fa6f19d7c2a864fad6f350a046a9ce45bea2c962",
+    "slide-05-v1.jpg": "169fff2b6f630a686fac4b7616e3a9d49c159158ae2feef46c0a5a6b008a61e2"
+  },
+  "caption_sha256": "7f1f43f25ff35f4bb8a6563609de5a8e21f43a13002f474ce5aef29a878b8d2b",
+  "payload_sha256": "f0e595e387222e424da021d93ff45c3e89ffb2dd65a5a08b7498de4daa4e6790",
+  "status": "prepared",
+  "prepared_at": "2026-08-11T14:47:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
