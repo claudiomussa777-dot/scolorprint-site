@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-12",
+  "timezone": "Africa/Maputo",
+  "theme": "Portefólio real: vinil de montra institucional para reforçar presença e leitura do espaço",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-12-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-12/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-12/caption.txt",
+  "image_sha256": "ae8e92c26c785b1f7c1289f6a6d628abd4d2dd1a76cd27892f4b757222d2f15c",
+  "caption_sha256": "0bf61cf505c5d7dd7218022d9116af16e0a34905ea119a0056a07e4057a77c63",
+  "payload_sha256": "6fc0127777eacebd7214c80d0f7a11c1025b5d914cef89d652b32cb1d74911df",
+  "status": "published",
+  "prepared_at": "2026-08-12T11:21:09+02:00",
+  "media_id": "18028113752672349",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Db71G3wCKc_/",
+  "published_at": "2026-08-12T11:23:23+02:00",
+  "error": null
+}
