@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-13",
+  "timezone": "Africa/Maputo",
+  "theme": "Problema + solucao: folder com dobra e vinco para organizar informacao sem folhas soltas",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-13-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-13/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-13/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-13/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-13/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-13/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-13/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-13/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram carousel background for Smart Color Print about folders and organized print materials; bright off-white portrait base with layered navy, cyan, magenta and yellow paper forms, no text, no logos, no products, no people",
+  "base_image_sha256": "f887bacd31dd5d2aa505ab3fcc65438f0b3c834a1958590ce6fd25d644191635",
+  "image_sha256": {
+    "slide-01-v1.jpg": "40c238fa095a2b949d9f80db3a9c2f13ffccd298313c91bb910b88d7d5eb8c13",
+    "slide-02-v1.jpg": "d3fe375802068ae2975c7d36598d4bb5451b973ac04873523d6115ef17e8f483",
+    "slide-03-v1.jpg": "5cfee40d32de749cdacf3296363e20acf2f71974d86a8363cf51324b2163feea",
+    "slide-04-v1.jpg": "94ac56bff435579e602a2bdaa1d04796e70888cd47ef815559f6d41cc2059460"
+  },
+  "caption_sha256": "cc15f1567a7db43033cb7b029487f8a1a25fce0805e97f4961069afb5e90bc99",
+  "payload_sha256": "ad06552519bb8e3a0f2927b940af1958d253c995df28b2c41b32768bc0b5ebe8",
+  "status": "prepared",
+  "prepared_at": "2026-08-13T16:05:17+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
