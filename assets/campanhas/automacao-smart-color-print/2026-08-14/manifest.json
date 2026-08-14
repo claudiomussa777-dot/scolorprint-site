@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-14",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: backdrop personalizado para eventos, palco e zona de fotografia",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-14-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-14/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-14/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-14/caption.txt",
+  "image_sha256": "5c278e143fb4f7f20741b440ff344c85bddb631334749c3406c46470584dc056",
+  "caption_sha256": "3a9a0fb4a6b871154b23d00bee3f61406b59b336afda99f524c325b86ac3d3d7",
+  "payload_sha256": "193d95ea7992c50cd8f693aae865920fc5dbf3a6bd999474a2955d039b86e30d",
+  "status": "prepared",
+  "prepared_at": "2026-08-14T11:15:53+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
