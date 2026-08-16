@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-16",
+  "timezone": "Africa/Maputo",
+  "theme": "Preparacao de domingo: o que o cliente ve, le e leva na semana",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-16-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-16/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-16/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-16/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-16/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram portrait poster base background for Smart Color Print; clean Sunday planning backdrop with warm ivory paper layers, subtle desk-planning atmosphere, strong left-side negative space, right-side photo-friendly area, navy cyan magenta yellow and lime accents; no text, no logos, no people, no watermark, no mock brand names",
+  "base_image_sha256": "feb589e47e8c467e73f261fd244020fc9d7c123ae0289089ed864af5525891a0",
+  "image_sha256": "57ce226ff5ee29f2fdd270a946df70a98b353e24a16ae6caa4c79cbcba713728",
+  "caption_sha256": "6a322a25ac88503c9b7861cdb058f4690a59f1ef86474227680a8541f14b66ca",
+  "payload_sha256": "c848bfdfc1df8aee2d06063762d9524fbb0151a6fc0478503792d9d950e9cd11",
+  "status": "prepared",
+  "prepared_at": "2026-08-16T14:43:34+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
