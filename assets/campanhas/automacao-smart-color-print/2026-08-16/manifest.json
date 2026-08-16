@@ -3,7 +3,7 @@
   "account": "smart_colorprint",
   "scheduled_date": "2026-08-16",
   "timezone": "Africa/Maputo",
-  "theme": "Preparacao de domingo: o que o cliente ve, le e leva na semana",
+  "theme": "Planeamento de domingo: 4 pecas para preparar a semana sem correria",
   "format": "single_image",
   "idempotency_key": "scp-ig-2026-08-16-v1",
   "image_urls": [
@@ -15,12 +15,12 @@
   "base_image_prompt": "ads-marketing Instagram portrait poster base background for Smart Color Print; clean Sunday planning backdrop with warm ivory paper layers, subtle desk-planning atmosphere, strong left-side negative space, right-side photo-friendly area, navy cyan magenta yellow and lime accents; no text, no logos, no people, no watermark, no mock brand names",
   "base_image_sha256": "feb589e47e8c467e73f261fd244020fc9d7c123ae0289089ed864af5525891a0",
   "image_sha256": "57ce226ff5ee29f2fdd270a946df70a98b353e24a16ae6caa4c79cbcba713728",
-  "caption_sha256": "7992ef3b30e8851ef3e613c7ed02b369289adf57277218d56457656fa5955ca6",
+  "caption_sha256": "a648c3c2e9a08e29e405e12a3c21e70db358dcbb755e74925cb80a9afdfd26e4",
   "payload_sha256": "e2ddeb7a20fd1eab112f41a27d6e626628233a799479d4f52facc51f3296e4b5",
-  "status": "failed",
+  "status": "published",
   "prepared_at": "2026-08-16T14:43:34+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
-  "error": "Prepared payload no longer matches the current caption file; manual review required before publish."
+  "media_id": "17948497608257091",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DcGfkq2jkhz/",
+  "published_at": "2026-08-16T14:50:25+02:00",
+  "error": null
 }
