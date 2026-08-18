@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-18",
+  "timezone": "Africa/Maputo",
+  "theme": "Terca educativa: 4 dados para pedir orcamento de roll-up, banner ou backdrop",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-18-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-18/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-18/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-18/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-18/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-18/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-18/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-18/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-18/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram carousel base background for Smart Color Print; bright Tuesday educational mood with layered ivory paper, strong left-side text space, right-side photo-safe area, footer-safe navy band, palette inspired by the real Smart Color Print logo with navy cyan magenta yellow and a small lime accent, no text, no logos, no people",
+  "base_image_sha256": "de77fbd029b81cd3f953160f1da84f3d48b4b927f5ee8b1fb1b2e7f866e989f2",
+  "image_sha256": {
+    "slide-01-v1.jpg": "b9a0d98656ba48f61616e7471ccd63a39ab80316c2f72f9643783dc964e785c2",
+    "slide-02-v1.jpg": "1748647ee02149fe054e80ec63c60bfa220eef8e497066328bba1c6a1008d369",
+    "slide-03-v1.jpg": "05fc006f1b536ad9d0fc1bf0e77699478703b47b7374cab50259adbcf6b26192",
+    "slide-04-v1.jpg": "b490c88edc8e4f047203d1d58f56d70e65ef2e9a69d5f09c0ddec06a285a3349",
+    "slide-05-v1.jpg": "8d563f3a71e2b86757bcb5c47baf535e663fabd0291253606e6962a6d349a8e9"
+  },
+  "caption_sha256": "350c814065dfd3600826fc63c97088b2e9754c535446302a590d54391063d42b",
+  "payload_sha256": "4aabc930a1484e1a8b6be9f98862f8f6d18fd9b3c7549483ce64a6707476d2b6",
+  "status": "prepared",
+  "prepared_at": "2026-08-18T09:09:10+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
