@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-20",
+  "timezone": "Africa/Maputo",
+  "theme": "Bastidores de producao: backdrop institucional pronto para recepcao, palco ou area de fotos",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-20-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/backdrop-evento-institucional.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-20/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-20/caption.txt",
+  "image_sha256": "5c278e143fb4f7f20741b440ff344c85bddb631334749c3406c46470584dc056",
+  "caption_sha256": "2ed53fd36e89901d04a20d44e9d18d723d38a9e1bd811babf0cf5edf8a0a6fb9",
+  "payload_sha256": "0791d9a7132ddd5ecd92cacd471f7601b115920ff791aea6b3df9768807e1eea",
+  "status": "prepared",
+  "prepared_at": "2026-08-20T11:02:10+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
