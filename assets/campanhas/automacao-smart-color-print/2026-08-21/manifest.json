@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-21",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: kits corporativos personalizados para onboarding, oferta e activacoes",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-21-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-21/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-21/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-21/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-21/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-21/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-21/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-21/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram carousel background for Smart Color Print about corporate gift kits; warm off-white paper base with navy, cyan, magenta, yellow and lime accents, left text space, right photo-safe area, footer-safe navy band, no text, no logos, no people, no products",
+  "base_image_sha256": "66a26f13018881bfa9e5c18df334ddf7db9cfe217720ee34f3042bcb96ac7162",
+  "image_sha256": {
+    "slide-01-v1.jpg": "00ed39ea38f0f319081395bf9ae7e6ac7cc63cf4eb695297a78916173f0f69b7",
+    "slide-02-v1.jpg": "6bba84878cb57f450fb7153c47dbad6e373518272b7885e41dcd263f9462235a",
+    "slide-03-v1.jpg": "71ba594b2eb270f1ea0f2cb1e17a64c450522fa383cefb19e16ac731719f6bdd",
+    "slide-04-v1.jpg": "d2fac87891826523ef31c86969cea5c9d346e648dcdd20a72ffe68f25d9f149b"
+  },
+  "caption_sha256": "9c1b6af122df617dadfabc20521f7a7a170ba9fca997cd4fa0b92fd185443d50",
+  "payload_sha256": "21893119679513ff9acd9278ef23f5b02424a6bf8eebcec1e244a78ec8bd57f2",
+  "status": "prepared",
+  "prepared_at": "2026-08-21T11:25:33+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
