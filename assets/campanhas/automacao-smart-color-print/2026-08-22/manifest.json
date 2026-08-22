@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-22",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiracao de sabado: camiseta e bone como dupla base para equipas de activacao",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-22-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-22/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-22/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-22/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-22/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram portrait poster base background for Smart Color Print about customized t-shirts and caps for activation teams; abstract paper-layer studio background with strong negative space on the left, photo-safe area on the right, footer-safe darker band, warm off-white base with navy, cyan, magenta, yellow and a small lime accent; no text, no logos, no watermark, no products, no people, no hands",
+  "base_image_sha256": "8155715f9eb618813e7c6aafc22989d897c0148bcff895c41240a4b2f6facf96",
+  "image_sha256": "4f51dc9c3fb193a3523ce5e4fb0b29a8977b6cbf804f6c4c62479fb04966d9fe",
+  "caption_sha256": "6a3963b3e6710497cb0120b4ae091bae2d85a4091d17739c4f1ad768e095635b",
+  "payload_sha256": "7d54fb9d28785d5c0547441753158388d7dccd77bcf8f1bc6049e6be3ef747b1",
+  "status": "prepared",
+  "prepared_at": "2026-08-22T12:17:22+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
