@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-23",
+  "timezone": "Africa/Maputo",
+  "theme": "Checklist de domingo: 4 decisoes antes de pedir o material da semana",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-23-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-23/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-23/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-23/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram carousel base background for Smart Color Print about Sunday planning and preparing the week's print materials before Monday; bright off-white studio-paper environment with subtle desk-planning atmosphere, strong left-side text space, safe photo-card area on the right, palette inspired by the real Smart Color Print logo with navy cyan magenta yellow and a small lime accent, no text, no logos, no people, no products, no hands, no watermark",
+  "base_image_sha256": "ab441ef072bf7af67d8a3d37920b1fdeda6cfea76bae9ed297c625271b64ea86",
+  "image_sha256": {
+    "slide-01-v1.jpg": "16f171a1a618b1e5572cc5377542f2f060ff14a977657d32d171238982ecacc8",
+    "slide-02-v1.jpg": "51770ad725ccfd26deb6fc74a11ffcd651555b2e044972f29330e77b68203d01",
+    "slide-03-v1.jpg": "a4d38280bd119b184e345b10c5aa1a9d16217769fcb15d812865a906ae3b8210",
+    "slide-04-v1.jpg": "52f66a8944c7ed9cfc18d0dce0730fe1c0f3998b6100c683939964d936375415",
+    "slide-05-v1.jpg": "4d7f7a0bb0c0148dc2d1c3d50b07fd44e3446bad728eb60ea1d0b6adef65a9d0"
+  },
+  "caption_sha256": "5fc17299e294824dc520fd7eb9f44a725691a7ddf75ba9f14bfc7fac6ee38664",
+  "payload_sha256": "080d62c66db386d41d7766844c68cd7b69d6353a6a72c0032f4254069b6874b4",
+  "status": "prepared",
+  "prepared_at": "2026-08-23T10:26:11+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-04-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-05-v1.jpg"
+      ],
+      "caption_sha256": "5fc17299e294824dc520fd7eb9f44a725691a7ddf75ba9f14bfc7fac6ee38664",
+      "published_at": null,
+      "permalink": null
+    }
+  }
+}
