@@ -29,13 +29,13 @@
   "payload_sha256": "080d62c66db386d41d7766844c68cd7b69d6353a6a72c0032f4254069b6874b4",
   "status": "published",
   "prepared_at": "2026-08-23T10:26:11+02:00",
-  "media_id": null,
+  "media_id": "18404646643084701",
   "permalink": "https://www.instagram.com/smart_colorprint/p/DcYDu13EUQn/",
   "published_at": "2026-08-23T10:28:19+02:00",
   "error": null,
   "channels": {
     "facebook": {
-      "state": "blocked_no_safe_publisher",
+      "state": "blocked_meta_verification",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-23/slide-01-v1.jpg",
@@ -47,8 +47,8 @@
       "caption_sha256": "5fc17299e294824dc520fd7eb9f44a725691a7ddf75ba9f14bfc7fac6ee38664",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-08-23T10:31:00+02:00",
-      "error": "No crosspost visivel na Pagina oficial e o repositorio nao contem publicador Facebook seguro."
+      "checked_at": "2026-08-23T10:42:01+02:00",
+      "error": "Business Suite abriu com a Pagina Smart Color Print, mas a verificacao persistente da Meta bloqueou o upload das imagens antes de qualquer submissao."
     }
   }
 }
