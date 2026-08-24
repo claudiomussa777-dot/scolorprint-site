@@ -17,22 +17,24 @@
   "image_sha256": "58561ec354726380322cae5d3d33c804b20380f70ef5b399b0e0b44c235fa87e",
   "caption_sha256": "f5d6ed7a302baa535b289a87f0f6f3a38a730126d50780b5096928c16d0030e4",
   "payload_sha256": "c75fe5f8aa7eb1b6091f41235adca0a25dc9ffba94304031ee72979817536af8",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-08-24T09:07:45+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18088094378258656",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DcafgBbjSZ4/",
+  "published_at": "2026-08-24T09:10:31+02:00",
   "error": null,
   "channels": {
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-24/poster-v1.jpg"
       ],
       "caption_sha256": "f5d6ed7a302baa535b289a87f0f6f3a38a730126d50780b5096928c16d0030e4",
       "published_at": null,
-      "permalink": null
+      "permalink": null,
+      "checked_at": "2026-08-24T09:10:31+02:00",
+      "error": "Instagram associado verificado, mas a Pagina oficial nao mostrou cruzamento automatico e a rotina nao tem via directa nao-interactiva para publicar no Facebook sem confirmacao em browser."
     }
   }
 }
