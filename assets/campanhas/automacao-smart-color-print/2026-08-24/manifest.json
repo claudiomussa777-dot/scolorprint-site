@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-24",
+  "timezone": "Africa/Maputo",
+  "theme": "Segunda de reunioes: canetas personalizadas para deixar a marca na mesa",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-24-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-24/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-24/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-24/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-24/base-brand-v1.png",
+  "base_image_prompt": "ads-marketing Instagram portrait poster background for Smart Color Print about useful branded pens for Monday meetings and briefing kits; abstract studio-paper environment with strong negative space on the left, one tall photo-safe card area on the right, footer-safe dark band, bright Monday morning mood, palette inspired by the real Smart Color Print logo with navy cyan magenta yellow off-white and a small lime accent; no text, no logos, no products, no people, no hands, no watermark",
+  "base_image_sha256": "60a6bf3f686be22625f103b0e15a3ba22af4959352b65f16dbd1a8bd48e71c4d",
+  "image_sha256": "58561ec354726380322cae5d3d33c804b20380f70ef5b399b0e0b44c235fa87e",
+  "caption_sha256": "f5d6ed7a302baa535b289a87f0f6f3a38a730126d50780b5096928c16d0030e4",
+  "payload_sha256": "c75fe5f8aa7eb1b6091f41235adca0a25dc9ffba94304031ee72979817536af8",
+  "status": "prepared",
+  "prepared_at": "2026-08-24T09:07:45+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-24/poster-v1.jpg"
+      ],
+      "caption_sha256": "f5d6ed7a302baa535b289a87f0f6f3a38a730126d50780b5096928c16d0030e4",
+      "published_at": null,
+      "permalink": null
+    }
+  }
+}
