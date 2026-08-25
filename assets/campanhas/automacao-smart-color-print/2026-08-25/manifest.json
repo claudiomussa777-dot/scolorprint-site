@@ -3,7 +3,7 @@
   "account": "smart_colorprint",
   "scheduled_date": "2026-08-25",
   "timezone": "Africa/Maputo",
-  "theme": "Terca educativa: vinil de montra, vinil de porta ou placas para orientar melhor a entrada",
+  "theme": "Terca educativa: vinil de montra, vinil de porta ou placa para orientar melhor a entrada",
   "format": "carousel",
   "idempotency_key": "scp-ig-2026-08-25-v1",
   "image_urls": [
@@ -18,13 +18,13 @@
     "vinil-portas.jpg": "39f6486870b3e2145561a499d6b00e99a0b6f6a238d926a0524529a4e58ea38c",
     "placas-sinaletica.jpg": "d784ff0ad9ccf33b27ba56305c03af5831d803afa828ad48b2f4b10131aa8d8a"
   },
-  "caption_sha256": "0d72dfa51029888a6a8965a218d0725d1b8ff092d002e2a622d420a50b6e8df8",
+  "caption_sha256": "cb3b59f796231882983d70ddee67a5889e9e85daf51444cb84809b8822b2c664",
   "payload_sha256": "f318ae3f8e91280040b396016149319178300d3efb5c82fc1a74df9bad596128",
   "status": "published",
   "prepared_at": "2026-08-25T14:03:25+02:00",
-  "media_id": "3971497814248697594",
+  "media_id": "17981859539887971",
   "permalink": "https://www.instagram.com/smart_colorprint/p/DcdmDhciK76/",
-  "published_at": "2026-08-25T14:04:29+02:00",
+  "published_at": "2026-08-25T14:06:00+02:00",
   "error": null,
   "channels": {
     "facebook": {
@@ -35,11 +35,11 @@
         "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
         "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
       ],
-      "caption_sha256": "0d72dfa51029888a6a8965a218d0725d1b8ff092d002e2a622d420a50b6e8df8",
+      "caption_sha256": "cb3b59f796231882983d70ddee67a5889e9e85daf51444cb84809b8822b2c664",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-08-25T14:07:31+02:00",
-      "error": "Pagina oficial Smart Color Print acessivel, mas sem cruzamento automatico visivel do Instagram de 2026-08-25 e sem via nao-interactiva aprovada para publicar directamente no Facebook nesta rotina."
+      "checked_at": "2026-08-25T14:07:47+02:00",
+      "error": "Instagram de 2026-08-25 publicado e confirmado, mas a Pagina oficial Smart Color Print nao mostrou partilha automatica visivel apos nova verificacao. Sem artefacto Facebook prepared do fluxo das 09h, esta rotina nao faz submissao directa."
     }
   }
 }
