@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-25",
+  "timezone": "Africa/Maputo",
+  "theme": "Terca educativa: vinil de montra, vinil de porta ou placas para orientar melhor a entrada",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-25-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
+    "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
+    "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-25/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-25/caption.txt",
+  "image_sha256": {
+    "vinil-montra-institucional.jpg": "ae8e92c26c785b1f7c1289f6a6d628abd4d2dd1a76cd27892f4b757222d2f15c",
+    "vinil-portas.jpg": "39f6486870b3e2145561a499d6b00e99a0b6f6a238d926a0524529a4e58ea38c",
+    "placas-sinaletica.jpg": "d784ff0ad9ccf33b27ba56305c03af5831d803afa828ad48b2f4b10131aa8d8a"
+  },
+  "caption_sha256": "0d72dfa51029888a6a8965a218d0725d1b8ff092d002e2a622d420a50b6e8df8",
+  "payload_sha256": "f318ae3f8e91280040b396016149319178300d3efb5c82fc1a74df9bad596128",
+  "status": "published",
+  "prepared_at": "2026-08-25T14:03:25+02:00",
+  "media_id": "3971497814248697594",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DcdmDhciK76/",
+  "published_at": "2026-08-25T14:04:29+02:00",
+  "error": null,
+  "channels": {
+    "facebook": {
+      "state": "blocked_confirmation_required",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
+        "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
+        "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
+      ],
+      "caption_sha256": "0d72dfa51029888a6a8965a218d0725d1b8ff092d002e2a622d420a50b6e8df8",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-08-25T14:07:31+02:00",
+      "error": "Pagina oficial Smart Color Print acessivel, mas sem cruzamento automatico visivel do Instagram de 2026-08-25 e sem via nao-interactiva aprovada para publicar directamente no Facebook nesta rotina."
+    }
+  }
+}
