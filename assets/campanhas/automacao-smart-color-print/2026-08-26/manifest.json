@@ -14,27 +14,28 @@
   "image_sha256": "79560879edc6f5d5a24c59448fd8cecff97a6e26fbfb965fe6b5e189dbec93ba",
   "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
   "payload_sha256": "b07c9f53ec117f945132c3cf11702980046538dfcaeeead765558b8e45767c9e",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-08-26T15:07:00+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18001205225793334",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DcgSLfDjbeN/",
+  "published_at": "2026-08-26T15:10:12+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/rollup-conferencia-direitos-humanos.jpg"
       ],
       "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
-      "published_at": null,
-      "permalink": null,
-      "checked_at": "2026-08-26T15:07:00+02:00",
+      "published_at": "2026-08-26T15:10:12+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/DcgSLfDjbeN/",
+      "media_id": "18001205225793334",
+      "checked_at": "2026-08-26T15:10:12+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/rollup-conferencia-direitos-humanos.jpg"
@@ -42,8 +43,8 @@
       "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
       "published_at": null,
       "permalink": null,
-      "checked_at": null,
-      "error": null
+      "checked_at": "2026-08-26T15:10:12+02:00",
+      "error": "Instagram de 2026-08-26 publicado e confirmado, mas a Pagina oficial Smart Color Print nao mostrou partilha automatica visivel apos nova verificacao. Sem fluxo nao-interactivo aprovado para publicacao directa no Facebook nesta rotina, nao foi feita submissao."
     }
   }
 }
