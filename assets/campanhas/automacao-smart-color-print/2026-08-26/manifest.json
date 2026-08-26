@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-26",
+  "timezone": "Africa/Maputo",
+  "theme": "Portefolio real: roll-up para conferencia com leitura clara e apoio ao evento",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-26-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/rollup-conferencia-direitos-humanos.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-26/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-26/caption.txt",
+  "image_sha256": "79560879edc6f5d5a24c59448fd8cecff97a6e26fbfb965fe6b5e189dbec93ba",
+  "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
+  "payload_sha256": "b07c9f53ec117f945132c3cf11702980046538dfcaeeead765558b8e45767c9e",
+  "status": "prepared",
+  "prepared_at": "2026-08-26T15:07:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/rollup-conferencia-direitos-humanos.jpg"
+      ],
+      "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-08-26T15:07:00+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/rollup-conferencia-direitos-humanos.jpg"
+      ],
+      "caption_sha256": "08ffc322c1cf82b96dcb1a923bb1f6fe636fdb60b01c5748326f06636a98dfec",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": null,
+      "error": null
+    }
+  }
+}
