@@ -19,27 +19,28 @@
   },
   "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
   "payload_sha256": "a6b469050b85f2972699d458d572bc9517f74ae500a007cb9f1dfc99073edd68",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-08-28T09:09:44+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18377698843227210",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dcky7SdkZML/",
+  "published_at": "2026-08-28T09:14:15+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-28/poster-v1.jpg"
       ],
       "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "error": null
+      "published_at": "2026-08-28T09:14:15+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dcky7SdkZML/",
+      "media_id": "18377698843227210",
+      "error": null,
+      "checked_at": "2026-08-28T09:14:15+02:00"
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-28/poster-v1.jpg"
@@ -47,7 +48,8 @@
       "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
       "published_at": null,
       "permalink": null,
-      "error": null
+      "error": "Verificacao autenticada das 09h confirmou que a Pagina oficial Smart Color Print (ID publico 61593453669428; activo Meta 1213825748490849) nao recebeu crosspost automatico do post de 2026-08-28. Esta execucao nao fez submissao directa no Facebook para evitar uma segunda publicacao sem confirmacao adicional de accao externa no browser.",
+      "checked_at": "2026-08-28T09:14:15+02:00"
     }
   }
 }
