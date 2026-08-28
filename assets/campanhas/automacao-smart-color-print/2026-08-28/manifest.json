@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-28",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: cartoes de visita personalizados para apresentar a marca com clareza",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-28-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-28/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-28/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-28/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-28/base-brand-v1.png",
+  "base_image_prompt": "Use case: ads-marketing. Asset type: Instagram single-image background for Smart Color Print. Primary request: bright portrait background base for a Friday product-focus post about personalized business cards for brands, meetings and field teams. Scene/backdrop: clean studio-paper environment with subtle print-shop texture, layered cards-and-paper atmosphere, designed for text on the left and a wide product photo card on the right. Subject: abstract branded background only. Style/medium: polished commercial graphic background, not a finished ad. Composition/framing: 4:5 portrait, strong negative space in the upper-left and mid-left for headline and body copy, large rounded photo-safe zone on the right, clean footer-safe dark strip area near the bottom. Lighting/mood: crisp Friday productivity, practical and confident. Color palette: Smart Color Print navy, cyan, magenta, yellow, off-white with subtle graphite contrast. Materials/textures: paper grain, soft shadows, light print-shop layering. Text (verbatim): none. Constraints: no logos, no words, no people, no products, no hands, no watermark, RGB-ready.",
+  "base_image_sha256": "ebc901db48c8d693135cad1f65a52c49ed49d8a9219b1e94488f8f8c6be4b13c",
+  "image_sha256": {
+    "poster-v1.jpg": "17dcbb863eef139293342b09fec6481b2cb223ebe1c547696cd3ba1540e7d19f"
+  },
+  "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
+  "payload_sha256": "a6b469050b85f2972699d458d572bc9517f74ae500a007cb9f1dfc99073edd68",
+  "status": "prepared",
+  "prepared_at": "2026-08-28T09:09:44+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-28/poster-v1.jpg"
+      ],
+      "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-28/poster-v1.jpg"
+      ],
+      "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
+      "published_at": null,
+      "permalink": null,
+      "error": null
+    }
+  }
+}
