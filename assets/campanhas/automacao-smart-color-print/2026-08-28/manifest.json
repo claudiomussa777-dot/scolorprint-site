@@ -37,7 +37,7 @@
       "permalink": "https://www.instagram.com/smart_colorprint/p/Dcky7SdkZML/",
       "media_id": "18377698843227210",
       "error": null,
-      "checked_at": "2026-08-28T09:14:15+02:00"
+      "checked_at": "2026-08-28T10:03:24+02:00"
     },
     "facebook": {
       "state": "blocked_confirmation_required",
@@ -48,8 +48,8 @@
       "caption_sha256": "bd07b9eb0c7b6e60923baf7fce480658f6f2faab1d127da0ae66f540e71f45cb",
       "published_at": null,
       "permalink": null,
-      "error": "Verificacao autenticada das 09h confirmou que a Pagina oficial Smart Color Print (ID publico 61593453669428; activo Meta 1213825748490849) nao recebeu crosspost automatico do post de 2026-08-28. Esta execucao nao fez submissao directa no Facebook para evitar uma segunda publicacao sem confirmacao adicional de accao externa no browser.",
-      "checked_at": "2026-08-28T09:14:15+02:00"
+      "error": "Verificacao autenticada das 10:03 CAT confirmou que o post de Instagram de 2026-08-28 continua publicado, mas a Pagina oficial Smart Color Print (ID publico 61593453669428; activo Meta 1213825748490849) nao mostra crosspost automatico nem publicacao correspondente visivel. Como o canal Facebook nao ficou prepared na execucao das 09h, esta rotina nao faz submissao directa.",
+      "checked_at": "2026-08-28T10:03:24+02:00"
     }
   }
 }
