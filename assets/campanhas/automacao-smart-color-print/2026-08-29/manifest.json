@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-29",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiracao de sabado: ponto de atendimento leve com roll-up, folders e cartoes",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-29-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-29/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-29/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-29/base-brand-v1.png",
+  "base_image_prompt": "Use case: ads-marketing. Asset type: Instagram carousel background for Smart Color Print. Primary request: bright portrait background base for a Saturday inspiration carousel about a compact reception setup using a roll-up, folders and business cards. Scene/backdrop: clean studio-paper environment with subtle print-shop texture and layered paper forms, designed for text on the left and photo cards on the right or center. Style/medium: polished commercial graphic background, not a finished ad. Composition/framing: 4:5 portrait, strong negative space in the upper-left and mid-left for headline and body copy, flexible rounded photo-safe areas, and a clean footer-safe dark strip near the bottom. Lighting/mood: fresh Saturday inspiration, airy, practical and confident. Color palette: Smart Color Print navy, cyan, magenta, yellow, off-white with subtle graphite contrast and a restrained lime accent. Text (verbatim): none. Constraints: no logos, no words, no people, no hands, no watermark, RGB-ready.",
+  "base_image_sha256": "3400540056f1f8a8eadb2d787140845b012642a9edaa35a9dc6dbe0d5abd8ccc",
+  "image_sha256": {
+    "slide-01-v1.jpg": "3b23c6c299796a7b1f8c42e4bb7a5fb73cef73eafb90a11e8654872901224384",
+    "slide-02-v1.jpg": "83157552c3af9b957ea54c1561d1b4cc55187bcf32bc56c812e806bd894c0db3",
+    "slide-03-v1.jpg": "77ef1f1ce309c09dd4970e3e17e249fecb8d1bdde82ce5ee3e8a7612b00638a4",
+    "slide-04-v1.jpg": "905e17cdaec014ba761895775c66646a6f039cdcd6711499e9d0a3e21a6b4749"
+  },
+  "caption_sha256": "99e03b276fe62e74d8aae41244007e01c7c5d990f49b987a24ac552b4d450f77",
+  "payload_sha256": "11aa73a127df1b0f35c1388d7d866dd44fbe7684bf23fccd8136451df47214ff",
+  "status": "prepared",
+  "prepared_at": "2026-08-29T12:49:55+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-04-v1.jpg"
+      ],
+      "caption_sha256": "99e03b276fe62e74d8aae41244007e01c7c5d990f49b987a24ac552b4d450f77",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-08-29T12:49:55+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-29/slide-04-v1.jpg"
+      ],
+      "caption_sha256": "99e03b276fe62e74d8aae41244007e01c7c5d990f49b987a24ac552b4d450f77",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-08-29T12:49:55+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
