@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-30",
+  "timezone": "Africa/Maputo",
+  "theme": "Domingo de revisao final: 4 dados para fechar o pedido antes de segunda",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-08-30-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-30/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-30/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-30/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-08-30/base-brand-v1.png",
+  "base_image_prompt": "Use case: ads-marketing. Asset type: Instagram portrait poster background for Smart Color Print. Primary request: create a clean Sunday planning background for a post about reviewing print-job details before Monday. Scene/backdrop: bright off-white studio-paper environment with layered sheets, translucent proof sleeves, subtle print-shop texture, and a modern planning atmosphere. Subject: abstract branded background only, with no finished ad elements. Style/medium: polished commercial graphic backdrop, realistic paper materials, premium but practical. Composition/framing: 4:5 portrait, large calm negative space on the left and center-left for headline, body text, and four checklist cards; one tall rounded photo-safe area on the right; safe dark footer strip near the bottom. Lighting/mood: fresh Sunday preparation, organised, calm, confident. Color palette: inspired by the real Smart Color Print logo with navy, cyan, magenta, yellow, off-white, and a restrained lime accent. Materials/textures: layered cardstock, soft paper shadows, light gloss from proof sleeves, subtle ink-print atmosphere. Text (verbatim): none. Constraints: no logos, no words, no numbers, no people, no hands, no computers, no watermark, RGB-ready, background only.",
+  "base_image_sha256": "d8217796a842bb683b0e2a2db9bc029aed4bc659829cab53989d8066b35fdea8",
+  "image_sha256": "bfcb83a18e9a1f8654ac219644c6917fd9ab0d02662ada49ec98fa8b2dd3baa7",
+  "caption_sha256": "4bbcda02e4cc38eb4d444beab7a69849daf21e7f2f3f4d5d70b7abef8a178d74",
+  "payload_sha256": "8c3298f440f47f0ee2dd3508ed71d9e7841e03e231e915611e9618544dbdcec4",
+  "status": "prepared",
+  "prepared_at": "2026-08-30T12:22:47+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-30/poster-v1.jpg"
+      ],
+      "caption_sha256": "4bbcda02e4cc38eb4d444beab7a69849daf21e7f2f3f4d5d70b7abef8a178d74",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": null,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-08-30/poster-v1.jpg"
+      ],
+      "caption_sha256": "4bbcda02e4cc38eb4d444beab7a69849daf21e7f2f3f4d5d70b7abef8a178d74",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": null,
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
