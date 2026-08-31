@@ -22,10 +22,43 @@
   },
   "caption_sha256": "87c2d800299620087a2148c72396cfef2fe70076b5ad30aafbfcc6ba8a7398dc",
   "payload_sha256": "faacf2f7581058a693d735a1c30cd031e1a5097b22d2a7d01126e31c69af3e9d",
-  "status": "prepared",
+  "status": "failed",
   "prepared_at": "2026-08-31T10:11:15+02:00",
   "media_id": null,
   "permalink": null,
   "published_at": null,
-  "error": null
+  "error": "A chamada unica com a chave scp-ig-2026-08-31-v1 devolveu META_9004 sem media_id nem duplicate. A verificacao posterior confirmou que o perfil @smart_colorprint continua com o post mais recente de 2026-08-30 e que nao existe publicacao visivel de 2026-08-31.",
+  "channels": {
+    "instagram": {
+      "state": "failed",
+      "submission_attempted": true,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/folders-e-flyers-impressos.jpg",
+        "https://scolorprint.com/assets/trabalhos/folder-criativo-corte-vinco.jpg",
+        "https://scolorprint.com/assets/mockup-papel-real-v1.jpg",
+        "https://scolorprint.com/assets/mockup-cartao-real-v1.jpg"
+      ],
+      "caption_sha256": "87c2d800299620087a2148c72396cfef2fe70076b5ad30aafbfcc6ba8a7398dc",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-08-31T10:13:29+02:00",
+      "error": "Wrapper devolveu META_9004. Recarregamento do perfil confirmou ausencia de post visivel de 2026-08-31, pelo que nao houve repeticao."
+    },
+    "facebook": {
+      "state": "blocked_waiting_for_instagram",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/folders-e-flyers-impressos.jpg",
+        "https://scolorprint.com/assets/trabalhos/folder-criativo-corte-vinco.jpg",
+        "https://scolorprint.com/assets/mockup-papel-real-v1.jpg",
+        "https://scolorprint.com/assets/mockup-cartao-real-v1.jpg"
+      ],
+      "caption_sha256": "87c2d800299620087a2148c72396cfef2fe70076b5ad30aafbfcc6ba8a7398dc",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-08-31T10:13:29+02:00",
+      "error": "A Pagina oficial Smart Color Print continuou sem crosspost ou publicacao visivel de 2026-08-31. Sem publicacao confirmada no Instagram e sem fluxo seguro nao-interactivo aprovado para nova submissao directa no Facebook nesta rotina, nao houve tentativa no canal."
+    }
+  }
 }
