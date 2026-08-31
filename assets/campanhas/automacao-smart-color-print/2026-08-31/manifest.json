@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-08-31",
+  "timezone": "Africa/Maputo",
+  "theme": "Preparacao de segunda: folder, flyer e cartao para a conversa continuar depois da visita",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-08-31-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/folders-e-flyers-impressos.jpg",
+    "https://scolorprint.com/assets/trabalhos/folder-criativo-corte-vinco.jpg",
+    "https://scolorprint.com/assets/mockup-papel-real-v1.jpg",
+    "https://scolorprint.com/assets/mockup-cartao-real-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-08-31/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-08-31/caption.txt",
+  "image_sha256": {
+    "folders-e-flyers-impressos.jpg": "9c71ab61083c79876d22cca5b2adc98a3dfae0a76f26d9cf65f0188a51c1f5d4",
+    "folder-criativo-corte-vinco.jpg": "584eb7e8aff10be94382d2cf8431f2fc752eadf64e356b1f1267eef74a5c1803",
+    "mockup-papel-real-v1.jpg": "31aa9d05da4ae115121f8e8f224a1b98dd1f152a19efaee4ca1a950436039c60",
+    "mockup-cartao-real-v1.jpg": "f5a7f7517feaf304797b16008bdb80ab66badf1c9941871b25a27edbb889c48e"
+  },
+  "caption_sha256": "87c2d800299620087a2148c72396cfef2fe70076b5ad30aafbfcc6ba8a7398dc",
+  "payload_sha256": "faacf2f7581058a693d735a1c30cd031e1a5097b22d2a7d01126e31c69af3e9d",
+  "status": "prepared",
+  "prepared_at": "2026-08-31T10:11:15+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null
+}
