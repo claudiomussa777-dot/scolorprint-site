@@ -27,7 +27,7 @@
   "media_id": null,
   "permalink": null,
   "published_at": null,
-  "error": "A chamada unica com a chave scp-ig-2026-08-31-v1 devolveu META_9004 sem media_id nem duplicate. A verificacao posterior confirmou que o perfil @smart_colorprint continua com o post mais recente de 2026-08-30 e que nao existe publicacao visivel de 2026-08-31.",
+  "error": "A tentativa original com a chave scp-ig-2026-08-31-v1 devolveu META_9004 sem media_id nem duplicate. Nesta recuperacao, a repeticao exacta do mesmo payload devolveu PREVIOUS_ATTEMPT_FAILED, pelo que o backend bloqueou nova submissao sem permitir mudar a chave. A verificacao posterior confirmou que o perfil @smart_colorprint continua com o post mais recente de 2026-08-30 e que nao existe publicacao visivel de 2026-08-31.",
   "channels": {
     "instagram": {
       "state": "failed",
@@ -42,8 +42,8 @@
       "published_at": null,
       "permalink": null,
       "media_id": null,
-      "checked_at": "2026-08-31T10:13:29+02:00",
-      "error": "Wrapper devolveu META_9004. Recarregamento do perfil confirmou ausencia de post visivel de 2026-08-31, pelo que nao houve repeticao."
+      "checked_at": "2026-08-31T10:16:12+02:00",
+      "error": "Tentativa original devolveu META_9004 e a repeticao exacta com a mesma chave devolveu PREVIOUS_ATTEMPT_FAILED. Recarregamento do perfil confirmou ausencia de post visivel de 2026-08-31, pelo que nao houve repeticao."
     },
     "facebook": {
       "state": "blocked_waiting_for_instagram",
@@ -57,8 +57,8 @@
       "caption_sha256": "87c2d800299620087a2148c72396cfef2fe70076b5ad30aafbfcc6ba8a7398dc",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-08-31T10:13:29+02:00",
-      "error": "A Pagina oficial Smart Color Print continuou sem crosspost ou publicacao visivel de 2026-08-31. Sem publicacao confirmada no Instagram e sem fluxo seguro nao-interactivo aprovado para nova submissao directa no Facebook nesta rotina, nao houve tentativa no canal."
+      "checked_at": "2026-08-31T10:16:12+02:00",
+      "error": "A Pagina oficial Smart Color Print continuou sem crosspost ou publicacao visivel de 2026-08-31. Como o Instagram permaneceu sem publicacao confirmada e a repeticao do mesmo payload ficou bloqueada por PREVIOUS_ATTEMPT_FAILED, nao houve tentativa no canal Facebook."
     }
   }
 }
