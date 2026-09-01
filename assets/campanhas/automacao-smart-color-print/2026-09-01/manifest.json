@@ -47,8 +47,8 @@
       "duplicate": true
     },
     "facebook": {
-      "state": "blocked_confirmation_required",
-      "submission_attempted": false,
+      "state": "publish_state_uncertain",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/autocolantes-recorte-vinil.jpg",
         "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg",
@@ -58,8 +58,8 @@
       "caption_sha256": "e9991b11a09067375b964dd62930b054c63929ab75b7bb7877f4ff9b63c2e598",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-01T20:02:23+02:00",
-      "error": "A Pagina oficial Smart Color Print continuou sem crosspost visivel do post de 2026-09-01 apos nova verificacao. A publicacao directa no Facebook nesta sessao exigiria uma accao de browser com efeito externo e confirmacao interactiva imediata; por isso nao foi feita submissao adicional.",
+      "checked_at": "2026-09-01T22:02:22+02:00",
+      "error": "A tentativa unica de publicacao directa no Facebook para 2026-09-01 foi executada na Pagina oficial Smart Color Print com o mesmo carrossel e legenda do Instagram, mas a verificacao posterior nao encontrou publicacao visivel nem permalink novo na cronologia da Pagina, nem registo novo em Publicadas, Agendadas ou Rascunhos da Biblioteca de Conteudos. Estado fechado como publish_state_uncertain; nao repetir.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
