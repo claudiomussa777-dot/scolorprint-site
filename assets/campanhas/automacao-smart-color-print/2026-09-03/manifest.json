@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-03",
+  "timezone": "Africa/Maputo",
+  "theme": "Problema + solucao: caixas sem identificacao clara? etiquetas personalizadas ajudam a organizar stock, entrega e marca",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-03-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-03/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-03/caption.txt",
+  "image_sha256": "37c29363d7fd7b91a7b267b5627a9b0b3274832d812f80718b3fd8da0d2530b5",
+  "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
+  "payload_sha256": "bf778dc1c9e1d821d76f326cddc5b14ce2caf66fb1d3b9f1e97eec02587697fd",
+  "status": "prepared",
+  "prepared_at": "2026-09-03T04:29:29+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
+      ],
+      "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-03T04:29:29+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
+      ],
+      "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-03T04:29:29+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
