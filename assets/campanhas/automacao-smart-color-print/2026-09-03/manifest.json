@@ -36,7 +36,7 @@
       "duplicate": true
     },
     "facebook": {
-      "state": "blocked_confirmation_required",
+      "state": "blocked_browser_session_unavailable",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
@@ -44,8 +44,8 @@
       "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-03T11:38:49+02:00",
-      "error": "A verificacao autenticada das 11:38 CAT confirmou que o post de Instagram de 2026-09-03 continua publicado em https://www.instagram.com/smart_colorprint/p/Dc0HbKojUn-/, mas a Pagina oficial Smart Color Print nao mostra crosspost automatico nem publicacao correspondente visivel; o topo da cronologia continua a exibir apenas um post de 6 dias. Sem confirmacao visivel e sem fluxo nao-interactivo aprovado para submissao directa nesta rotina, nao foi feita nova tentativa no Facebook.",
+      "checked_at": "2026-09-03T16:12:00+02:00",
+      "error": "A confirmacao explicita do utilizador autorizou a publicacao directa no Facebook para 2026-09-03. Nesta execucao, a verificacao autenticada confirmou novamente a Pagina oficial Smart Color Print (ID publico 61593453669428; activo Meta 1213825748490849), a ausencia de duplicado visivel na cronologia e a correspondencia exacta entre a legenda/imagem canonicas do manifesto e o compositor. A identidade activa foi mudada com sucesso para Smart Color Print e o compositor de Foto/video abriu com a imagem anexada, mas a extensao do browser perdeu a sessao antes de eu conseguir colar a legenda e confirmar o clique final; de seguida, o unico browser ainda controlavel caiu em login da Meta. Sem sessao autenticada controlavel e sem confirmacao final visivel, nao foi feita submissao.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
