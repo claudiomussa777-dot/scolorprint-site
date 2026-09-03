@@ -14,28 +14,28 @@
   "image_sha256": "37c29363d7fd7b91a7b267b5627a9b0b3274832d812f80718b3fd8da0d2530b5",
   "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
   "payload_sha256": "bf778dc1c9e1d821d76f326cddc5b14ce2caf66fb1d3b9f1e97eec02587697fd",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-03T04:29:29+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18121905478891653",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dc0HbKojUn-/",
+  "published_at": "2026-09-03T07:59:16+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
       ],
       "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-03T04:29:29+02:00",
+      "published_at": "2026-09-03T07:59:16+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dc0HbKojUn-/",
+      "media_id": "18121905478891653",
+      "checked_at": "2026-09-03T08:00:55+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/etiquetas-e-embalagens-personalizadas.jpg"
@@ -43,8 +43,8 @@
       "caption_sha256": "4e11819ad73d889e6fe82d0540c3a8cb60639c6156af2978dff4c8c320511568",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-03T04:29:29+02:00",
-      "error": null,
+      "checked_at": "2026-09-03T08:00:55+02:00",
+      "error": "Verificacao visual da Pagina oficial Smart Color Print as 08:00 CAT nao encontrou crosspost automatico nem publicacao correspondente de 2026-09-03. Como o canal Facebook nao ficou prepared para reutilizacao exacta e uma submissao directa exigiria accao interactiva imediata no browser, esta rotina termina sem nova tentativa.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
