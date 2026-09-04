@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-04",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: vinil e sinaletica para orientar montra, porta e areas internas com clareza",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-09-04-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
+    "https://scolorprint.com/assets/categorias/vinil-montras.jpg",
+    "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
+    "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-04/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-04/caption.txt",
+  "image_sha256": {
+    "vinil-montra-institucional.jpg": "ae8e92c26c785b1f7c1289f6a6d628abd4d2dd1a76cd27892f4b757222d2f15c",
+    "vinil-montras.jpg": "40266b6d1ef39c2dc3df79130d14ef724b036ae92d75e7acc3a14a30ba79c979",
+    "vinil-portas.jpg": "39f6486870b3e2145561a499d6b00e99a0b6f6a238d926a0524529a4e58ea38c",
+    "placas-sinaletica.jpg": "d784ff0ad9ccf33b27ba56305c03af5831d803afa828ad48b2f4b10131aa8d8a"
+  },
+  "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
+  "payload_sha256": "a5f1d4e16b852fa326619ab36a9933b13bc7d6727f2141e16ca2cd6d8e046dca",
+  "status": "prepared",
+  "prepared_at": "2026-09-04T11:31:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
+        "https://scolorprint.com/assets/categorias/vinil-montras.jpg",
+        "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
+        "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
+      ],
+      "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": null,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
+        "https://scolorprint.com/assets/categorias/vinil-montras.jpg",
+        "https://scolorprint.com/assets/categorias/vinil-portas.jpg",
+        "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
+      ],
+      "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": null,
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
