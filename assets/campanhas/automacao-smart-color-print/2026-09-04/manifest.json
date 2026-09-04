@@ -22,16 +22,16 @@
   },
   "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
   "payload_sha256": "a5f1d4e16b852fa326619ab36a9933b13bc7d6727f2141e16ca2cd6d8e046dca",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-04T11:31:00+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "17980692234095988",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dc3EWnHjIFE/",
+  "published_at": "2026-09-04T11:32:30+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
         "https://scolorprint.com/assets/categorias/vinil-montras.jpg",
@@ -39,14 +39,15 @@
         "https://scolorprint.com/assets/categorias/placas-sinaletica.jpg"
       ],
       "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": null,
+      "published_at": "2026-09-04T11:32:30+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dc3EWnHjIFE/",
+      "media_id": "17980692234095988",
+      "checked_at": "2026-09-04T11:32:30+02:00",
+      "duplicate": false,
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/trabalhos/vinil-montra-institucional.jpg",
@@ -57,8 +58,8 @@
       "caption_sha256": "e434d1c3679b65dac61e048d6806b62a9c6eb32c7a935457a2be4a6101ac8e91",
       "published_at": null,
       "permalink": null,
-      "checked_at": null,
-      "error": null,
+      "checked_at": "2026-09-04T11:32:30+02:00",
+      "error": "A verificacao visual da Pagina oficial Smart Color Print confirmou identidade correcta e ausencia de crosspost automatico do conteudo de 2026-09-04; o topo visivel da cronologia permaneceu em 28 de agosto de 2026. O repositorio continua sem fluxo local nao-interactivo aprovado para publicar directamente no Facebook, e a submissao manual no browser exigiria confirmacao interactiva imediata; por isso este canal fecha bloqueado sem tentativa.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
