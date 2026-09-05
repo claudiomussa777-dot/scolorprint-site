@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-05",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiração de sábado: kit de boas-vindas com brindes úteis para eventos e equipas",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-05-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-05/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-05/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-05/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-05/base-kit-brindes-v1.png",
+  "base_image_prompt": "ads-marketing square Instagram background showing a generic ceramic mug, reusable bottle, notebook and pen arranged as a coordinated welcome-kit display; dark navy studio tabletop with magenta and cyan geometric accents; product group lower-right and clean upper-left negative space; no text, letters, logos, people or watermark",
+  "base_image_sha256": "cd2539d5dcb1305acaef16222ec1976992572cda2d698070c815b6517fa7cc6d",
+  "image_sha256": "c090c9f0bb9dd116bda0103d236807c645d8b3f7c07cc374808c4cffa7dcbc61",
+  "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
+  "payload_sha256": "5afd461352ab6864fb15812db0e2580158f65cad5d8b3164265ba5591bb5b317",
+  "status": "prepared",
+  "prepared_at": "2026-09-05T15:11:39+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-05/poster-v1.jpg"
+      ],
+      "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-05T15:11:39+02:00",
+      "duplicate": false,
+      "error": null
+    },
+    "facebook": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-05/poster-v1.jpg"
+      ],
+      "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-05T15:11:39+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
