@@ -17,29 +17,29 @@
   "image_sha256": "c090c9f0bb9dd116bda0103d236807c645d8b3f7c07cc374808c4cffa7dcbc61",
   "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
   "payload_sha256": "5afd461352ab6864fb15812db0e2580158f65cad5d8b3164265ba5591bb5b317",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-05T15:11:39+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "17993948565035492",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dc6Fgsejbek/",
+  "published_at": "2026-09-05T15:38:33+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-05/poster-v1.jpg"
       ],
       "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-05T15:11:39+02:00",
+      "published_at": "2026-09-05T15:38:33+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dc6Fgsejbek/",
+      "media_id": "17993948565035492",
+      "checked_at": "2026-09-05T15:38:33+02:00",
       "duplicate": false,
       "error": null
     },
     "facebook": {
-      "state": "prepared",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-05/poster-v1.jpg"
@@ -47,8 +47,8 @@
       "caption_sha256": "a45efef0746f71e9fff5774d636c6a915a5f3d92833239796fcdf455d060d470",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-05T15:11:39+02:00",
-      "error": null,
+      "checked_at": "2026-09-05T15:38:33+02:00",
+      "error": "A verificação visual da Página oficial Smart Color Print confirmou o destino numérico correcto e ausência de crosspost automático do conteúdo de 2026-09-05; a publicação mais recente visível permaneceu em 28 de agosto de 2026. Não existe fluxo local não-interactivo aprovado para publicação directa no Facebook, e a submissão manual no navegador requer confirmação interactiva imediata; por isso o canal fecha bloqueado sem tentativa.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
