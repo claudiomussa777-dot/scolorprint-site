@@ -17,29 +17,29 @@
   "image_sha256": "9992f7210d43a5470b55eb1a151adb11f84bf0019c521e2362b29ffe765d6de3",
   "caption_sha256": "ef2c24b9333216b79908cda7cbec4bf9ffcb5766f25ceced84656d6c65c8a148",
   "payload_sha256": "825b1b027090c9377d1e2d6bea554181a01060c93a7387d487e531da05567ca0",
-  "status": "prepared",
+  "status": "published_permalink_pending",
   "prepared_at": "2026-09-07T13:38:00+02:00",
-  "media_id": null,
+  "media_id": "18050441957804181",
   "permalink": null,
-  "published_at": null,
+  "published_at": "2026-09-07T13:40:00+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published_permalink_pending",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-07/poster-v1.jpg"
       ],
       "caption_sha256": "ef2c24b9333216b79908cda7cbec4bf9ffcb5766f25ceced84656d6c65c8a148",
-      "published_at": null,
+      "published_at": "2026-09-07T13:40:00+02:00",
       "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-07T13:38:00+02:00",
+      "media_id": "18050441957804181",
+      "checked_at": "2026-09-07T13:41:00+02:00",
       "duplicate": false,
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-07/poster-v1.jpg"
@@ -47,8 +47,8 @@
       "caption_sha256": "ef2c24b9333216b79908cda7cbec4bf9ffcb5766f25ceced84656d6c65c8a148",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-07T13:38:00+02:00",
-      "error": null,
+      "checked_at": "2026-09-07T13:41:00+02:00",
+      "error": "Não foi possível confirmar visualmente uma publicação cruzada na Página oficial nesta execução: o acesso público do Facebook recusou a consulta e não existe fluxo local não-interactivo aprovado para submissão directa. O canal fecha bloqueado sem tentativa para evitar publicação no destino errado ou duplicação.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
