@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-08",
+  "timezone": "Africa/Maputo",
+  "theme": "Terça educativa: um logótipo, vários materiais — 4 cuidados para manter a marca legível",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-09-08-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-08/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-08/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-08/base-marca-legivel-v1.png",
+  "base_image_prompt": "ads-marketing portrait Instagram background showing generic blank navy t-shirt, navy cap, white A5 flyer and small vertical roll-up in a dark navy print studio; cyan, magenta and yellow accent light; products on the right with clean negative space on the left; no text, letters, logos, people or watermark",
+  "base_image_sha256": "23d441e2d0416eefd7d9f26805b7df978b9029ac33d9c9db840bf86741ff6fef",
+  "image_sha256": {
+    "slide-01-v1.jpg": "8f51e3becf2845d4aceae62f345235435236cd9d5a822a3aa3be140c51a2bfe4",
+    "slide-02-v1.jpg": "fc94fab4bc8cfd59830f06227edbc37e4f14a6b484d76e3b5408b5d1b4cdfce4",
+    "slide-03-v1.jpg": "cbd9b1d7e141af5cccf25937c586778bfb9206689a75fd18dc1be69f20d7e8aa",
+    "slide-04-v1.jpg": "142d5135af72fb961d63b353b80e00ca892e560eabbc84a8cb64b3ae84ed3a00",
+    "slide-05-v1.jpg": "3cba10b8aca2af5198c2d924691aea7206dd1c6b318024c5020e632d2cad8268"
+  },
+  "caption_sha256": "2c8e958560992d51234a41f3c1d8c841a0608368cd796a4fe908d1b2b8e6831c",
+  "payload_sha256": "90ab1a0144b33bdfbfc7d5590dfe8bb931f7ff2c5ff38e88ce53c1a5866b6f33",
+  "status": "prepared",
+  "prepared_at": "2026-09-08T09:05:35+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-04-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-05-v1.jpg"
+      ],
+      "caption_sha256": "2c8e958560992d51234a41f3c1d8c841a0608368cd796a4fe908d1b2b8e6831c",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-08T09:03:00+02:00",
+      "duplicate": false,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-04-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-08/slide-05-v1.jpg"
+      ],
+      "caption_sha256": "2c8e958560992d51234a41f3c1d8c841a0608368cd796a4fe908d1b2b8e6831c",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-08T09:04:00+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
