@@ -17,29 +17,29 @@
   "image_sha256": "20300883e1938becb0feaaf236fc0e75721564737a2462430da9bc627412bf51",
   "caption_sha256": "571d7a722019fffb90ec68d442f1218aad9568aa7be7bea8a8c8fe187e375d99",
   "payload_sha256": "14c2fe2e7dfeb8f589699d82bae204b3fbc6b971e7d7ed022566956921f32d6f",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-09T11:56:46+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "17995195977002573",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DdD_rNCikKq/",
+  "published_at": "2026-09-09T12:00:17+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-09/poster-v1.jpg"
       ],
       "caption_sha256": "571d7a722019fffb90ec68d442f1218aad9568aa7be7bea8a8c8fe187e375d99",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-09T11:56:46+02:00",
+      "published_at": "2026-09-09T12:00:17+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/DdD_rNCikKq/",
+      "media_id": "17995195977002573",
+      "checked_at": "2026-09-09T12:00:17+02:00",
       "duplicate": false,
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-09/poster-v1.jpg"
@@ -50,8 +50,8 @@
       "caption_sha256": "571d7a722019fffb90ec68d442f1218aad9568aa7be7bea8a8c8fe187e375d99",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-09T11:56:46+02:00",
-      "error": null,
+      "checked_at": "2026-09-09T12:00:17+02:00",
+      "error": "A Página oficial Smart Color Print, ID público 61593453669428 e activo Meta 1213825748490849, foi confirmada e não apresentou publicação cruzada visível do conteúdo de 2026-09-09; a publicação mais recente visível permanece a de 2026-09-07. A interface autenticada indicou a identidade de interacção Smart Home, que é expressamente proibida para esta rotina. O canal encerra bloqueado sem tentativa para evitar publicar com a identidade errada ou duplicar conteúdo.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
