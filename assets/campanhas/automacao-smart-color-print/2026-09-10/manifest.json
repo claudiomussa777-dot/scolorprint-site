@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-10",
+  "timezone": "Africa/Maputo",
+  "theme": "Bastidores de produção: quatro confirmações antes de personalizar camisetas e uniformes",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-09-10-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-04-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-05-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-10/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-10/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-10/base-uniformes-confirmacoes-v1.png",
+  "base_image_prompt": "ads-marketing portrait Instagram background showing blank white and navy T-shirts and production tools in a dark navy print studio; cyan, magenta and yellow accent light; products on the right and clean negative space on the left; no text, letters, logos, brands or watermark",
+  "base_image_sha256": "2415edb1c791151e95c363deffe3f5a6f7d0b532af1eb415a4020f8796807476",
+  "image_sha256": {
+    "slide-01-v1.jpg": "5e83e20a901f9cf05e55a3a29e0c06149853a30aa18a0c70b2bebcb07954f374",
+    "slide-02-v1.jpg": "717ad0f5b9cc7b7681dca9cc051446474f43eab4e8fb794cc833053b0dfa6a6d",
+    "slide-03-v1.jpg": "f2386045fca3b6726f4c4661b612bd4beae04d310992e9f711d99668c54f5ccb",
+    "slide-04-v1.jpg": "43fa43de0aaecab04f24b1dcdf42f96ad66b63f99729700f79fb6a015fadea54",
+    "slide-05-v1.jpg": "bda91a34010798babdf75019f905a7422dca3973cb0b022cf79f4a178f383bee"
+  },
+  "caption_sha256": "80310ba7007c3ec33caa00a3b61cb2dc8a64f6b0290b0cfc21340e5b35c1bf43",
+  "payload_sha256": "9ee74b6936b30fee3eb9557f61b703ee488e5e6e3eb55500c1b52a3d5f838638",
+  "status": "prepared",
+  "prepared_at": "2026-09-10T09:35:08+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-04-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-05-v1.jpg"
+      ],
+      "caption_sha256": "80310ba7007c3ec33caa00a3b61cb2dc8a64f6b0290b0cfc21340e5b35c1bf43",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-10T09:35:08+02:00",
+      "duplicate": false,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-10/slide-01-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-10/slide-02-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-10/slide-03-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-10/slide-04-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-10/slide-05-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-04-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-10/slide-05-v1.jpg"
+      ],
+      "caption_sha256": "80310ba7007c3ec33caa00a3b61cb2dc8a64f6b0290b0cfc21340e5b35c1bf43",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-10T09:35:08+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
