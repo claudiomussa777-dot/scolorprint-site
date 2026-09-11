@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-11",
+  "timezone": "Africa/Maputo",
+  "theme": "Produto em foco: bonés personalizados para identificar equipas em atendimento, eventos e trabalho no terreno",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-11-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-11/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-11/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-11/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-11/base-bones-v1.png",
+  "base_image_prompt": "ads-marketing square Instagram background based on supplied neutral-cap portrait; same adult model and realistic cap, dark charcoal studio gradient, cyan/magenta/yellow print-inspired lighting, abstract three-colour stitched geometric motif on cap, negative space on left, no written text or brand logo",
+  "base_image_sha256": "f5879cb458e40efa58667a4ae68cec985f5a9fb37601f0440c9ba4019368f098",
+  "image_sha256": {
+    "poster-v1.jpg": "751cd0bb7b0b14773bdcb7b0646137ce76738032b089c8295c79a95628cc6473"
+  },
+  "caption_sha256": "d97818d3dae4a22289dd2156438c37ce130e2f8e4463105b349c2638cb71a0a0",
+  "payload_sha256": "a79b3a3bac63d9e6cdfa61470ef08094bab413ef7fac5ad05e40f37a42a583da",
+  "status": "prepared",
+  "prepared_at": "2026-09-11T09:48:32+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-11/poster-v1.jpg"
+      ],
+      "caption_sha256": "d97818d3dae4a22289dd2156438c37ce130e2f8e4463105b349c2638cb71a0a0",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-11T09:48:32+02:00",
+      "duplicate": false,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-11/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-11/poster-v1.jpg"
+      ],
+      "caption_sha256": "d97818d3dae4a22289dd2156438c37ce130e2f8e4463105b349c2638cb71a0a0",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-11T09:48:32+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
