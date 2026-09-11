@@ -41,7 +41,7 @@
       "error": null
     },
     "facebook": {
-      "state": "blocked_wrong_active_identity",
+      "state": "blocked_authentication_required",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-11/poster-v1.jpg"
@@ -52,8 +52,8 @@
       "caption_sha256": "d97818d3dae4a22289dd2156438c37ce130e2f8e4463105b349c2638cb71a0a0",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-11T09:51:30+02:00",
-      "error": "A Página oficial Smart Color Print, ID público 61593453669428 e activo Meta 1213825748490849, foi confirmada e não apresentou publicação cruzada visível do conteúdo de 2026-09-11; a publicação mais recente visível permanece a de 2026-09-07. A sessão autenticada abre a gestão da Página correcta, mas a identidade activa de interacção continua Smart Home, expressamente proibida para esta rotina. O canal encerra bloqueado sem tentativa para evitar publicar com a identidade errada ou duplicar conteúdo.",
+      "checked_at": "2026-09-11T11:32:12+02:00",
+      "error": "A Página oficial Smart Color Print, ID público 61593453669428 e activo Meta 1213825748490849, foi confirmada e não apresentou publicação cruzada visível do conteúdo de 2026-09-11; a publicação mais recente visível permanece a de 2026-09-07. A sessão disponível não está autenticada para gestão da Página. O canal encerra bloqueado sem tentativa para evitar publicação sem confirmação do destino ou duplicação.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
