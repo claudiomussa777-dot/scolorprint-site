@@ -25,16 +25,16 @@
   },
   "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
   "payload_sha256": "412561671a693187a2936064ac90a3867314d993c4e8983713eb12ab0807c056",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-12T11:17:00+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "17926052772179767",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DdLp41gEc8g/",
+  "published_at": "2026-09-12T11:23:57+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-02-v1.jpg",
@@ -42,14 +42,15 @@
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-04-v1.jpg"
       ],
       "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-12T11:17:00+02:00",
+      "published_at": "2026-09-12T11:23:57+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/DdLp41gEc8g/",
+      "media_id": "17926052772179767",
+      "checked_at": "2026-09-12T11:23:57+02:00",
+      "duplicate": false,
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_authentication_required",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
@@ -66,8 +67,8 @@
       "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-12T11:17:00+02:00",
-      "error": null,
+      "checked_at": "2026-09-12T11:23:57+02:00",
+      "error": "A Página oficial Smart Color Print, ID público 61593453669428 e activo Meta 1213825748490849, foi confirmada publicamente. Não existe crosspost visível do conteúdo de 2026-09-12; a publicação mais recente visível permanece a de 7 de setembro. A sessão disponível não está autenticada para gestão da Página, por isso nenhuma submissão directa foi tentada, evitando publicar sem confirmação do destino ou duplicar conteúdo.",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
