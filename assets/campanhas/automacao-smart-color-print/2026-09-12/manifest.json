@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-12",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiração de sábado: sinalética de evento para receber, orientar e identificar",
+  "format": "carousel",
+  "idempotency_key": "scp-ig-2026-09-12-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-02-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-03-v1.jpg",
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-04-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-12/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-12/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-12/base-sinaletica-evento-v1.png",
+  "base_image_prompt": "ads-marketing portrait Instagram background showing a polished event entrance with a blank roll-up, blank directional sign, floor arrows and badge desk; dark navy environment with cyan, magenta and yellow accents; clean negative space on the left; no text, letters, logos, brands or watermark",
+  "base_image_sha256": "134befe450a2fd1c9abf178c5e47bde9983c43e4072af8a371717caf21085778",
+  "image_sha256": {
+    "slide-01-v1.jpg": "6f7941bf4fbd9fb26e782e22734ac738863147d6e4486007f5fdd1fd48f9aa41",
+    "slide-02-v1.jpg": "4467f8803903849ef2e6d0fa0a755064619394c86a0f12706da586bb8d86afa5",
+    "slide-03-v1.jpg": "63e24fa18499af660a346745bb6bd7c82323c5cc97f3e865a53335e1588e411f",
+    "slide-04-v1.jpg": "1a61d041016fb2887481d5f62d5d1f5ea4e0c956d69de72d3404b1fb0e957dad"
+  },
+  "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
+  "payload_sha256": "412561671a693187a2936064ac90a3867314d993c4e8983713eb12ab0807c056",
+  "status": "prepared",
+  "prepared_at": "2026-09-12T11:17:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-04-v1.jpg"
+      ],
+      "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-12T11:17:00+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-12/slide-02-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-12/slide-03-v1.jpg",
+        "assets/campanhas/automacao-smart-color-print/2026-09-12/slide-04-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-01-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-02-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-03-v1.jpg",
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-12/slide-04-v1.jpg"
+      ],
+      "caption_sha256": "db91f98b13cb593a3207be50d161b1885af2d524b813c5be415a8cef04fedf6e",
+      "published_at": null,
+      "permalink": null,
+      "checked_at": "2026-09-12T11:17:00+02:00",
+      "error": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849"
+    }
+  }
+}
