@@ -19,24 +19,24 @@
   },
   "caption_sha256": "2bc3cfcdd4823f5387fcc46cceb2b946f98e9c6bcff5013628f541d072fb40e3",
   "payload_sha256": "461daa3e9fcb52c6e96e405048c74225d0a2a53e8c31c555c72eb2501e94e37c",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-13T09:52:57+02:00",
   "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "permalink": "https://www.instagram.com/smart_colorprint/p/DdOFtKjDCPe/",
+  "published_at": "2026-09-13T10:04:29+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-13/poster-v1.jpg"
       ],
       "caption_sha256": "2bc3cfcdd4823f5387fcc46cceb2b946f98e9c6bcff5013628f541d072fb40e3",
-      "published_at": null,
-      "permalink": null,
+      "published_at": "2026-09-13T10:04:29+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/DdOFtKjDCPe/",
       "media_id": null,
-      "checked_at": "2026-09-13T09:52:57+02:00",
+      "checked_at": "2026-09-13T10:05:00+02:00",
       "duplicate": false,
       "error": null
     },
@@ -52,8 +52,8 @@
       "caption_sha256": "2bc3cfcdd4823f5387fcc46cceb2b946f98e9c6bcff5013628f541d072fb40e3",
       "published_at": null,
       "permalink": null,
-      "checked_at": "2026-09-13T09:52:57+02:00",
-      "error": null,
+      "checked_at": "2026-09-13T10:06:00+02:00",
+      "error": "blocked_action_confirmation_required; no_crosspost_visible",
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849"
