@@ -19,27 +19,28 @@
   },
   "caption_sha256": "172320a9fecb48ee837ccf02b1974773937d171969024cf7b5397c5bc83015c6",
   "payload_sha256": "5d20923443fdfaac577d7b324f24f9510a1f6fab4ead51f96a8a72994f8dcb5f",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-28T12:20:21+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18122834635900466",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dd09fcnDe5N/",
+  "published_at": "2026-09-28T12:23:30+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
       ],
       "caption_sha256": "172320a9fecb48ee837ccf02b1974773937d171969024cf7b5397c5bc83015c6",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
+      "published_at": "2026-09-28T12:23:30+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dd09fcnDe5N/",
+      "media_id": "18122834635900466",
+      "checked_at": "2026-09-28T12:24:44+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_browser_session_unavailable",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
@@ -53,7 +54,8 @@
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849",
-      "error": null
+      "checked_at": "2026-09-28T12:24:44+02:00",
+      "error": "A Página oficial exige autenticação nesta sessão. Não foi possível confirmar crosspost automático nem reconfirmar o perfil activo e o destino numérico para uma submissão directa; nenhuma publicação foi tentada."
     }
   }
 }
