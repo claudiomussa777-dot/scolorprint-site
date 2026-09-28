@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-28",
+  "timezone": "Africa/Maputo",
+  "theme": "Planeamento de domingo: três decisões para alinhar a comunicação da semana antes de produzir",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-28-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-28/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-28/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-28/base-planeamento-semana-v1.png",
+  "base_image_prompt": "ads-marketing portrait Instagram background showing a tidy Sunday planning desk for a small business with an unbranded teal clipboard, blank checklist, white polo shirt, blank business cards, tabletop roll-up mockup and blank vinyl sign; warm print-studio workbench; white, graphite, deep teal and golden yellow; no text, logo, branding, watermark or people",
+  "base_image_sha256": "80057422bd0db4a41b6c5f665346ff0115461bbc8234dd1a6876aabec418d7f2",
+  "image_sha256": {
+    "poster-v1.jpg": "77599d1f68cb105e4ec621d61fbc64215a3f0b69ae12e07d41544183e2a1e602"
+  },
+  "caption_sha256": "172320a9fecb48ee837ccf02b1974773937d171969024cf7b5397c5bc83015c6",
+  "payload_sha256": "5d20923443fdfaac577d7b324f24f9510a1f6fab4ead51f96a8a72994f8dcb5f",
+  "status": "prepared",
+  "prepared_at": "2026-09-28T12:20:21+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
+      ],
+      "caption_sha256": "172320a9fecb48ee837ccf02b1974773937d171969024cf7b5397c5bc83015c6",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-28/poster-v1.jpg"
+      ],
+      "caption_sha256": "172320a9fecb48ee837ccf02b1974773937d171969024cf7b5397c5bc83015c6",
+      "published_at": null,
+      "permalink": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849",
+      "error": null
+    }
+  }
+}
