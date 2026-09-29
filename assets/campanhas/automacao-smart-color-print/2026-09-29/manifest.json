@@ -19,28 +19,28 @@
   },
   "caption_sha256": "48bb96d267752536dad0693e735a3ae4fad48af3b8de60c3ef348bbbf7094a47",
   "payload_sha256": "2d5993776726d7e8d0e132d4431e32d78601c9b62a6e461fe4019567c7317d17",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-29T11:56:46+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18089666033220007",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dd3fit1jAND/",
+  "published_at": "2026-09-29T12:09:33+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
       ],
       "caption_sha256": "48bb96d267752536dad0693e735a3ae4fad48af3b8de60c3ef348bbbf7094a47",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-29T11:56:46+02:00",
+      "published_at": "2026-09-29T12:09:33+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dd3fit1jAND/",
+      "media_id": "18089666033220007",
+      "checked_at": "2026-09-29T12:09:33+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_confirmation_required",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
@@ -54,8 +54,8 @@
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849",
-      "checked_at": "2026-09-29T11:56:46+02:00",
-      "error": null
+      "checked_at": "2026-09-29T12:09:33+02:00",
+      "error": "A Página oficial Smart Color Print (ID público 61593453669428) foi confirmada publicamente e não apresentou publicação cruzada do conteúdo de 2026-09-29. A submissão directa pelo navegador exige confirmação interactiva imediata; nenhuma tentativa foi feita."
     }
   }
 }
