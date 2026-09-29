@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-29",
+  "timezone": "Africa/Maputo",
+  "theme": "Preparação de segunda: cartões de visita claros para começar a semana com uma marca coerente",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-29-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-29/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-29/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-29/base-cartoes-visita-v1.png",
+  "base_image_prompt": "ads-marketing portrait source photo: blank business cards, blank kraft folder, teal fabric swatch, ruler and cutting mat in a warm print-studio worktable; dark left-side negative space; no text, logo, branding or watermark",
+  "base_image_sha256": "2d188750ada597b5ea9296b2a0af71173969c344c22dd429b28ba3d1fcfc4b28",
+  "image_sha256": {
+    "poster-v1.jpg": "a2f3677bff6a0ccab677aa8b229cefd057e764aeaf55a51ae72aea03536e88fc"
+  },
+  "caption_sha256": "48bb96d267752536dad0693e735a3ae4fad48af3b8de60c3ef348bbbf7094a47",
+  "payload_sha256": "2d5993776726d7e8d0e132d4431e32d78601c9b62a6e461fe4019567c7317d17",
+  "status": "prepared",
+  "prepared_at": "2026-09-29T11:56:46+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
+      ],
+      "caption_sha256": "48bb96d267752536dad0693e735a3ae4fad48af3b8de60c3ef348bbbf7094a47",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-29T11:56:46+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-29/poster-v1.jpg"
+      ],
+      "caption_sha256": "48bb96d267752536dad0693e735a3ae4fad48af3b8de60c3ef348bbbf7094a47",
+      "published_at": null,
+      "permalink": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849",
+      "checked_at": "2026-09-29T11:56:46+02:00",
+      "error": null
+    }
+  }
+}
