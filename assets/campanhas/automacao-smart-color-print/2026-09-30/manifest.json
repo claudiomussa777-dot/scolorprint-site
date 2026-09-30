@@ -19,28 +19,28 @@
   },
   "caption_sha256": "12aae7d4a29e58b28dc7f3bda04f38dca99ee0f23b0c4fb9b709016bdc34900f",
   "payload_sha256": "2fa7671602d14b8ae8dfae04eeb430aaf638ef0d11e8e8418d3e5a98bf0e4216",
-  "status": "prepared",
+  "status": "published",
   "prepared_at": "2026-09-30T09:49:28+02:00",
-  "media_id": null,
-  "permalink": null,
-  "published_at": null,
+  "media_id": "18115176925821067",
+  "permalink": "https://www.instagram.com/smart_colorprint/p/Dd51xxEjaca/",
+  "published_at": "2026-09-30T09:52:40+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
       ],
       "caption_sha256": "12aae7d4a29e58b28dc7f3bda04f38dca99ee0f23b0c4fb9b709016bdc34900f",
-      "published_at": null,
-      "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-09-30T09:49:28+02:00",
+      "published_at": "2026-09-30T09:52:40+02:00",
+      "permalink": "https://www.instagram.com/smart_colorprint/p/Dd51xxEjaca/",
+      "media_id": "18115176925821067",
+      "checked_at": "2026-09-30T09:52:40+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_browser_session_unavailable",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
@@ -54,8 +54,8 @@
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849",
-      "checked_at": "2026-09-30T09:49:28+02:00",
-      "error": null
+      "checked_at": "2026-09-30T09:52:40+02:00",
+      "error": "A Página oficial Smart Color Print exigiu autenticação nesta sessão; não foi possível confirmar crosspost automático nem reconfirmar o destino antes de uma submissão directa. Nenhuma tentativa foi feita."
     }
   }
 }
