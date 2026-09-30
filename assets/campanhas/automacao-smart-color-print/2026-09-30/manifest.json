@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-09-30",
+  "timezone": "Africa/Maputo",
+  "theme": "Dica de acabamento: vinco e dobra para folders e capas bem apresentados",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-09-30-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-09-30/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-09-30/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-09-30/base-dobra-vinco-v1.png",
+  "base_image_prompt": "ads-marketing portrait print-studio photo of an unbranded premium presentation folder with a sharply creased fold, cutting mat and ruler; no words, logo or watermark; deterministic Smart Color Print overlay applied separately",
+  "base_image_sha256": "e9bb24b81043796b5f61218bf8bfa215500a27bff7a4b66ef8598308b45739f8",
+  "image_sha256": {
+    "poster-v1.jpg": "1af023eb73cb7530b638123deda638be43d45a10e30b7dd2de899372d5f72bbf"
+  },
+  "caption_sha256": "12aae7d4a29e58b28dc7f3bda04f38dca99ee0f23b0c4fb9b709016bdc34900f",
+  "payload_sha256": "2fa7671602d14b8ae8dfae04eeb430aaf638ef0d11e8e8418d3e5a98bf0e4216",
+  "status": "prepared",
+  "prepared_at": "2026-09-30T09:49:28+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
+      ],
+      "caption_sha256": "12aae7d4a29e58b28dc7f3bda04f38dca99ee0f23b0c4fb9b709016bdc34900f",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-09-30T09:49:28+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-09-30/poster-v1.jpg"
+      ],
+      "caption_sha256": "12aae7d4a29e58b28dc7f3bda04f38dca99ee0f23b0c4fb9b709016bdc34900f",
+      "published_at": null,
+      "permalink": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849",
+      "checked_at": "2026-09-30T09:49:28+02:00",
+      "error": null
+    }
+  }
+}
