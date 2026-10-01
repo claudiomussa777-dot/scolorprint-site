@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-10-01",
+  "timezone": "Africa/Maputo",
+  "theme": "Dica de acabamento: margem segura, sangria e marcas para um corte limpo",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-10-01-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-01/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-10-01/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-10-01/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-10-01/base-corte-preciso-v1.png",
+  "base_image_prompt": "ads-marketing portrait commercial-printing studio still life: a stack of freshly printed unbranded flyers, clean rounded corner and precise trimmed edge, metal ruler and cutting mat; no words, logo or watermark; deterministic Smart Color Print overlay applied separately",
+  "base_image_sha256": "2a6123930ec86da4b98bd67e31f3401cbc6d0c3fd4638c97a92ab03fdcf3b66f",
+  "image_sha256": {
+    "poster-v1.jpg": "484f4a6f4ee3f406b47f5cb4540fc67a1c670059ba63adb72624516d360081a0"
+  },
+  "caption_sha256": "2afef31a932c66d63fa73dadf4b49825bcb74c8b0c4b29ca9037f0b02323d6ac",
+  "payload_sha256": "46b417a01f1e2e3bc7dcec234669966200ba106034420f564534c0c10d07f950",
+  "status": "prepared",
+  "prepared_at": "2026-10-01T12:49:10+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-01/poster-v1.jpg"
+      ],
+      "caption_sha256": "2afef31a932c66d63fa73dadf4b49825bcb74c8b0c4b29ca9037f0b02323d6ac",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-10-01T12:49:10+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-10-01/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-01/poster-v1.jpg"
+      ],
+      "caption_sha256": "2afef31a932c66d63fa73dadf4b49825bcb74c8b0c4b29ca9037f0b02323d6ac",
+      "published_at": null,
+      "permalink": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849",
+      "checked_at": "2026-10-01T12:49:10+02:00",
+      "error": null
+    }
+  }
+}
