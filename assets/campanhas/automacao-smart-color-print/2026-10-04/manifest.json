@@ -17,28 +17,28 @@
   "image_sha256": "1ae1f691dab4c8c00cb308cfa0912f3f8990211278e3f23d0ce44a023eacbeeb",
   "caption_sha256": "6ce16885a17a726c6c3e603d274014020fb6bdc3c76f436032faa4be574ceff1",
   "payload_sha256": "0872d387e9894d6d5ba8bbacfa27de810a000d9c58a2a66b9b0af72738908756",
-  "status": "prepared",
+  "status": "published_permalink_pending",
   "prepared_at": "2026-10-04T09:50:00+02:00",
-  "media_id": null,
+  "media_id": "18151125991548969",
   "permalink": null,
-  "published_at": null,
+  "published_at": "2026-10-04T09:52:31+02:00",
   "error": null,
   "channels": {
     "instagram": {
-      "state": "prepared",
-      "submission_attempted": false,
+      "state": "published_permalink_pending",
+      "submission_attempted": true,
       "image_urls": [
         "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
       ],
       "caption_sha256": "6ce16885a17a726c6c3e603d274014020fb6bdc3c76f436032faa4be574ceff1",
-      "published_at": null,
+      "published_at": "2026-10-04T09:52:31+02:00",
       "permalink": null,
-      "media_id": null,
-      "checked_at": "2026-10-04T09:50:00+02:00",
+      "media_id": "18151125991548969",
+      "checked_at": "2026-10-04T09:52:31+02:00",
       "error": null
     },
     "facebook": {
-      "state": "operational",
+      "state": "blocked_browser_session_unavailable",
       "submission_attempted": false,
       "image_files": [
         "assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
@@ -52,8 +52,8 @@
       "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
       "page_public_id": "61593453669428",
       "meta_asset_id": "1213825748490849",
-      "checked_at": "2026-10-04T09:50:00+02:00",
-      "error": null
+      "checked_at": "2026-10-04T09:52:31+02:00",
+      "error": "O canal Instagram confirmou a publicação, mas a sessão do navegador ficou indisponível. Não foi possível verificar se a associação Meta criou uma publicação cruzada na Página oficial Smart Color Print nem reconfirmar o destino antes de uma submissão directa; nenhuma publicação Facebook foi tentada."
     }
   }
 }
