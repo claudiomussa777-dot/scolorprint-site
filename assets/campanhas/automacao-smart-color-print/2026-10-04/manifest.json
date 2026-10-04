@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "account": "smart_colorprint",
+  "scheduled_date": "2026-10-04",
+  "timezone": "Africa/Maputo",
+  "theme": "Inspiração de sábado: identidade coerente para eventos com backdrop, roll-up e credenciais",
+  "format": "single_image",
+  "idempotency_key": "scp-ig-2026-10-04-v1",
+  "image_urls": [
+    "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
+  ],
+  "image_urls_file": "assets/campanhas/automacao-smart-color-print/2026-10-04/image-urls.txt",
+  "caption_file": "assets/campanhas/automacao-smart-color-print/2026-10-04/caption.txt",
+  "base_image_file": "assets/campanhas/automacao-smart-color-print/2026-10-04/base-evento-identidade-v1.png",
+  "base_image_prompt": "ads-marketing square Instagram campaign background for Smart Color Print: an honest, polished event information corner with a blank freestanding fabric backdrop, blank roll-up banner, blank tabletop name-card holder and two unbranded lanyards; deep navy studio, cyan magenta and warm yellow lighting accents; products right and lower-right, calm left negative space; no people, logos, words, brands, watermark, price or claims",
+  "base_image_sha256": "b2989e59d603a393b04d1fab6658417a07c1b1a57404b8bee5f0973ba01595bb",
+  "image_sha256": "1ae1f691dab4c8c00cb308cfa0912f3f8990211278e3f23d0ce44a023eacbeeb",
+  "caption_sha256": "6ce16885a17a726c6c3e603d274014020fb6bdc3c76f436032faa4be574ceff1",
+  "payload_sha256": "0872d387e9894d6d5ba8bbacfa27de810a000d9c58a2a66b9b0af72738908756",
+  "status": "prepared",
+  "prepared_at": "2026-10-04T09:50:00+02:00",
+  "media_id": null,
+  "permalink": null,
+  "published_at": null,
+  "error": null,
+  "channels": {
+    "instagram": {
+      "state": "prepared",
+      "submission_attempted": false,
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
+      ],
+      "caption_sha256": "6ce16885a17a726c6c3e603d274014020fb6bdc3c76f436032faa4be574ceff1",
+      "published_at": null,
+      "permalink": null,
+      "media_id": null,
+      "checked_at": "2026-10-04T09:50:00+02:00",
+      "error": null
+    },
+    "facebook": {
+      "state": "operational",
+      "submission_attempted": false,
+      "image_files": [
+        "assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
+      ],
+      "image_urls": [
+        "https://scolorprint.com/assets/campanhas/automacao-smart-color-print/2026-10-04/poster-v1.jpg"
+      ],
+      "caption_sha256": "6ce16885a17a726c6c3e603d274014020fb6bdc3c76f436032faa4be574ceff1",
+      "published_at": null,
+      "permalink": null,
+      "page_url": "https://www.facebook.com/profile.php?id=61593453669428",
+      "page_public_id": "61593453669428",
+      "meta_asset_id": "1213825748490849",
+      "checked_at": "2026-10-04T09:50:00+02:00",
+      "error": null
+    }
+  }
+}
